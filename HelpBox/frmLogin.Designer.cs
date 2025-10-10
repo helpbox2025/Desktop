@@ -28,58 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tableLayoutPanel1 = new TableLayoutPanel();
-            panel1 = new Panel();
+            tlpLogin = new TableLayoutPanel();
+            pnLogin = new Panel();
             btnSair = new Button();
             btnEntrar = new Button();
             txtSenha = new TextBox();
             txtUsuario = new TextBox();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
-            tableLayoutPanel1.SuspendLayout();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            lblSenha = new Label();
+            lblUsuario = new Label();
+            lblDescricao = new Label();
+            lblBoasVindas = new Label();
+            pboxLogoHP = new PictureBox();
+            tlpLogin.SuspendLayout();
+            pnLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pboxLogoHP).BeginInit();
             SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tlpLogin
             // 
-            tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(panel1, 1, 1);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(800, 450);
-            tableLayoutPanel1.TabIndex = 18;
+            tlpLogin.ColumnCount = 3;
+            tlpLogin.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tlpLogin.ColumnStyles.Add(new ColumnStyle());
+            tlpLogin.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tlpLogin.Controls.Add(pnLogin, 1, 1);
+            tlpLogin.Dock = DockStyle.Fill;
+            tlpLogin.Location = new Point(0, 0);
+            tlpLogin.Name = "tlpLogin";
+            tlpLogin.RowCount = 3;
+            tlpLogin.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tlpLogin.RowStyles.Add(new RowStyle());
+            tlpLogin.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tlpLogin.Size = new Size(800, 450);
+            tlpLogin.TabIndex = 18;
             // 
-            // panel1
+            // pnLogin
             // 
-            panel1.Controls.Add(btnSair);
-            panel1.Controls.Add(btnEntrar);
-            panel1.Controls.Add(txtSenha);
-            panel1.Controls.Add(txtUsuario);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(-7, -4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(814, 459);
-            panel1.TabIndex = 9;
+            pnLogin.Controls.Add(btnSair);
+            pnLogin.Controls.Add(btnEntrar);
+            pnLogin.Controls.Add(txtSenha);
+            pnLogin.Controls.Add(txtUsuario);
+            pnLogin.Controls.Add(lblSenha);
+            pnLogin.Controls.Add(lblUsuario);
+            pnLogin.Controls.Add(lblDescricao);
+            pnLogin.Controls.Add(lblBoasVindas);
+            pnLogin.Controls.Add(pboxLogoHP);
+            pnLogin.Location = new Point(-8, -4);
+            pnLogin.MinimumSize = new Size(816, 459);
+            pnLogin.Name = "pnLogin";
+            pnLogin.Size = new Size(816, 459);
+            pnLogin.TabIndex = 9;
             // 
             // btnSair
             // 
-            btnSair.BackColor = Color.Maroon;
+            btnSair.BackColor = Color.FromArgb(192, 0, 0);
+            btnSair.FlatAppearance.MouseDownBackColor = Color.FromArgb(64, 0, 0);
+            btnSair.FlatAppearance.MouseOverBackColor = Color.Maroon;
+            btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSair.ForeColor = SystemColors.ButtonHighlight;
             btnSair.Location = new Point(303, 390);
@@ -92,8 +96,12 @@
             // 
             // btnEntrar
             // 
-            btnEntrar.BackColor = Color.CornflowerBlue;
+            btnEntrar.BackColor = Color.FromArgb(0, 0, 130);
+            btnEntrar.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 30);
+            btnEntrar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 64);
+            btnEntrar.FlatStyle = FlatStyle.Flat;
             btnEntrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEntrar.ForeColor = SystemColors.Control;
             btnEntrar.Location = new Point(449, 390);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(92, 36);
@@ -109,6 +117,7 @@
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(235, 23);
             txtSenha.TabIndex = 15;
+            txtSenha.UseSystemPasswordChar = true;
             // 
             // txtUsuario
             // 
@@ -118,58 +127,58 @@
             txtUsuario.Size = new Size(235, 23);
             txtUsuario.TabIndex = 14;
             // 
-            // label4
+            // lblSenha
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(244, 355);
-            label4.Name = "label4";
-            label4.Size = new Size(53, 14);
-            label4.TabIndex = 13;
-            label4.Text = "Senha:";
+            lblSenha.AutoSize = true;
+            lblSenha.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSenha.ForeColor = Color.Black;
+            lblSenha.Location = new Point(244, 355);
+            lblSenha.Name = "lblSenha";
+            lblSenha.Size = new Size(53, 14);
+            lblSenha.TabIndex = 13;
+            lblSenha.Text = "Senha:";
             // 
-            // label3
+            // lblUsuario
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(236, 321);
-            label3.Name = "label3";
-            label3.Size = new Size(63, 14);
-            label3.TabIndex = 12;
-            label3.Text = "Usuário:";
+            lblUsuario.AutoSize = true;
+            lblUsuario.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsuario.ForeColor = Color.Black;
+            lblUsuario.Location = new Point(236, 321);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(63, 14);
+            lblUsuario.TabIndex = 12;
+            lblUsuario.Text = "Usuário:";
             // 
-            // label2
+            // lblDescricao
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(256, 270);
-            label2.Name = "label2";
-            label2.Size = new Size(322, 14);
-            label2.TabIndex = 11;
-            label2.Text = "Para acessar o sistema, digite suas credenciais.";
+            lblDescricao.AutoSize = true;
+            lblDescricao.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDescricao.ForeColor = Color.DarkBlue;
+            lblDescricao.Location = new Point(256, 270);
+            lblDescricao.Name = "lblDescricao";
+            lblDescricao.Size = new Size(322, 14);
+            lblDescricao.TabIndex = 11;
+            lblDescricao.Text = "Para acessar o sistema, digite suas credenciais.";
             // 
-            // label1
+            // lblBoasVindas
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(0, 0, 64);
-            label1.Location = new Point(170, 199);
-            label1.Name = "label1";
-            label1.Size = new Size(481, 71);
-            label1.TabIndex = 10;
-            label1.Text = "SEJA BEM VINDO!";
+            lblBoasVindas.AutoSize = true;
+            lblBoasVindas.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBoasVindas.ForeColor = Color.FromArgb(0, 0, 64);
+            lblBoasVindas.Location = new Point(170, 199);
+            lblBoasVindas.Name = "lblBoasVindas";
+            lblBoasVindas.Size = new Size(481, 71);
+            lblBoasVindas.TabIndex = 10;
+            lblBoasVindas.Text = "SEJA BEM VINDO!";
             // 
-            // pictureBox1
+            // pboxLogoHP
             // 
-            pictureBox1.Image = Properties.Resources.helpbox_removebg_preview;
-            pictureBox1.Location = new Point(126, -19);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(558, 225);
-            pictureBox1.TabIndex = 9;
-            pictureBox1.TabStop = false;
+            pboxLogoHP.Image = Properties.Resources.helpbox_removebg_preview;
+            pboxLogoHP.Location = new Point(126, -19);
+            pboxLogoHP.Name = "pboxLogoHP";
+            pboxLogoHP.Size = new Size(558, 225);
+            pboxLogoHP.TabIndex = 9;
+            pboxLogoHP.TabStop = false;
             // 
             // frmLogin
             // 
@@ -177,31 +186,32 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(800, 450);
-            Controls.Add(tableLayoutPanel1);
+            Controls.Add(tlpLogin);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
+            MinimumSize = new Size(816, 489);
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Login.";
+            Text = "HelpBox - Login.";
             WindowState = FormWindowState.Maximized;
-            tableLayoutPanel1.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            tlpLogin.ResumeLayout(false);
+            pnLogin.ResumeLayout(false);
+            pnLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pboxLogoHP).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private TableLayoutPanel tableLayoutPanel1;
-        private Panel panel1;
+        private TableLayoutPanel tlpLogin;
+        private Panel pnLogin;
         private Button btnSair;
         private Button btnEntrar;
         private TextBox txtSenha;
         private TextBox txtUsuario;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private PictureBox pictureBox1;
+        private Label lblSenha;
+        private Label lblUsuario;
+        private Label lblDescricao;
+        private Label lblBoasVindas;
+        private PictureBox pboxLogoHP;
     }
 }

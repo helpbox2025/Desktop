@@ -34,29 +34,35 @@
             txtAbrangencia = new TextBox();
             txtFrequencia = new TextBox();
             txtImpacto = new TextBox();
-            labelAbrangencia = new Label();
-            labelFrequencia = new Label();
-            labelImpacto = new Label();
+            lblAbrangencia = new Label();
+            lblFrequencia = new Label();
+            lblImpacto = new Label();
             txtInicioProb = new TextBox();
-            labelProblema = new Label();
-            labelCateg = new Label();
+            lblProblema = new Label();
+            lblCateg = new Label();
             txtCategoria = new TextBox();
-            textDescricao = new TextBox();
-            labelDescricao = new Label();
+            txtDescricao = new TextBox();
+            lblDescricao = new Label();
             txtAssunto = new TextBox();
-            labelAssunto = new Label();
+            lblAssunto = new Label();
             groupBoxResolucao = new GroupBox();
-            textBox1 = new TextBox();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            panelPrincipal = new Panel();
+            txtSolucaoTec = new TextBox();
+            tlpDetalhes = new TableLayoutPanel();
             panelBotoes = new Panel();
-            button1 = new Button();
-            button2 = new Button();
+            btnSalvar = new Button();
+            btnFinalizar = new Button();
+            menuStripDetalhes = new MenuStrip();
+            stripUsuarioDetalhes = new ToolStripMenuItem();
+            stripLogoutDetalhes = new ToolStripMenuItem();
+            stripSobreDetalhes = new ToolStripMenuItem();
+            stripSobreHDetalhes = new ToolStripMenuItem();
+            stripManualDetalhes = new ToolStripMenuItem();
+            stripMSistemaDetalhes = new ToolStripMenuItem();
             groupBoxDetalhes.SuspendLayout();
             groupBoxResolucao.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
-            panelPrincipal.SuspendLayout();
+            tlpDetalhes.SuspendLayout();
             panelBotoes.SuspendLayout();
+            menuStripDetalhes.SuspendLayout();
             SuspendLayout();
             // 
             // groupBoxDetalhes
@@ -67,29 +73,32 @@
             groupBoxDetalhes.Controls.Add(txtAbrangencia);
             groupBoxDetalhes.Controls.Add(txtFrequencia);
             groupBoxDetalhes.Controls.Add(txtImpacto);
-            groupBoxDetalhes.Controls.Add(labelAbrangencia);
-            groupBoxDetalhes.Controls.Add(labelFrequencia);
-            groupBoxDetalhes.Controls.Add(labelImpacto);
+            groupBoxDetalhes.Controls.Add(lblAbrangencia);
+            groupBoxDetalhes.Controls.Add(lblFrequencia);
+            groupBoxDetalhes.Controls.Add(lblImpacto);
             groupBoxDetalhes.Controls.Add(txtInicioProb);
-            groupBoxDetalhes.Controls.Add(labelProblema);
-            groupBoxDetalhes.Controls.Add(labelCateg);
+            groupBoxDetalhes.Controls.Add(lblProblema);
+            groupBoxDetalhes.Controls.Add(lblCateg);
             groupBoxDetalhes.Controls.Add(txtCategoria);
-            groupBoxDetalhes.Controls.Add(textDescricao);
-            groupBoxDetalhes.Controls.Add(labelDescricao);
+            groupBoxDetalhes.Controls.Add(txtDescricao);
+            groupBoxDetalhes.Controls.Add(lblDescricao);
             groupBoxDetalhes.Controls.Add(txtAssunto);
-            groupBoxDetalhes.Controls.Add(labelAssunto);
-            groupBoxDetalhes.Dock = DockStyle.Top;
-            groupBoxDetalhes.Location = new Point(0, 0);
+            groupBoxDetalhes.Controls.Add(lblAssunto);
+            groupBoxDetalhes.Dock = DockStyle.Fill;
+            groupBoxDetalhes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBoxDetalhes.Location = new Point(3, 3);
             groupBoxDetalhes.Name = "groupBoxDetalhes";
-            groupBoxDetalhes.Size = new Size(776, 248);
+            groupBoxDetalhes.Size = new Size(978, 248);
             groupBoxDetalhes.TabIndex = 0;
             groupBoxDetalhes.TabStop = false;
             groupBoxDetalhes.Text = "Detalhes do Chamado";
             // 
             // labelSolucaoIA
             // 
+            labelSolucaoIA.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             labelSolucaoIA.AutoSize = true;
-            labelSolucaoIA.Location = new Point(482, 123);
+            labelSolucaoIA.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelSolucaoIA.Location = new Point(585, 132);
             labelSolucaoIA.Name = "labelSolucaoIA";
             labelSolucaoIA.Size = new Size(66, 15);
             labelSolucaoIA.TabIndex = 15;
@@ -97,273 +106,352 @@
             // 
             // txtSolucaoIA
             // 
+            txtSolucaoIA.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtSolucaoIA.BackColor = SystemColors.ButtonFace;
-            txtSolucaoIA.Location = new Point(510, 147);
+            txtSolucaoIA.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSolucaoIA.Location = new Point(668, 132);
             txtSolucaoIA.Multiline = true;
             txtSolucaoIA.Name = "txtSolucaoIA";
             txtSolucaoIA.ReadOnly = true;
             txtSolucaoIA.ScrollBars = ScrollBars.Vertical;
-            txtSolucaoIA.Size = new Size(251, 95);
+            txtSolucaoIA.Size = new Size(277, 102);
             txtSolucaoIA.TabIndex = 14;
             // 
             // txtAbrangencia
             // 
+            txtAbrangencia.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtAbrangencia.BackColor = SystemColors.ButtonFace;
-            txtAbrangencia.Location = new Point(560, 52);
+            txtAbrangencia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtAbrangencia.Location = new Point(668, 61);
             txtAbrangencia.Name = "txtAbrangencia";
             txtAbrangencia.ReadOnly = true;
-            txtAbrangencia.Size = new Size(201, 23);
+            txtAbrangencia.Size = new Size(277, 23);
             txtAbrangencia.TabIndex = 13;
             // 
             // txtFrequencia
             // 
-            txtFrequencia.Location = new Point(142, 202);
+            txtFrequencia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtFrequencia.Location = new Point(142, 211);
             txtFrequencia.Name = "txtFrequencia";
             txtFrequencia.ReadOnly = true;
-            txtFrequencia.Size = new Size(268, 23);
+            txtFrequencia.Size = new Size(415, 23);
             txtFrequencia.TabIndex = 12;
             // 
             // txtImpacto
             // 
-            txtImpacto.Location = new Point(142, 173);
+            txtImpacto.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtImpacto.Location = new Point(142, 182);
             txtImpacto.Name = "txtImpacto";
             txtImpacto.ReadOnly = true;
-            txtImpacto.Size = new Size(268, 23);
+            txtImpacto.Size = new Size(415, 23);
             txtImpacto.TabIndex = 11;
             // 
-            // labelAbrangencia
+            // lblAbrangencia
             // 
-            labelAbrangencia.AutoSize = true;
-            labelAbrangencia.Location = new Point(482, 54);
-            labelAbrangencia.Name = "labelAbrangencia";
-            labelAbrangencia.Size = new Size(77, 15);
-            labelAbrangencia.TabIndex = 10;
-            labelAbrangencia.Text = "Abrangência.";
+            lblAbrangencia.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblAbrangencia.AutoSize = true;
+            lblAbrangencia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblAbrangencia.Location = new Point(585, 64);
+            lblAbrangencia.Name = "lblAbrangencia";
+            lblAbrangencia.Size = new Size(77, 15);
+            lblAbrangencia.TabIndex = 10;
+            lblAbrangencia.Text = "Abrangência.";
             // 
-            // labelFrequencia
+            // lblFrequencia
             // 
-            labelFrequencia.AutoSize = true;
-            labelFrequencia.Location = new Point(11, 205);
-            labelFrequencia.Name = "labelFrequencia";
-            labelFrequencia.Size = new Size(68, 15);
-            labelFrequencia.TabIndex = 9;
-            labelFrequencia.Text = "Frequência.";
+            lblFrequencia.AutoSize = true;
+            lblFrequencia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFrequencia.Location = new Point(11, 214);
+            lblFrequencia.Name = "lblFrequencia";
+            lblFrequencia.Size = new Size(68, 15);
+            lblFrequencia.TabIndex = 9;
+            lblFrequencia.Text = "Frequência.";
             // 
-            // labelImpacto
+            // lblImpacto
             // 
-            labelImpacto.AutoSize = true;
-            labelImpacto.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelImpacto.Location = new Point(11, 176);
-            labelImpacto.Name = "labelImpacto";
-            labelImpacto.Size = new Size(124, 15);
-            labelImpacto.TabIndex = 8;
-            labelImpacto.Text = "Impacto na Demanda.";
+            lblImpacto.AutoSize = true;
+            lblImpacto.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblImpacto.Location = new Point(11, 185);
+            lblImpacto.Name = "lblImpacto";
+            lblImpacto.Size = new Size(124, 15);
+            lblImpacto.TabIndex = 8;
+            lblImpacto.Text = "Impacto na Demanda.";
             // 
             // txtInicioProb
             // 
+            txtInicioProb.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtInicioProb.BackColor = SystemColors.ButtonFace;
-            txtInicioProb.Location = new Point(596, 84);
+            txtInicioProb.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtInicioProb.Location = new Point(701, 93);
             txtInicioProb.Name = "txtInicioProb";
             txtInicioProb.ReadOnly = true;
-            txtInicioProb.Size = new Size(165, 23);
+            txtInicioProb.Size = new Size(244, 23);
             txtInicioProb.TabIndex = 7;
             // 
-            // labelProblema
+            // lblProblema
             // 
-            labelProblema.AutoSize = true;
-            labelProblema.Location = new Point(482, 87);
-            labelProblema.Name = "labelProblema";
-            labelProblema.Size = new Size(110, 15);
-            labelProblema.TabIndex = 6;
-            labelProblema.Text = "Início do Problema.";
+            lblProblema.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblProblema.AutoSize = true;
+            lblProblema.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblProblema.Location = new Point(585, 96);
+            lblProblema.Name = "lblProblema";
+            lblProblema.Size = new Size(110, 15);
+            lblProblema.TabIndex = 6;
+            lblProblema.Text = "Início do Problema.";
             // 
-            // labelCateg
+            // lblCateg
             // 
-            labelCateg.AutoSize = true;
-            labelCateg.Location = new Point(482, 25);
-            labelCateg.Name = "labelCateg";
-            labelCateg.Size = new Size(61, 15);
-            labelCateg.TabIndex = 5;
-            labelCateg.Text = "Categoria.";
+            lblCateg.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblCateg.AutoSize = true;
+            lblCateg.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCateg.Location = new Point(585, 34);
+            lblCateg.Name = "lblCateg";
+            lblCateg.Size = new Size(61, 15);
+            lblCateg.TabIndex = 5;
+            lblCateg.Text = "Categoria.";
             // 
             // txtCategoria
             // 
+            txtCategoria.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtCategoria.BackColor = SystemColors.ButtonFace;
-            txtCategoria.Location = new Point(560, 22);
+            txtCategoria.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCategoria.Location = new Point(668, 31);
             txtCategoria.Name = "txtCategoria";
             txtCategoria.ReadOnly = true;
-            txtCategoria.Size = new Size(201, 23);
+            txtCategoria.Size = new Size(277, 23);
             txtCategoria.TabIndex = 4;
             // 
-            // textDescricao
+            // txtDescricao
             // 
-            textDescricao.BackColor = SystemColors.ButtonFace;
-            textDescricao.Location = new Point(142, 51);
-            textDescricao.Multiline = true;
-            textDescricao.Name = "textDescricao";
-            textDescricao.ReadOnly = true;
-            textDescricao.ScrollBars = ScrollBars.Vertical;
-            textDescricao.Size = new Size(329, 107);
-            textDescricao.TabIndex = 3;
-            textDescricao.TextChanged += textDescricao_TextChanged;
+            txtDescricao.BackColor = SystemColors.ButtonFace;
+            txtDescricao.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDescricao.Location = new Point(142, 60);
+            txtDescricao.Multiline = true;
+            txtDescricao.Name = "txtDescricao";
+            txtDescricao.ReadOnly = true;
+            txtDescricao.ScrollBars = ScrollBars.Vertical;
+            txtDescricao.Size = new Size(415, 107);
+            txtDescricao.TabIndex = 3;
+            txtDescricao.TextChanged += textDescricao_TextChanged;
             // 
-            // labelDescricao
+            // lblDescricao
             // 
-            labelDescricao.AutoSize = true;
-            labelDescricao.Location = new Point(11, 54);
-            labelDescricao.Name = "labelDescricao";
-            labelDescricao.Size = new Size(118, 15);
-            labelDescricao.TabIndex = 2;
-            labelDescricao.Text = "Descrição do Cliente.";
+            lblDescricao.AutoSize = true;
+            lblDescricao.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDescricao.Location = new Point(11, 63);
+            lblDescricao.Name = "lblDescricao";
+            lblDescricao.Size = new Size(118, 15);
+            lblDescricao.TabIndex = 2;
+            lblDescricao.Text = "Descrição do Cliente.";
             // 
             // txtAssunto
             // 
             txtAssunto.BackColor = SystemColors.ButtonFace;
-            txtAssunto.Location = new Point(142, 22);
+            txtAssunto.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtAssunto.Location = new Point(142, 31);
             txtAssunto.Name = "txtAssunto";
             txtAssunto.ReadOnly = true;
-            txtAssunto.Size = new Size(329, 23);
+            txtAssunto.Size = new Size(415, 23);
             txtAssunto.TabIndex = 1;
             // 
-            // labelAssunto
+            // lblAssunto
             // 
-            labelAssunto.AutoSize = true;
-            labelAssunto.Location = new Point(11, 25);
-            labelAssunto.Name = "labelAssunto";
-            labelAssunto.Size = new Size(53, 15);
-            labelAssunto.TabIndex = 0;
-            labelAssunto.Text = "Assunto.";
+            lblAssunto.AutoSize = true;
+            lblAssunto.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblAssunto.Location = new Point(11, 34);
+            lblAssunto.Name = "lblAssunto";
+            lblAssunto.Size = new Size(53, 15);
+            lblAssunto.TabIndex = 0;
+            lblAssunto.Text = "Assunto.";
             // 
             // groupBoxResolucao
             // 
-            groupBoxResolucao.Controls.Add(textBox1);
+            groupBoxResolucao.Controls.Add(txtSolucaoTec);
             groupBoxResolucao.Dock = DockStyle.Fill;
-            groupBoxResolucao.Location = new Point(0, 248);
+            groupBoxResolucao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBoxResolucao.Location = new Point(3, 257);
             groupBoxResolucao.Name = "groupBoxResolucao";
-            groupBoxResolucao.Size = new Size(776, 121);
+            groupBoxResolucao.Size = new Size(978, 304);
             groupBoxResolucao.TabIndex = 1;
             groupBoxResolucao.TabStop = false;
             groupBoxResolucao.Text = "Solução do Técnico";
             // 
-            // textBox1
+            // txtSolucaoTec
             // 
-            textBox1.BackColor = SystemColors.ButtonHighlight;
-            textBox1.Location = new Point(10, 22);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ScrollBars = ScrollBars.Vertical;
-            textBox1.Size = new Size(751, 93);
-            textBox1.TabIndex = 1;
+            txtSolucaoTec.Anchor = AnchorStyles.Top;
+            txtSolucaoTec.BackColor = SystemColors.ButtonHighlight;
+            txtSolucaoTec.Location = new Point(104, 42);
+            txtSolucaoTec.Multiline = true;
+            txtSolucaoTec.Name = "txtSolucaoTec";
+            txtSolucaoTec.ScrollBars = ScrollBars.Vertical;
+            txtSolucaoTec.Size = new Size(761, 255);
+            txtSolucaoTec.TabIndex = 1;
             // 
-            // tableLayoutPanel1
+            // tlpDetalhes
             // 
-            tableLayoutPanel1.BackColor = Color.LightSteelBlue;
-            tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(panelPrincipal, 1, 1);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 40.47619F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 59.52381F));
-            tableLayoutPanel1.Size = new Size(800, 450);
-            tableLayoutPanel1.TabIndex = 2;
-            // 
-            // panelPrincipal
-            // 
-            panelPrincipal.Controls.Add(groupBoxResolucao);
-            panelPrincipal.Controls.Add(groupBoxDetalhes);
-            panelPrincipal.Controls.Add(panelBotoes);
-            panelPrincipal.Dock = DockStyle.Fill;
-            panelPrincipal.Location = new Point(12, 19);
-            panelPrincipal.Name = "panelPrincipal";
-            panelPrincipal.Size = new Size(776, 402);
-            panelPrincipal.TabIndex = 3;
+            tlpDetalhes.BackColor = Color.LightSteelBlue;
+            tlpDetalhes.ColumnCount = 1;
+            tlpDetalhes.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tlpDetalhes.Controls.Add(groupBoxDetalhes, 0, 0);
+            tlpDetalhes.Controls.Add(groupBoxResolucao, 0, 1);
+            tlpDetalhes.Controls.Add(panelBotoes, 0, 2);
+            tlpDetalhes.Dock = DockStyle.Fill;
+            tlpDetalhes.Location = new Point(0, 24);
+            tlpDetalhes.Name = "tlpDetalhes";
+            tlpDetalhes.RowCount = 4;
+            tlpDetalhes.RowStyles.Add(new RowStyle());
+            tlpDetalhes.RowStyles.Add(new RowStyle(SizeType.Percent, 70F));
+            tlpDetalhes.RowStyles.Add(new RowStyle());
+            tlpDetalhes.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
+            tlpDetalhes.Size = new Size(984, 737);
+            tlpDetalhes.TabIndex = 2;
             // 
             // panelBotoes
             // 
+            panelBotoes.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             panelBotoes.BackColor = Color.LightSteelBlue;
-            panelBotoes.Controls.Add(button1);
-            panelBotoes.Controls.Add(button2);
-            panelBotoes.Dock = DockStyle.Bottom;
-            panelBotoes.Location = new Point(0, 369);
+            panelBotoes.Controls.Add(btnSalvar);
+            panelBotoes.Controls.Add(btnFinalizar);
+            panelBotoes.Location = new Point(3, 567);
             panelBotoes.Name = "panelBotoes";
-            panelBotoes.Size = new Size(776, 33);
+            panelBotoes.Size = new Size(978, 33);
             panelBotoes.TabIndex = 0;
             // 
-            // button1
+            // btnSalvar
             // 
-            button1.BackColor = Color.CornflowerBlue;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(510, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(110, 23);
-            button1.TabIndex = 5;
-            button1.Text = "Salvar Solução";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
+            btnSalvar.BackColor = Color.MidnightBlue;
+            btnSalvar.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 25);
+            btnSalvar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 64);
+            btnSalvar.FlatStyle = FlatStyle.Flat;
+            btnSalvar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalvar.ForeColor = SystemColors.Control;
+            btnSalvar.Location = new Point(510, 3);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(110, 23);
+            btnSalvar.TabIndex = 5;
+            btnSalvar.Text = "Salvar Solução";
+            btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Click += button1_Click_1;
             // 
-            // button2
+            // btnFinalizar
             // 
-            button2.BackColor = Color.MidnightBlue;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(630, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(134, 23);
-            button2.TabIndex = 4;
-            button2.Text = "Finalizar Chamado";
-            button2.UseVisualStyleBackColor = false;
+            btnFinalizar.BackColor = Color.Green;
+            btnFinalizar.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 30, 0);
+            btnFinalizar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 64, 0);
+            btnFinalizar.FlatStyle = FlatStyle.Flat;
+            btnFinalizar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnFinalizar.ForeColor = SystemColors.Control;
+            btnFinalizar.Location = new Point(630, 3);
+            btnFinalizar.Name = "btnFinalizar";
+            btnFinalizar.Size = new Size(134, 23);
+            btnFinalizar.TabIndex = 4;
+            btnFinalizar.Text = "Finalizar Chamado";
+            btnFinalizar.UseVisualStyleBackColor = false;
             // 
-            // frmTelaPrincipal
+            // menuStripDetalhes
+            // 
+            menuStripDetalhes.BackColor = Color.LightSteelBlue;
+            menuStripDetalhes.Items.AddRange(new ToolStripItem[] { stripUsuarioDetalhes, stripSobreDetalhes, stripManualDetalhes });
+            menuStripDetalhes.Location = new Point(0, 0);
+            menuStripDetalhes.Name = "menuStripDetalhes";
+            menuStripDetalhes.Size = new Size(984, 24);
+            menuStripDetalhes.TabIndex = 3;
+            menuStripDetalhes.Text = "menuStrip1";
+            // 
+            // stripUsuarioDetalhes
+            // 
+            stripUsuarioDetalhes.DropDownItems.AddRange(new ToolStripItem[] { stripLogoutDetalhes });
+            stripUsuarioDetalhes.Name = "stripUsuarioDetalhes";
+            stripUsuarioDetalhes.Size = new Size(59, 20);
+            stripUsuarioDetalhes.Text = "Usuário";
+            // 
+            // stripLogoutDetalhes
+            // 
+            stripLogoutDetalhes.Name = "stripLogoutDetalhes";
+            stripLogoutDetalhes.Size = new Size(144, 22);
+            stripLogoutDetalhes.Text = "Fazer LogOut";
+            // 
+            // stripSobreDetalhes
+            // 
+            stripSobreDetalhes.DropDownItems.AddRange(new ToolStripItem[] { stripSobreHDetalhes });
+            stripSobreDetalhes.Name = "stripSobreDetalhes";
+            stripSobreDetalhes.Size = new Size(49, 20);
+            stripSobreDetalhes.Text = "Sobre";
+            // 
+            // stripSobreHDetalhes
+            // 
+            stripSobreHDetalhes.Name = "stripSobreHDetalhes";
+            stripSobreHDetalhes.Size = new Size(161, 22);
+            stripSobreHDetalhes.Text = "Sobre a HelpBox";
+            // 
+            // stripManualDetalhes
+            // 
+            stripManualDetalhes.DropDownItems.AddRange(new ToolStripItem[] { stripMSistemaDetalhes });
+            stripManualDetalhes.Name = "stripManualDetalhes";
+            stripManualDetalhes.Size = new Size(59, 20);
+            stripManualDetalhes.Text = "Manual";
+            // 
+            // stripMSistemaDetalhes
+            // 
+            stripMSistemaDetalhes.Name = "stripMSistemaDetalhes";
+            stripMSistemaDetalhes.Size = new Size(175, 22);
+            stripMSistemaDetalhes.Text = "Manual do Sistema";
+            // 
+            // frmDetalhesChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(tableLayoutPanel1);
-            Name = "frmTelaPrincipal";
+            ClientSize = new Size(984, 761);
+            Controls.Add(tlpDetalhes);
+            Controls.Add(menuStripDetalhes);
+            MainMenuStrip = menuStripDetalhes;
+            MinimumSize = new Size(1000, 800);
+            Name = "frmDetalhesChamado";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Chamados.";
+            Text = "HelpBox - Chamados.";
             groupBoxDetalhes.ResumeLayout(false);
             groupBoxDetalhes.PerformLayout();
             groupBoxResolucao.ResumeLayout(false);
             groupBoxResolucao.PerformLayout();
-            tableLayoutPanel1.ResumeLayout(false);
-            panelPrincipal.ResumeLayout(false);
+            tlpDetalhes.ResumeLayout(false);
             panelBotoes.ResumeLayout(false);
+            menuStripDetalhes.ResumeLayout(false);
+            menuStripDetalhes.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private GroupBox groupBoxDetalhes;
         private TextBox txtAssunto;
-        private Label labelAssunto;
+        private Label lblAssunto;
         private TextBox txtInicioProb;
-        private Label labelProblema;
-        private Label labelCateg;
+        private Label lblProblema;
+        private Label lblCateg;
         private TextBox txtCategoria;
-        private TextBox textDescricao;
-        private Label labelDescricao;
-        private Label labelAbrangencia;
-        private Label labelFrequencia;
-        private Label labelImpacto;
+        private TextBox txtDescricao;
+        private Label lblDescricao;
+        private Label lblAbrangencia;
+        private Label lblFrequencia;
+        private Label lblImpacto;
         private TextBox txtAbrangencia;
         private TextBox txtFrequencia;
         private TextBox txtImpacto;
         private GroupBox groupBoxResolucao;
-        private TableLayoutPanel tableLayoutPanel1;
+        private TableLayoutPanel tlpDetalhes;
         private Panel panelBotoes;
-        private TextBox textBox1;
-        private Button button1;
-        private Button button2;
-        private Panel panelPrincipal;
+        private TextBox txtSolucaoTec;
+        private Button btnSalvar;
+        private Button btnFinalizar;
         private Label labelSolucaoIA;
         private TextBox txtSolucaoIA;
+        private MenuStrip menuStripDetalhes;
+        private ToolStripMenuItem stripUsuarioDetalhes;
+        private ToolStripMenuItem stripLogoutDetalhes;
+        private ToolStripMenuItem stripSobreDetalhes;
+        private ToolStripMenuItem stripSobreHDetalhes;
+        private ToolStripMenuItem stripManualDetalhes;
+        private ToolStripMenuItem stripMSistemaDetalhes;
     }
 }

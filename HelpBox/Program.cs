@@ -13,5 +13,5 @@ namespace HelpBox
             ApplicationConfiguration.Initialize();
             Application.Run(new frmTelaInicial());
         }
-    }
+}
 }

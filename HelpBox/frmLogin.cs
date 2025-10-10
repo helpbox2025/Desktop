@@ -19,25 +19,25 @@ namespace HelpBox
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            // Define a mensagem e o t√≠tulo da caixa de di√°logo
+            // Define a mensagem e o tÌtulo da caixa de di·logo
             string mensagem = "Deseja realmente sair?";
-            string titulo = "Confirma√ß√£o de Sa√≠da";
+            string titulo = "ConfirmaÁ„o de SaÌda";
 
-            // Define os bot√µes que a caixa ter√° (Sim e N√£o) e um √≠cone de pergunta
+            // Define os botıes que a caixa ter· (Sim e N„o) e um Ìcone de pergunta
             MessageBoxButtons botoes = MessageBoxButtons.YesNo;
             MessageBoxIcon icone = MessageBoxIcon.Question;
 
-            // Mostra a caixa de di√°logo e guarda o resultado do clique do usu√°rio
+            // Mostra a caixa de di·logo e guarda o resultado do clique do usu·rio
             DialogResult resultado = MessageBox.Show(mensagem, titulo, botoes, icone);
 
-            // verifica  se o bot√£o clicado pelo usu√°rio foi o "Sim"
+            // verifica  se o bot„o clicado pelo usu·rio foi o "Sim"
             if (resultado == DialogResult.Yes)
             {
-            // Se o usu√°rio clicou em "Sim", fecha td
+            // Se o usu·rio clicou em "Sim", fecha td
                 Application.Exit();
             }
-            // Se o usu√°rio clicou em "N√£o", o c√≥digo dentro do 'if' √© ignorado, 
-            // o m√©todo termina, e nada acontece,.
+            // Se o usu·rio clicou em "N„o", o cÛdigo dentro do 'if' È ignorado, 
+            // o mÈtodo termina, e nada acontece,.
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
