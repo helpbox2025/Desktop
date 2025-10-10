@@ -1,0 +1,82 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\GAMER\\source\\repos\\HelpBox\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|frmLogin\\HelpBox.csproj|C:\\Users\\GAMER\\source\\repos\\HelpBox\\frmlogin\\frmtelainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|frmLogin\\HelpBox.csproj|solutionrelative:frmlogin\\frmtelainicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|frmLogin\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpbox\\frmlogin\\frmtelasolucao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|frmLogin\\HelpBox.csproj|solutionrelative:frmlogin\\frmtelasolucao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|frmLogin\\HelpBox.csproj|C:\\Users\\GAMER\\source\\repos\\HelpBox\\frmlogin\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|frmLogin\\HelpBox.csproj|solutionrelative:frmlogin\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|frmLogin\\HelpBox.csproj|C:\\Users\\GAMER\\source\\repos\\HelpBox\\frmlogin\\frmdetalheschamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|frmLogin\\HelpBox.csproj|solutionrelative:frmlogin\\frmdetalheschamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmLogin.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBox\\frmLogin\\frmLogin.cs",
+              "RelativeDocumentMoniker": "frmLogin\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBox\\frmLogin\\frmLogin.cs [Projeto]",
+              "RelativeToolTip": "frmLogin\\frmLogin.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T01:46:15.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmTelaInicial.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBox\\frmLogin\\frmTelaInicial.cs",
+              "RelativeDocumentMoniker": "frmLogin\\frmTelaInicial.cs",
+              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBox\\frmLogin\\frmTelaInicial.cs [Projeto]",
+              "RelativeToolTip": "frmLogin\\frmTelaInicial.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T02:26:38.106Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmTelaSolucao.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBox\\frmLogin\\frmTelaSolucao.cs",
+              "RelativeDocumentMoniker": "frmLogin\\frmTelaSolucao.cs",
+              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBox\\frmLogin\\frmTelaSolucao.cs [Projeto]",
+              "RelativeToolTip": "frmLogin\\frmTelaSolucao.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T01:46:19.516Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmDetalhesChamado.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBox\\frmLogin\\frmDetalhesChamado.cs",
+              "RelativeDocumentMoniker": "frmLogin\\frmDetalhesChamado.cs",
+              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBox\\frmLogin\\frmDetalhesChamado.cs [Projeto]",
+              "RelativeToolTip": "frmLogin\\frmDetalhesChamado.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T01:46:20.579Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
