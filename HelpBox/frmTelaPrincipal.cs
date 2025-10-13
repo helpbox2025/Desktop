@@ -12,6 +12,11 @@ namespace HelpBox
 {
     public partial class frmTelaPrincipal : Form
     {
+        // Variáveis para controlar a animação do menu
+        private bool menuAberto = false; // Começa com o estado "fechado"
+        private int larguraMenuAberto = 280; // Largura do menu quando estiver aberto
+        private int larguraMenuFechado = 0; // Largura do menu quando estiver fechado
+        private int passoAnimacao = 30; // Velocidade do deslize em pixels
 
         public frmTelaPrincipal()
         {
@@ -22,6 +27,18 @@ namespace HelpBox
         {
             // Chama o nosso método para preencher a grade assim que a tela carregar
             CarregarDadosFicticios();
+
+            // --- MUDANÇAS PARA O MENU INICIAR ABERTO ---
+
+            // 1. Garante que o painel esquerdo NÃO comece colapsado/escondido.
+            this.splicontPrincipal.Panel1Collapsed = false;
+
+            // 2. Define a largura inicial do menu para a largura total de "aberto".
+            //    (Lembre-se que 'larguraMenuAberto' é a variável que definimos com o valor 280)
+            this.splicontPrincipal.SplitterDistance = this.larguraMenuAberto;
+
+            // 3. Define o estado inicial da nossa variável de controle como "aberto".
+            this.menuAberto = true;
         }
 
         private void CarregarDadosFicticios()
@@ -48,5 +65,67 @@ namespace HelpBox
             // Linha 5
             dgvChamados.Rows.Add("785321", "Software", "Login de novo funcionário não funciona", "Alta", "08/10/2025", "Aberto");
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            // Se o timer já estiver rodando a animação, não faz nada (evita cliques duplos)
+            if (timerMenu.Enabled)
+                return;
+
+            // Inverte o estado do menu (se estava fechado, agora está abrindo, e vice-versa)
+            menuAberto = !menuAberto;
+
+            // Se o menu for abrir, primeiro precisamos garantir que o painel está visível
+            if (menuAberto)
+            {
+                splicontPrincipal.Panel1Collapsed = false;
+            }
+
+            // Inicia o timer, que vai começar a executar a animação no evento Tick
+            timerMenu.Start();
+        }
+
+        private void timerMenu_Tick(object sender, EventArgs e)
+        {
+            // Usa o nome do seu SplitContainer: splicontPrincipal
+            if (menuAberto)
+            {
+                // --- LÓGICA PARA ABRIR O MENU ---
+                // Se a largura atual for menor que a largura desejada...
+                if (splicontPrincipal.SplitterDistance < larguraMenuAberto)
+                {
+                    // ...aumenta a largura em "passoAnimacao" pixels
+                    splicontPrincipal.SplitterDistance += passoAnimacao;
+                }
+                else
+                {
+                    // Se já atingiu ou passou da largura desejada, trava no alvo e para o timer
+                    splicontPrincipal.SplitterDistance = larguraMenuAberto;
+                    timerMenu.Stop();
+                }
+            }
+            else
+            {
+                // --- LÓGICA PARA FECHAR O MENU ---
+                // Se a largura atual for maior que a largura mínima...
+
+                // A MUDANÇA ESTÁ NESTA LINHA:
+                // Agora, ele verifica se o *próximo passo* da animação ainda será maior que o alvo.
+                if ((splicontPrincipal.SplitterDistance - passoAnimacao) > larguraMenuFechado)
+                {
+                    // ...diminui a largura em "passoAnimacao" pixels
+                    splicontPrincipal.SplitterDistance -= passoAnimacao;
+                }
+                else
+                {
+                    // Se já atingiu ou passou da largura mínima, trava no alvo, esconde o painel e para o timer
+                    splicontPrincipal.SplitterDistance = larguraMenuFechado;
+                    timerMenu.Stop();
+                    splicontPrincipal.Panel1Collapsed = true; // Esconde completamente no final
+                }
+            }
+        }
+
+
     }
 }

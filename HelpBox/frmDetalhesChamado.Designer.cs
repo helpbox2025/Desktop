@@ -350,7 +350,7 @@
             // 
             // menuStripDetalhes
             // 
-            menuStripDetalhes.BackColor = Color.LightSteelBlue;
+            menuStripDetalhes.BackColor = Color.SteelBlue;
             menuStripDetalhes.Items.AddRange(new ToolStripItem[] { stripUsuarioDetalhes, stripSobreDetalhes, stripManualDetalhes });
             menuStripDetalhes.Location = new Point(0, 0);
             menuStripDetalhes.Name = "menuStripDetalhes";

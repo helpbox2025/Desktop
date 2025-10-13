@@ -25,8 +25,6 @@ C:\Users\GAMER\source\repos\HelpBox\HelpBox\bin\Debug\net8.0-windows\HelpBox.dll
 C:\Users\GAMER\source\repos\HelpBox\HelpBox\bin\Debug\net8.0-windows\HelpBox.pdb
 C:\Users\GAMER\source\repos\HelpBox\HelpBox\obj\Debug\net8.0-windows\HelpBox.frmDetalhesChamado.resources
 C:\Users\GAMER\source\repos\HelpBox\HelpBox\obj\Debug\net8.0-windows\HelpBox.frmLogin.resources
-C:\Users\GAMER\source\repos\HelpBox\HelpBox\obj\Debug\net8.0-windows\HelpBox.frmTelaInicial.resources
-C:\Users\GAMER\source\repos\HelpBox\HelpBox\obj\Debug\net8.0-windows\HelpBox.frmTelaSolucao.resources
 C:\Users\GAMER\source\repos\HelpBox\HelpBox\obj\Debug\net8.0-windows\HelpBox.Properties.Resources.resources
 C:\Users\GAMER\source\repos\HelpBox\HelpBox\obj\Debug\net8.0-windows\HelpBox.csproj.GenerateResource.cache
 C:\Users\GAMER\source\repos\HelpBox\HelpBox\obj\Debug\net8.0-windows\HelpBox.GeneratedMSBuildEditorConfig.editorconfig
