@@ -39,6 +39,8 @@ namespace HelpBox
 
             // 3. Define o estado inicial da nossa variável de controle como "aberto".
             this.menuAberto = true;
+
+            tsmMenuLateral.BackColor = Color.DarkSlateGray;
         }
 
         private void CarregarDadosFicticios()
@@ -102,6 +104,7 @@ namespace HelpBox
                     // Se já atingiu ou passou da largura desejada, trava no alvo e para o timer
                     splicontPrincipal.SplitterDistance = larguraMenuAberto;
                     timerMenu.Stop();
+                    tsmMenuLateral.BackColor = Color.DarkSlateGray; // ADICIONADO: Pinta o fundo do botão para indicar que o menu está aberto.
                 }
             }
             else
@@ -109,7 +112,6 @@ namespace HelpBox
                 // --- LÓGICA PARA FECHAR O MENU ---
                 // Se a largura atual for maior que a largura mínima...
 
-                // A MUDANÇA ESTÁ NESTA LINHA:
                 // Agora, ele verifica se o *próximo passo* da animação ainda será maior que o alvo.
                 if ((splicontPrincipal.SplitterDistance - passoAnimacao) > larguraMenuFechado)
                 {
@@ -122,6 +124,7 @@ namespace HelpBox
                     splicontPrincipal.SplitterDistance = larguraMenuFechado;
                     timerMenu.Stop();
                     splicontPrincipal.Panel1Collapsed = true; // Esconde completamente no final
+                    tsmMenuLateral.BackColor = Color.Transparent; // ADICIONADO: Limpa a cor de fundo para indicar que o menu está fechado.
                 }
             }
         }

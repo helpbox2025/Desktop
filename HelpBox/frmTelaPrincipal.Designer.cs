@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             splicontPrincipal = new SplitContainer();
             tlpMenuLateral = new TableLayoutPanel();
             picFotoUser = new PictureBox();
@@ -59,6 +59,7 @@
             stripManualPrincipal = new ToolStripMenuItem();
             stripMSistemaPrincipal = new ToolStripMenuItem();
             timerMenu = new System.Windows.Forms.Timer(components);
+            lblPerfil = new Label();
             ((System.ComponentModel.ISupportInitialize)splicontPrincipal).BeginInit();
             splicontPrincipal.Panel1.SuspendLayout();
             splicontPrincipal.Panel2.SuspendLayout();
@@ -96,11 +97,11 @@
             tlpMenuLateral.BackColor = Color.SteelBlue;
             tlpMenuLateral.ColumnCount = 1;
             tlpMenuLateral.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tlpMenuLateral.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tlpMenuLateral.Controls.Add(picFotoUser, 0, 0);
-            tlpMenuLateral.Controls.Add(lblBoasVindas, 0, 1);
-            tlpMenuLateral.Controls.Add(lblEmail, 0, 2);
-            tlpMenuLateral.Controls.Add(btnLogOut, 0, 3);
+            tlpMenuLateral.Controls.Add(lblPerfil, 0, 0);
+            tlpMenuLateral.Controls.Add(picFotoUser, 0, 1);
+            tlpMenuLateral.Controls.Add(lblBoasVindas, 0, 2);
+            tlpMenuLateral.Controls.Add(lblEmail, 0, 3);
+            tlpMenuLateral.Controls.Add(btnLogOut, 0, 4);
             tlpMenuLateral.Dock = DockStyle.Fill;
             tlpMenuLateral.Location = new Point(0, 0);
             tlpMenuLateral.Name = "tlpMenuLateral";
@@ -109,7 +110,7 @@
             tlpMenuLateral.RowStyles.Add(new RowStyle());
             tlpMenuLateral.RowStyles.Add(new RowStyle());
             tlpMenuLateral.RowStyles.Add(new RowStyle());
-            tlpMenuLateral.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tlpMenuLateral.RowStyles.Add(new RowStyle());
             tlpMenuLateral.Size = new Size(200, 426);
             tlpMenuLateral.TabIndex = 0;
             // 
@@ -117,7 +118,7 @@
             // 
             picFotoUser.Anchor = AnchorStyles.None;
             picFotoUser.Image = Properties.Resources.icon_user;
-            picFotoUser.Location = new Point(39, 3);
+            picFotoUser.Location = new Point(39, 28);
             picFotoUser.Name = "picFotoUser";
             picFotoUser.Size = new Size(121, 88);
             picFotoUser.SizeMode = PictureBoxSizeMode.Zoom;
@@ -130,7 +131,7 @@
             lblBoasVindas.Dock = DockStyle.Fill;
             lblBoasVindas.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblBoasVindas.ForeColor = SystemColors.ControlLightLight;
-            lblBoasVindas.Location = new Point(3, 94);
+            lblBoasVindas.Location = new Point(3, 119);
             lblBoasVindas.Name = "lblBoasVindas";
             lblBoasVindas.Size = new Size(194, 15);
             lblBoasVindas.TabIndex = 1;
@@ -143,7 +144,7 @@
             lblEmail.Dock = DockStyle.Fill;
             lblEmail.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblEmail.ForeColor = SystemColors.ControlLightLight;
-            lblEmail.Location = new Point(3, 109);
+            lblEmail.Location = new Point(3, 134);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(194, 15);
             lblEmail.TabIndex = 2;
@@ -194,7 +195,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.LightSteelBlue;
+            pictureBox1.BackColor = Color.SteelBlue;
             pictureBox1.Image = Properties.Resources.helpbox_removebg_preview3;
             pictureBox1.Location = new Point(-4, -19);
             pictureBox1.Name = "pictureBox1";
@@ -210,24 +211,24 @@
             dgvChamados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvChamados.BackgroundColor = Color.LightSteelBlue;
             dgvChamados.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.SteelBlue;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvChamados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.SteelBlue;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle7.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dgvChamados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dgvChamados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvChamados.Columns.AddRange(new DataGridViewColumn[] { ColunaIdCham, ColunaCategoria, ColunaAssunto, ColunaPrioridade, ColunaData, ColunaStatus, ColunaSolucionar, ColunaDetalhes });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.Azure;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvChamados.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.Azure;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            dgvChamados.DefaultCellStyle = dataGridViewCellStyle8;
             dgvChamados.Dock = DockStyle.Fill;
             dgvChamados.EnableHeadersVisualStyles = false;
             dgvChamados.GridColor = SystemColors.GrayText;
@@ -376,6 +377,18 @@
             timerMenu.Interval = 10;
             timerMenu.Tick += timerMenu_Tick;
             // 
+            // lblPerfil
+            // 
+            lblPerfil.Anchor = AnchorStyles.Top;
+            lblPerfil.AutoSize = true;
+            lblPerfil.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPerfil.ForeColor = SystemColors.ControlLightLight;
+            lblPerfil.Location = new Point(71, 0);
+            lblPerfil.Name = "lblPerfil";
+            lblPerfil.Size = new Size(58, 25);
+            lblPerfil.TabIndex = 2;
+            lblPerfil.Text = "Perfil";
+            // 
             // frmTelaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -386,7 +399,7 @@
             Controls.Add(menuStripPrincipal);
             MainMenuStrip = menuStripPrincipal;
             Name = "frmTelaPrincipal";
-            Text = "frmTelaPrincipal";
+            Text = "HelpBox - Tela Inicial.";
             WindowState = FormWindowState.Maximized;
             Load += frmTelaPrincipal_Load;
             splicontPrincipal.Panel1.ResumeLayout(false);
@@ -436,5 +449,6 @@
         private ToolStripMenuItem stripMSistemaPrincipal;
         private ToolStripMenuItem tsmMenuLateral;
         private System.Windows.Forms.Timer timerMenu;
+        private Label lblPerfil;
     }
 }
