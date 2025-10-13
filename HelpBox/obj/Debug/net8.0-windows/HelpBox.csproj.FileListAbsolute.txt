@@ -39,3 +39,4 @@ C:\Users\GAMER\source\repos\HelpBox\HelpBox\obj\Debug\net8.0-windows\HelpBox.pdb
 C:\Users\GAMER\source\repos\HelpBox\HelpBox\obj\Debug\net8.0-windows\HelpBox.genruntimeconfig.cache
 C:\Users\GAMER\source\repos\HelpBox\HelpBox\obj\Debug\net8.0-windows\ref\HelpBox.dll
 C:\Users\GAMER\source\repos\HelpBox\HelpBox\obj\Debug\net8.0-windows\HelpBox.sourcelink.json
+C:\Users\GAMER\source\repos\HelpBox\HelpBox\obj\Debug\net8.0-windows\HelpBox.frmTelaPrincipal.resources

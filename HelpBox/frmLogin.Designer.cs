@@ -188,7 +188,6 @@
             ClientSize = new Size(800, 450);
             Controls.Add(tlpLogin);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
             MinimumSize = new Size(816, 489);
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
