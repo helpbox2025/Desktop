@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             splicontPrincipal = new SplitContainer();
             tlpMenuLateral = new TableLayoutPanel();
+            lblPerfil = new Label();
             picFotoUser = new PictureBox();
             lblBoasVindas = new Label();
             lblEmail = new Label();
@@ -59,7 +60,6 @@
             stripManualPrincipal = new ToolStripMenuItem();
             stripMSistemaPrincipal = new ToolStripMenuItem();
             timerMenu = new System.Windows.Forms.Timer(components);
-            lblPerfil = new Label();
             ((System.ComponentModel.ISupportInitialize)splicontPrincipal).BeginInit();
             splicontPrincipal.Panel1.SuspendLayout();
             splicontPrincipal.Panel2.SuspendLayout();
@@ -88,7 +88,7 @@
             // splicontPrincipal.Panel2
             // 
             splicontPrincipal.Panel2.Controls.Add(tlpConteudo);
-            splicontPrincipal.Size = new Size(800, 426);
+            splicontPrincipal.Size = new Size(984, 663);
             splicontPrincipal.SplitterDistance = 200;
             splicontPrincipal.TabIndex = 0;
             // 
@@ -111,8 +111,20 @@
             tlpMenuLateral.RowStyles.Add(new RowStyle());
             tlpMenuLateral.RowStyles.Add(new RowStyle());
             tlpMenuLateral.RowStyles.Add(new RowStyle());
-            tlpMenuLateral.Size = new Size(200, 426);
+            tlpMenuLateral.Size = new Size(200, 663);
             tlpMenuLateral.TabIndex = 0;
+            // 
+            // lblPerfil
+            // 
+            lblPerfil.Anchor = AnchorStyles.Top;
+            lblPerfil.AutoSize = true;
+            lblPerfil.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPerfil.ForeColor = SystemColors.ControlLightLight;
+            lblPerfil.Location = new Point(71, 0);
+            lblPerfil.Name = "lblPerfil";
+            lblPerfil.Size = new Size(58, 25);
+            lblPerfil.TabIndex = 2;
+            lblPerfil.Text = "Perfil";
             // 
             // picFotoUser
             // 
@@ -160,7 +172,7 @@
             btnLogOut.FlatStyle = FlatStyle.Flat;
             btnLogOut.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogOut.ForeColor = SystemColors.ControlLightLight;
-            btnLogOut.Location = new Point(95, 388);
+            btnLogOut.Location = new Point(95, 625);
             btnLogOut.Name = "btnLogOut";
             btnLogOut.Size = new Size(102, 35);
             btnLogOut.TabIndex = 3;
@@ -181,7 +193,7 @@
             tlpConteudo.RowStyles.Add(new RowStyle(SizeType.Absolute, 110F));
             tlpConteudo.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tlpConteudo.RowStyles.Add(new RowStyle());
-            tlpConteudo.Size = new Size(596, 426);
+            tlpConteudo.Size = new Size(780, 663);
             tlpConteudo.TabIndex = 0;
             // 
             // panelLogo
@@ -190,14 +202,15 @@
             panelLogo.Dock = DockStyle.Fill;
             panelLogo.Location = new Point(3, 3);
             panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(590, 104);
+            panelLogo.Size = new Size(774, 104);
             panelLogo.TabIndex = 0;
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.SteelBlue;
+            pictureBox1.Anchor = AnchorStyles.Top;
+            pictureBox1.BackColor = Color.LightSteelBlue;
             pictureBox1.Image = Properties.Resources.helpbox_removebg_preview3;
-            pictureBox1.Location = new Point(-4, -19);
+            pictureBox1.Location = new Point(88, -19);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(600, 130);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -211,24 +224,24 @@
             dgvChamados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvChamados.BackgroundColor = Color.LightSteelBlue;
             dgvChamados.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.SteelBlue;
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle7.ForeColor = SystemColors.Window;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dgvChamados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.SteelBlue;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvChamados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvChamados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvChamados.Columns.AddRange(new DataGridViewColumn[] { ColunaIdCham, ColunaCategoria, ColunaAssunto, ColunaPrioridade, ColunaData, ColunaStatus, ColunaSolucionar, ColunaDetalhes });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.Azure;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            dgvChamados.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.Azure;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvChamados.DefaultCellStyle = dataGridViewCellStyle2;
             dgvChamados.Dock = DockStyle.Fill;
             dgvChamados.EnableHeadersVisualStyles = false;
             dgvChamados.GridColor = SystemColors.GrayText;
@@ -237,7 +250,7 @@
             dgvChamados.ReadOnly = true;
             dgvChamados.RowHeadersVisible = false;
             dgvChamados.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvChamados.Size = new Size(590, 269);
+            dgvChamados.Size = new Size(774, 506);
             dgvChamados.TabIndex = 1;
             // 
             // ColunaIdCham
@@ -301,7 +314,7 @@
             btnManual.FlatStyle = FlatStyle.Flat;
             btnManual.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnManual.ForeColor = SystemColors.ControlLightLight;
-            btnManual.Location = new Point(450, 388);
+            btnManual.Location = new Point(634, 625);
             btnManual.Name = "btnManual";
             btnManual.Size = new Size(143, 35);
             btnManual.TabIndex = 1;
@@ -314,14 +327,14 @@
             menuStripPrincipal.Items.AddRange(new ToolStripItem[] { tsmMenuLateral, stripUsuarioPrincipal, stripSobrePrincipal, stripManualPrincipal });
             menuStripPrincipal.Location = new Point(0, 0);
             menuStripPrincipal.Name = "menuStripPrincipal";
-            menuStripPrincipal.Size = new Size(800, 24);
+            menuStripPrincipal.Size = new Size(984, 24);
             menuStripPrincipal.TabIndex = 1;
             menuStripPrincipal.Text = "menuStrip1";
             // 
             // tsmMenuLateral
             // 
             tsmMenuLateral.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            tsmMenuLateral.ForeColor = SystemColors.ActiveCaptionText;
+            tsmMenuLateral.ForeColor = SystemColors.Control;
             tsmMenuLateral.Name = "tsmMenuLateral";
             tsmMenuLateral.Size = new Size(31, 20);
             tsmMenuLateral.Text = "☰";
@@ -330,38 +343,40 @@
             // stripUsuarioPrincipal
             // 
             stripUsuarioPrincipal.DropDownItems.AddRange(new ToolStripItem[] { stripLogoutPrincipal });
-            stripUsuarioPrincipal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            stripUsuarioPrincipal.ForeColor = SystemColors.ActiveCaptionText;
+            stripUsuarioPrincipal.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            stripUsuarioPrincipal.ForeColor = SystemColors.ControlLightLight;
+            stripUsuarioPrincipal.ImageTransparentColor = Color.Transparent;
             stripUsuarioPrincipal.Name = "stripUsuarioPrincipal";
-            stripUsuarioPrincipal.Size = new Size(59, 20);
+            stripUsuarioPrincipal.Size = new Size(61, 20);
             stripUsuarioPrincipal.Text = "Usuario";
             // 
             // stripLogoutPrincipal
             // 
             stripLogoutPrincipal.Name = "stripLogoutPrincipal";
-            stripLogoutPrincipal.Size = new Size(144, 22);
+            stripLogoutPrincipal.Size = new Size(148, 22);
             stripLogoutPrincipal.Text = "Fazer LogOut";
             // 
             // stripSobrePrincipal
             // 
             stripSobrePrincipal.DropDownItems.AddRange(new ToolStripItem[] { stripSobreHPrincipal });
-            stripSobrePrincipal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            stripSobrePrincipal.ForeColor = SystemColors.ActiveCaptionText;
+            stripSobrePrincipal.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            stripSobrePrincipal.ForeColor = SystemColors.ButtonHighlight;
             stripSobrePrincipal.Name = "stripSobrePrincipal";
-            stripSobrePrincipal.Size = new Size(49, 20);
+            stripSobrePrincipal.Size = new Size(52, 20);
             stripSobrePrincipal.Text = "Sobre";
             // 
             // stripSobreHPrincipal
             // 
             stripSobreHPrincipal.Name = "stripSobreHPrincipal";
-            stripSobreHPrincipal.Size = new Size(161, 22);
+            stripSobreHPrincipal.Size = new Size(167, 22);
             stripSobreHPrincipal.Text = "Sobre a HelpBox";
+            stripSobreHPrincipal.Click += stripSobreHPrincipal_Click;
             // 
             // stripManualPrincipal
             // 
             stripManualPrincipal.DropDownItems.AddRange(new ToolStripItem[] { stripMSistemaPrincipal });
-            stripManualPrincipal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            stripManualPrincipal.ForeColor = SystemColors.ActiveCaptionText;
+            stripManualPrincipal.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            stripManualPrincipal.ForeColor = SystemColors.ButtonHighlight;
             stripManualPrincipal.Name = "stripManualPrincipal";
             stripManualPrincipal.Size = new Size(59, 20);
             stripManualPrincipal.Text = "Manual";
@@ -369,7 +384,7 @@
             // stripMSistemaPrincipal
             // 
             stripMSistemaPrincipal.Name = "stripMSistemaPrincipal";
-            stripMSistemaPrincipal.Size = new Size(175, 22);
+            stripMSistemaPrincipal.Size = new Size(178, 22);
             stripMSistemaPrincipal.Text = "Manual do Sistema";
             // 
             // timerMenu
@@ -377,27 +392,16 @@
             timerMenu.Interval = 10;
             timerMenu.Tick += timerMenu_Tick;
             // 
-            // lblPerfil
-            // 
-            lblPerfil.Anchor = AnchorStyles.Top;
-            lblPerfil.AutoSize = true;
-            lblPerfil.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPerfil.ForeColor = SystemColors.ControlLightLight;
-            lblPerfil.Location = new Point(71, 0);
-            lblPerfil.Name = "lblPerfil";
-            lblPerfil.Size = new Size(58, 25);
-            lblPerfil.TabIndex = 2;
-            lblPerfil.Text = "Perfil";
-            // 
             // frmTelaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(984, 687);
             Controls.Add(splicontPrincipal);
             Controls.Add(menuStripPrincipal);
             MainMenuStrip = menuStripPrincipal;
+            MinimumSize = new Size(1000, 726);
             Name = "frmTelaPrincipal";
             Text = "HelpBox - Tela Inicial.";
             WindowState = FormWindowState.Maximized;

@@ -107,7 +107,7 @@
             // txtSolucaoIA
             // 
             txtSolucaoIA.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtSolucaoIA.BackColor = SystemColors.ButtonFace;
+            txtSolucaoIA.BackColor = SystemColors.ControlLight;
             txtSolucaoIA.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtSolucaoIA.Location = new Point(668, 132);
             txtSolucaoIA.Multiline = true;
@@ -120,7 +120,7 @@
             // txtAbrangencia
             // 
             txtAbrangencia.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtAbrangencia.BackColor = SystemColors.ButtonFace;
+            txtAbrangencia.BackColor = SystemColors.ControlLight;
             txtAbrangencia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtAbrangencia.Location = new Point(668, 61);
             txtAbrangencia.Name = "txtAbrangencia";
@@ -130,6 +130,7 @@
             // 
             // txtFrequencia
             // 
+            txtFrequencia.BackColor = SystemColors.ControlLight;
             txtFrequencia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtFrequencia.Location = new Point(142, 211);
             txtFrequencia.Name = "txtFrequencia";
@@ -139,6 +140,7 @@
             // 
             // txtImpacto
             // 
+            txtImpacto.BackColor = SystemColors.ControlLight;
             txtImpacto.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtImpacto.Location = new Point(142, 182);
             txtImpacto.Name = "txtImpacto";
@@ -180,8 +182,9 @@
             // txtInicioProb
             // 
             txtInicioProb.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtInicioProb.BackColor = SystemColors.ButtonFace;
+            txtInicioProb.BackColor = SystemColors.ControlLight;
             txtInicioProb.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtInicioProb.ForeColor = SystemColors.WindowText;
             txtInicioProb.Location = new Point(701, 93);
             txtInicioProb.Name = "txtInicioProb";
             txtInicioProb.ReadOnly = true;
@@ -213,7 +216,7 @@
             // txtCategoria
             // 
             txtCategoria.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtCategoria.BackColor = SystemColors.ButtonFace;
+            txtCategoria.BackColor = SystemColors.ControlLight;
             txtCategoria.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCategoria.Location = new Point(668, 31);
             txtCategoria.Name = "txtCategoria";
@@ -223,7 +226,7 @@
             // 
             // txtDescricao
             // 
-            txtDescricao.BackColor = SystemColors.ButtonFace;
+            txtDescricao.BackColor = SystemColors.ControlLight;
             txtDescricao.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtDescricao.Location = new Point(142, 60);
             txtDescricao.Multiline = true;
@@ -246,7 +249,7 @@
             // 
             // txtAssunto
             // 
-            txtAssunto.BackColor = SystemColors.ButtonFace;
+            txtAssunto.BackColor = SystemColors.ControlLight;
             txtAssunto.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtAssunto.Location = new Point(142, 31);
             txtAssunto.Name = "txtAssunto";
@@ -271,7 +274,7 @@
             groupBoxResolucao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBoxResolucao.Location = new Point(3, 257);
             groupBoxResolucao.Name = "groupBoxResolucao";
-            groupBoxResolucao.Size = new Size(978, 304);
+            groupBoxResolucao.Size = new Size(978, 253);
             groupBoxResolucao.TabIndex = 1;
             groupBoxResolucao.TabStop = false;
             groupBoxResolucao.Text = "Solução do Técnico";
@@ -280,11 +283,11 @@
             // 
             txtSolucaoTec.Anchor = AnchorStyles.Top;
             txtSolucaoTec.BackColor = SystemColors.ButtonHighlight;
-            txtSolucaoTec.Location = new Point(104, 42);
+            txtSolucaoTec.Location = new Point(104, 40);
             txtSolucaoTec.Multiline = true;
             txtSolucaoTec.Name = "txtSolucaoTec";
             txtSolucaoTec.ScrollBars = ScrollBars.Vertical;
-            txtSolucaoTec.Size = new Size(761, 255);
+            txtSolucaoTec.Size = new Size(761, 205);
             txtSolucaoTec.TabIndex = 1;
             // 
             // tlpDetalhes
@@ -303,7 +306,7 @@
             tlpDetalhes.RowStyles.Add(new RowStyle(SizeType.Percent, 70F));
             tlpDetalhes.RowStyles.Add(new RowStyle());
             tlpDetalhes.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
-            tlpDetalhes.Size = new Size(984, 737);
+            tlpDetalhes.Size = new Size(984, 663);
             tlpDetalhes.TabIndex = 2;
             // 
             // panelBotoes
@@ -312,7 +315,7 @@
             panelBotoes.BackColor = Color.LightSteelBlue;
             panelBotoes.Controls.Add(btnSalvar);
             panelBotoes.Controls.Add(btnFinalizar);
-            panelBotoes.Location = new Point(3, 567);
+            panelBotoes.Location = new Point(3, 516);
             panelBotoes.Name = "panelBotoes";
             panelBotoes.Size = new Size(978, 33);
             panelBotoes.TabIndex = 0;
@@ -361,32 +364,39 @@
             // stripUsuarioDetalhes
             // 
             stripUsuarioDetalhes.DropDownItems.AddRange(new ToolStripItem[] { stripLogoutDetalhes });
+            stripUsuarioDetalhes.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            stripUsuarioDetalhes.ForeColor = SystemColors.ControlLightLight;
             stripUsuarioDetalhes.Name = "stripUsuarioDetalhes";
-            stripUsuarioDetalhes.Size = new Size(59, 20);
+            stripUsuarioDetalhes.Size = new Size(61, 20);
             stripUsuarioDetalhes.Text = "Usuário";
             // 
             // stripLogoutDetalhes
             // 
             stripLogoutDetalhes.Name = "stripLogoutDetalhes";
-            stripLogoutDetalhes.Size = new Size(144, 22);
+            stripLogoutDetalhes.Size = new Size(148, 22);
             stripLogoutDetalhes.Text = "Fazer LogOut";
             // 
             // stripSobreDetalhes
             // 
             stripSobreDetalhes.DropDownItems.AddRange(new ToolStripItem[] { stripSobreHDetalhes });
+            stripSobreDetalhes.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            stripSobreDetalhes.ForeColor = SystemColors.ControlLightLight;
             stripSobreDetalhes.Name = "stripSobreDetalhes";
-            stripSobreDetalhes.Size = new Size(49, 20);
+            stripSobreDetalhes.Size = new Size(52, 20);
             stripSobreDetalhes.Text = "Sobre";
             // 
             // stripSobreHDetalhes
             // 
             stripSobreHDetalhes.Name = "stripSobreHDetalhes";
-            stripSobreHDetalhes.Size = new Size(161, 22);
+            stripSobreHDetalhes.Size = new Size(167, 22);
             stripSobreHDetalhes.Text = "Sobre a HelpBox";
+            stripSobreHDetalhes.Click += stripSobreHDetalhes_Click;
             // 
             // stripManualDetalhes
             // 
             stripManualDetalhes.DropDownItems.AddRange(new ToolStripItem[] { stripMSistemaDetalhes });
+            stripManualDetalhes.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            stripManualDetalhes.ForeColor = SystemColors.ControlLightLight;
             stripManualDetalhes.Name = "stripManualDetalhes";
             stripManualDetalhes.Size = new Size(59, 20);
             stripManualDetalhes.Text = "Manual";
@@ -394,18 +404,18 @@
             // stripMSistemaDetalhes
             // 
             stripMSistemaDetalhes.Name = "stripMSistemaDetalhes";
-            stripMSistemaDetalhes.Size = new Size(175, 22);
+            stripMSistemaDetalhes.Size = new Size(178, 22);
             stripMSistemaDetalhes.Text = "Manual do Sistema";
             // 
             // frmDetalhesChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(984, 761);
+            ClientSize = new Size(984, 687);
             Controls.Add(tlpDetalhes);
             Controls.Add(menuStripDetalhes);
             MainMenuStrip = menuStripDetalhes;
-            MinimumSize = new Size(1000, 800);
+            MinimumSize = new Size(1000, 726);
             Name = "frmDetalhesChamado";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HelpBox - Chamados.";

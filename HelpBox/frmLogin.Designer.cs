@@ -58,7 +58,7 @@
             tlpLogin.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tlpLogin.RowStyles.Add(new RowStyle());
             tlpLogin.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tlpLogin.Size = new Size(800, 450);
+            tlpLogin.Size = new Size(984, 687);
             tlpLogin.TabIndex = 18;
             // 
             // pnLogin
@@ -72,7 +72,7 @@
             pnLogin.Controls.Add(lblDescricao);
             pnLogin.Controls.Add(lblBoasVindas);
             pnLogin.Controls.Add(pboxLogoHP);
-            pnLogin.Location = new Point(-8, -4);
+            pnLogin.Location = new Point(84, 114);
             pnLogin.MinimumSize = new Size(816, 459);
             pnLogin.Name = "pnLogin";
             pnLogin.Size = new Size(816, 459);
@@ -185,10 +185,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(984, 687);
             Controls.Add(tlpLogin);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MinimumSize = new Size(816, 489);
+            MinimumSize = new Size(1000, 726);
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HelpBox - Login.";
