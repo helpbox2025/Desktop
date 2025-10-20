@@ -42,7 +42,10 @@ namespace HelpBox
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Login feito com sucesso!");
+            // Isso "avisa" ao Program.cs que o login foi bem-sucedido
+            // e fecha o formulário de login automaticamente.
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

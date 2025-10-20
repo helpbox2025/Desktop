@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lab02M18\\source\\repos\\damascenagui\\HelpBoxDESKTOP\\HelpBox\\HelpBox.csproj": {}
+    "C:\\Users\\jucal\\Downloads\\HelpBox\\HelpBoxDESKTOP\\HelpBox\\HelpBox.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lab02M18\\source\\repos\\damascenagui\\HelpBoxDESKTOP\\HelpBox\\HelpBox.csproj": {
+    "C:\\Users\\jucal\\Downloads\\HelpBox\\HelpBoxDESKTOP\\HelpBox\\HelpBox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lab02M18\\source\\repos\\damascenagui\\HelpBoxDESKTOP\\HelpBox\\HelpBox.csproj",
+        "projectUniqueName": "C:\\Users\\jucal\\Downloads\\HelpBox\\HelpBoxDESKTOP\\HelpBox\\HelpBox.csproj",
         "projectName": "HelpBox",
-        "projectPath": "C:\\Users\\Lab02M18\\source\\repos\\damascenagui\\HelpBoxDESKTOP\\HelpBox\\HelpBox.csproj",
-        "packagesPath": "C:\\Users\\Lab02M18\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lab02M18\\source\\repos\\damascenagui\\HelpBoxDESKTOP\\HelpBox\\obj\\",
+        "projectPath": "C:\\Users\\jucal\\Downloads\\HelpBox\\HelpBoxDESKTOP\\HelpBox\\HelpBox.csproj",
+        "packagesPath": "C:\\Users\\jucal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jucal\\Downloads\\HelpBox\\HelpBoxDESKTOP\\HelpBox\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lab02M18\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jucal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

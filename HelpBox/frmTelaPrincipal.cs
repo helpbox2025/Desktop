@@ -140,5 +140,20 @@ namespace HelpBox
             // Mostra a caixa de mensagem com o botão OK e o ícone de Informação
             MessageBox.Show(mensagem, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void dgvChamados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            // Abre a tela de detalhes como um "Dialog"
+            frmDetalhesChamado telaDetalhes = new frmDetalhesChamado(); // (Passe o ID se precisar)
+
+            // O ShowDialog() PAUSA a Tela Principal
+            telaDetalhes.ShowDialog();
+
+            // Quando a telaDetalhes fechar (com this.Close()), 
+            // o código continua daqui.
+            // Você pode até atualizar sua tabela aqui, se quiser.
+        
+    }
     }
 }

@@ -24,7 +24,24 @@ namespace HelpBox
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            // --- 1. LÓGICA PARA SALVAR A SOLUÇÃO ---
+            // (Opcional, mas recomendado)
+            // Antes de fechar, você provavelmente quer salvar
+            // o que o técnico escreveu.
 
+            // Exemplo (adapte para os nomes dos seus componentes):
+            // string solucaoDoTecnico = txtSolucaoTecnico.Text;
+            // MeuBancoDeDados.SalvarSolucao(idDoChamado, solucaoDoTecnico);
+
+            // Mostra uma mensagem de sucesso
+            MessageBox.Show("Solução salva com sucesso!");
+
+
+            // --- 2. FECHAR A TELA ATUAL ---
+            // Este comando fecha a janela/formulário atual
+            // e automaticamente retorna o foco para a tela
+            // que a abriu (sua tela principal).
+            this.Close();
         }
 
         private void textDescricao_TextChanged(object sender, EventArgs e)
@@ -42,6 +59,15 @@ namespace HelpBox
 
             // Mostra a caixa de mensagem com o botão OK e o ícone de Informação
             MessageBox.Show(mensagem, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+
+            // Mostra uma mensagem de sucesso
+            MessageBox.Show("Chamado finalizado com sucesso!");
+            //Fecha a tela atual
+            this.Close();
         }
     }
 }
