@@ -78,8 +78,7 @@
             splicontPrincipal.Dock = DockStyle.Fill;
             splicontPrincipal.FixedPanel = FixedPanel.Panel1;
             splicontPrincipal.IsSplitterFixed = true;
-            splicontPrincipal.Location = new Point(0, 30);
-            splicontPrincipal.Margin = new Padding(3, 4, 3, 4);
+            splicontPrincipal.Location = new Point(0, 24);
             splicontPrincipal.Name = "splicontPrincipal";
             // 
             // splicontPrincipal.Panel1
@@ -89,9 +88,8 @@
             // splicontPrincipal.Panel2
             // 
             splicontPrincipal.Panel2.Controls.Add(tlpConteudo);
-            splicontPrincipal.Size = new Size(1125, 886);
-            splicontPrincipal.SplitterDistance = 229;
-            splicontPrincipal.SplitterWidth = 5;
+            splicontPrincipal.Size = new Size(984, 637);
+            splicontPrincipal.SplitterDistance = 200;
             splicontPrincipal.TabIndex = 0;
             // 
             // tlpMenuLateral
@@ -106,7 +104,6 @@
             tlpMenuLateral.Controls.Add(btnLogOut, 0, 4);
             tlpMenuLateral.Dock = DockStyle.Fill;
             tlpMenuLateral.Location = new Point(0, 0);
-            tlpMenuLateral.Margin = new Padding(3, 4, 3, 4);
             tlpMenuLateral.Name = "tlpMenuLateral";
             tlpMenuLateral.RowCount = 4;
             tlpMenuLateral.RowStyles.Add(new RowStyle());
@@ -114,8 +111,8 @@
             tlpMenuLateral.RowStyles.Add(new RowStyle());
             tlpMenuLateral.RowStyles.Add(new RowStyle());
             tlpMenuLateral.RowStyles.Add(new RowStyle());
-            tlpMenuLateral.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tlpMenuLateral.Size = new Size(229, 886);
+            tlpMenuLateral.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
+            tlpMenuLateral.Size = new Size(200, 637);
             tlpMenuLateral.TabIndex = 0;
             // 
             // lblPerfil
@@ -124,9 +121,9 @@
             lblPerfil.AutoSize = true;
             lblPerfil.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPerfil.ForeColor = SystemColors.ControlLightLight;
-            lblPerfil.Location = new Point(77, 0);
+            lblPerfil.Location = new Point(71, 0);
             lblPerfil.Name = "lblPerfil";
-            lblPerfil.Size = new Size(75, 32);
+            lblPerfil.Size = new Size(58, 25);
             lblPerfil.TabIndex = 2;
             lblPerfil.Text = "Perfil";
             // 
@@ -134,10 +131,9 @@
             // 
             picFotoUser.Anchor = AnchorStyles.None;
             picFotoUser.Image = Properties.Resources.icon_user;
-            picFotoUser.Location = new Point(45, 36);
-            picFotoUser.Margin = new Padding(3, 4, 3, 4);
+            picFotoUser.Location = new Point(39, 28);
             picFotoUser.Name = "picFotoUser";
-            picFotoUser.Size = new Size(138, 117);
+            picFotoUser.Size = new Size(121, 88);
             picFotoUser.SizeMode = PictureBoxSizeMode.Zoom;
             picFotoUser.TabIndex = 0;
             picFotoUser.TabStop = false;
@@ -148,9 +144,9 @@
             lblBoasVindas.Dock = DockStyle.Fill;
             lblBoasVindas.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblBoasVindas.ForeColor = SystemColors.ControlLightLight;
-            lblBoasVindas.Location = new Point(3, 157);
+            lblBoasVindas.Location = new Point(3, 119);
             lblBoasVindas.Name = "lblBoasVindas";
-            lblBoasVindas.Size = new Size(223, 20);
+            lblBoasVindas.Size = new Size(194, 15);
             lblBoasVindas.TabIndex = 1;
             lblBoasVindas.Text = "Olá, Técnico!";
             lblBoasVindas.TextAlign = ContentAlignment.MiddleCenter;
@@ -161,9 +157,9 @@
             lblEmail.Dock = DockStyle.Fill;
             lblEmail.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblEmail.ForeColor = SystemColors.ControlLightLight;
-            lblEmail.Location = new Point(3, 177);
+            lblEmail.Location = new Point(3, 134);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(223, 20);
+            lblEmail.Size = new Size(194, 15);
             lblEmail.TabIndex = 2;
             lblEmail.Text = "emailtest@helpbox.com";
             lblEmail.TextAlign = ContentAlignment.MiddleCenter;
@@ -177,13 +173,13 @@
             btnLogOut.FlatStyle = FlatStyle.Flat;
             btnLogOut.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogOut.ForeColor = SystemColors.ControlLightLight;
-            btnLogOut.Location = new Point(109, 835);
-            btnLogOut.Margin = new Padding(3, 4, 3, 4);
+            btnLogOut.Location = new Point(95, 599);
             btnLogOut.Name = "btnLogOut";
-            btnLogOut.Size = new Size(117, 47);
+            btnLogOut.Size = new Size(102, 35);
             btnLogOut.TabIndex = 3;
             btnLogOut.Text = "Fazer LogOut";
             btnLogOut.UseVisualStyleBackColor = false;
+            btnLogOut.Click += btnLogOut_Click;
             // 
             // tlpConteudo
             // 
@@ -194,23 +190,21 @@
             tlpConteudo.Controls.Add(btnManual, 0, 2);
             tlpConteudo.Dock = DockStyle.Fill;
             tlpConteudo.Location = new Point(0, 0);
-            tlpConteudo.Margin = new Padding(3, 4, 3, 4);
             tlpConteudo.Name = "tlpConteudo";
             tlpConteudo.RowCount = 3;
-            tlpConteudo.RowStyles.Add(new RowStyle(SizeType.Absolute, 147F));
+            tlpConteudo.RowStyles.Add(new RowStyle(SizeType.Absolute, 110F));
             tlpConteudo.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tlpConteudo.RowStyles.Add(new RowStyle());
-            tlpConteudo.Size = new Size(891, 886);
+            tlpConteudo.Size = new Size(780, 637);
             tlpConteudo.TabIndex = 0;
             // 
             // panelLogo
             // 
             panelLogo.Controls.Add(pictureBox1);
             panelLogo.Dock = DockStyle.Fill;
-            panelLogo.Location = new Point(3, 4);
-            panelLogo.Margin = new Padding(3, 4, 3, 4);
+            panelLogo.Location = new Point(3, 3);
             panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(885, 139);
+            panelLogo.Size = new Size(774, 104);
             panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -218,10 +212,9 @@
             pictureBox1.Anchor = AnchorStyles.Top;
             pictureBox1.BackColor = Color.LightSteelBlue;
             pictureBox1.Image = Properties.Resources.helpbox_removebg_preview3;
-            pictureBox1.Location = new Point(101, -25);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(88, -19);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(686, 173);
+            pictureBox1.Size = new Size(600, 130);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -254,14 +247,13 @@
             dgvChamados.Dock = DockStyle.Fill;
             dgvChamados.EnableHeadersVisualStyles = false;
             dgvChamados.GridColor = SystemColors.GrayText;
-            dgvChamados.Location = new Point(3, 151);
-            dgvChamados.Margin = new Padding(3, 4, 3, 4);
+            dgvChamados.Location = new Point(3, 113);
             dgvChamados.Name = "dgvChamados";
             dgvChamados.ReadOnly = true;
             dgvChamados.RowHeadersVisible = false;
             dgvChamados.RowHeadersWidth = 51;
             dgvChamados.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvChamados.Size = new Size(885, 676);
+            dgvChamados.Size = new Size(774, 480);
             dgvChamados.TabIndex = 1;
             dgvChamados.CellContentClick += dgvChamados_CellContentClick;
             // 
@@ -334,10 +326,9 @@
             btnManual.FlatStyle = FlatStyle.Flat;
             btnManual.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnManual.ForeColor = SystemColors.ControlLightLight;
-            btnManual.Location = new Point(725, 835);
-            btnManual.Margin = new Padding(3, 4, 3, 4);
+            btnManual.Location = new Point(634, 599);
             btnManual.Name = "btnManual";
-            btnManual.Size = new Size(163, 47);
+            btnManual.Size = new Size(143, 35);
             btnManual.TabIndex = 1;
             btnManual.Text = "Manual do Usuário";
             btnManual.UseVisualStyleBackColor = false;
@@ -349,8 +340,7 @@
             menuStripPrincipal.Items.AddRange(new ToolStripItem[] { tsmMenuLateral, stripUsuarioPrincipal, stripSobrePrincipal, stripManualPrincipal });
             menuStripPrincipal.Location = new Point(0, 0);
             menuStripPrincipal.Name = "menuStripPrincipal";
-            menuStripPrincipal.Padding = new Padding(7, 3, 0, 3);
-            menuStripPrincipal.Size = new Size(1125, 30);
+            menuStripPrincipal.Size = new Size(984, 24);
             menuStripPrincipal.TabIndex = 1;
             menuStripPrincipal.Text = "menuStrip1";
             // 
@@ -359,7 +349,7 @@
             tsmMenuLateral.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             tsmMenuLateral.ForeColor = SystemColors.Control;
             tsmMenuLateral.Name = "tsmMenuLateral";
-            tsmMenuLateral.Size = new Size(37, 24);
+            tsmMenuLateral.Size = new Size(31, 20);
             tsmMenuLateral.Text = "☰";
             tsmMenuLateral.Click += toolStripMenuItem1_Click;
             // 
@@ -370,14 +360,15 @@
             stripUsuarioPrincipal.ForeColor = SystemColors.ControlLightLight;
             stripUsuarioPrincipal.ImageTransparentColor = Color.Transparent;
             stripUsuarioPrincipal.Name = "stripUsuarioPrincipal";
-            stripUsuarioPrincipal.Size = new Size(77, 24);
+            stripUsuarioPrincipal.Size = new Size(61, 20);
             stripUsuarioPrincipal.Text = "Usuario";
             // 
             // stripLogoutPrincipal
             // 
             stripLogoutPrincipal.Name = "stripLogoutPrincipal";
-            stripLogoutPrincipal.Size = new Size(185, 26);
+            stripLogoutPrincipal.Size = new Size(180, 22);
             stripLogoutPrincipal.Text = "Fazer LogOut";
+            stripLogoutPrincipal.Click += stripLogoutPrincipal_Click;
             // 
             // stripSobrePrincipal
             // 
@@ -385,13 +376,13 @@
             stripSobrePrincipal.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             stripSobrePrincipal.ForeColor = SystemColors.ButtonHighlight;
             stripSobrePrincipal.Name = "stripSobrePrincipal";
-            stripSobrePrincipal.Size = new Size(63, 24);
+            stripSobrePrincipal.Size = new Size(52, 20);
             stripSobrePrincipal.Text = "Sobre";
             // 
             // stripSobreHPrincipal
             // 
             stripSobreHPrincipal.Name = "stripSobreHPrincipal";
-            stripSobreHPrincipal.Size = new Size(207, 26);
+            stripSobreHPrincipal.Size = new Size(167, 22);
             stripSobreHPrincipal.Text = "Sobre a HelpBox";
             stripSobreHPrincipal.Click += stripSobreHPrincipal_Click;
             // 
@@ -401,13 +392,13 @@
             stripManualPrincipal.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             stripManualPrincipal.ForeColor = SystemColors.ButtonHighlight;
             stripManualPrincipal.Name = "stripManualPrincipal";
-            stripManualPrincipal.Size = new Size(75, 24);
+            stripManualPrincipal.Size = new Size(59, 20);
             stripManualPrincipal.Text = "Manual";
             // 
             // stripMSistemaPrincipal
             // 
             stripMSistemaPrincipal.Name = "stripMSistemaPrincipal";
-            stripMSistemaPrincipal.Size = new Size(225, 26);
+            stripMSistemaPrincipal.Size = new Size(178, 22);
             stripMSistemaPrincipal.Text = "Manual do Sistema";
             // 
             // timerMenu
@@ -417,18 +408,18 @@
             // 
             // frmTelaPrincipal
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1125, 916);
+            ClientSize = new Size(984, 661);
             Controls.Add(splicontPrincipal);
             Controls.Add(menuStripPrincipal);
             MainMenuStrip = menuStripPrincipal;
-            Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(1140, 952);
+            MinimumSize = new Size(1000, 653);
             Name = "frmTelaPrincipal";
             Text = "HelpBox - Tela Inicial.";
             WindowState = FormWindowState.Maximized;
+            FormClosing += frmTelaPrincipal_FormClosing;
             Load += frmTelaPrincipal_Load;
             splicontPrincipal.Panel1.ResumeLayout(false);
             splicontPrincipal.Panel2.ResumeLayout(false);

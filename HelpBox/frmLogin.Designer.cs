@@ -117,6 +117,7 @@
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(235, 23);
             txtSenha.TabIndex = 15;
+            txtSenha.UseSystemPasswordChar = true;
             // 
             // txtUsuario
             // 

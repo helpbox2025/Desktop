@@ -70,7 +70,8 @@ namespace HelpBox
                     frmTelaPrincipal telaPrincipal = new frmTelaPrincipal(usuarioLogado);
                     this.Hide();
                     telaPrincipal.ShowDialog();
-                    Application.Exit(); // Fecha a aplicação quando a tela principal fechar
+                    txtSenha.Clear(); // ADICIONADO: Limpa o campo de senha ao retornar do logout.
+                    this.Show(); // Mostra o login dnv qnd fechar a TelaPrincipal
                 }
                 else
                 {

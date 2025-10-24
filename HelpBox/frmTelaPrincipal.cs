@@ -22,6 +22,7 @@ namespace HelpBox
         // Variável para guardar os dados do usuário que logou
         private Usuario usuarioLogado;
 
+        //------------------------------------------------------------------------
         // O CONSTRUTOR ESPECIAL que aceita um objeto Usuario
         public frmTelaPrincipal(Usuario usuario)
         {
@@ -36,7 +37,7 @@ namespace HelpBox
             // Chama o nosso método para preencher a grade assim que a tela carregar
             CarregarDadosFicticios();
 
-            // --- MUDANÇAS PARA O MENU INICIAR ABERTO ---
+            // ------------------- MUDANÇAS PARA O MENU INICIAR ABERTO -------------
 
             // 1. Garante que o painel esquerdo NÃO comece colapsado/escondido.
             this.splicontPrincipal.Panel1Collapsed = false;
@@ -49,6 +50,31 @@ namespace HelpBox
             this.menuAberto = true;
 
             tsmMenuLateral.BackColor = Color.DarkSlateGray;
+        }
+
+        private void ExecutarLogout()
+        {
+            string mensagem = "Deseja realmente deslogar?";
+            string titulo = "Confirmação de Logout";
+
+            // Define quais botões estarão disponíveis na caixa de mensagem. 
+            MessageBoxButtons botoes = MessageBoxButtons.YesNo;
+
+            // Define qual ícone será exibido na caixa de mensagem.
+            MessageBoxIcon icone = MessageBoxIcon.Question;
+
+            // Ele então RETORNA um valor que representa qual botão foi clicado (DialogResult.Yes ou DialogResult.No).
+            // Esse valor retornado é armazenado na variável 'resultado'.
+            DialogResult resultado = MessageBox.Show(mensagem, titulo, botoes, icone);
+
+            // Verifica se o valor armazenado na variável 'resultado' é igual a DialogResult.Yes.
+            if (resultado == DialogResult.Yes)
+            {
+                // Se o usuário clicou em "Sim", fecha p/ o login:
+                this.Close();
+            }
+            // Se o usuário clicou em "Não" (ou fechou a caixa de mensagem pelo 'X'),
+
         }
 
         private void CarregarDadosFicticios()
@@ -161,7 +187,44 @@ namespace HelpBox
             // Quando a telaDetalhes fechar (com this.Close()), 
             // o código continua daqui.
             // Você pode até atualizar sua tabela aqui, se quiser.
-        
-    }
+
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            ExecutarLogout();
+        }
+
+        private void stripLogoutPrincipal_Click(object sender, EventArgs e)
+        {
+            ExecutarLogout();
+        }
+
+        private void frmTelaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Verifica se o motivo do fechamento foi o usuário clicando no 'X' 
+            // (ou Alt+F4, etc.). Isso evita que a mensagem apareça se o programa 
+            // estiver fechando por outro motivo.
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // 1. Prepara a mensagem de confirmação (mesma lógica do botão Logout)
+                string mensagem = "Deseja realmente deslogar?";
+                string titulo = "Confirmação de Saída";
+                MessageBoxButtons botoes = MessageBoxButtons.YesNo;
+                MessageBoxIcon icone = MessageBoxIcon.Question;
+
+                // 2. Mostra a caixa de diálogo e guarda a resposta
+                DialogResult resultado = MessageBox.Show(mensagem, titulo, botoes, icone);
+
+                // 3. Verifica se o usuário clicou em "NÃO"
+                if (resultado == DialogResult.No)
+                {
+                    // Se clicou em "Não", CANCELA o evento de fechamento da janela.
+                    e.Cancel = true;
+                }
+                // Se o usuário clicou em "Sim", a propriedade e.Cancel continua 'false' (o padrão),
+                // e o formulário será fechado normalmente, retornando para a tela de login.
+            }
+        }
     }
 }
