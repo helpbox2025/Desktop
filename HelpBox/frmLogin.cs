@@ -1,3 +1,6 @@
+using HelpBox.BLL; // Para usar UsuarioBLL
+using HelpBox.Model; // Para usar Usuario
+
 namespace HelpBox
 {
     public partial class frmLogin : Form
@@ -42,10 +45,52 @@ namespace HelpBox
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Login feito com sucesso!");
-            // Isso "avisa" ao Program.cs que o login foi bem-sucedido
-            // e fecha o formulário de login automaticamente.
-            this.DialogResult = DialogResult.OK;
+            string email = txtUsuario.Text.Trim(); // Pega o email do campo de usuário
+            string senha = txtSenha.Text.Trim();    // Pega a senha
+
+            // Cria uma instância da nossa camada de lógica de negócio
+            UsuarioBLL usuarioBLL = new UsuarioBLL();
+
+            try
+            {
+                // Chama o método de validação
+                Usuario usuarioLogado = usuarioBLL.ValidarLoginTecnico(email, senha);
+
+                // Verifica o resultado
+                if (usuarioLogado != null)
+                {
+                    // SUCESSO! O usuário é um técnico válido.
+                    MessageBox.Show($"Login bem-sucedido! Bem-vindo, {usuarioLogado.nome_User}!",
+                                    "Autenticado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+
+                    // Abre a próxima tela (sua tela principal/dashboard)
+                    // Passando o objeto 'usuarioLogado' para a próxima tela, se necessário
+                    frmTelaPrincipal telaPrincipal = new frmTelaPrincipal(usuarioLogado);
+                    this.Hide();
+                    telaPrincipal.ShowDialog();
+                    Application.Exit(); // Fecha a aplicação quando a tela principal fechar
+                }
+                else
+                {
+                    // FALHA! Usuário/senha inválidos ou não é um técnico.
+                    MessageBox.Show("Email ou senha inválidos, ou o usuário não tem permissão de técnico.",
+                                    "Falha no Login",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                    txtSenha.Clear(); // Limpa a senha
+                    txtUsuario.Focus(); // Coloca o foco de volta no usuário
+                }
+            }
+            catch (Exception ex)
+            {
+                // Captura erros inesperados (ex: falha na conexão que a BLL/DAL não tratou)
+                MessageBox.Show($"Ocorreu um erro inesperado durante o login: {ex.Message}",
+                                "Erro Crítico",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
         }
     }
 }

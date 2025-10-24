@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HelpBox.Model; // Garante que essa tela saiba o que é um user
 
 namespace HelpBox
 {
@@ -18,10 +19,17 @@ namespace HelpBox
         private int larguraMenuFechado = 0; // Largura do menu quando estiver fechado
         private int passoAnimacao = 30; // Velocidade do deslize em pixels
 
-        public frmTelaPrincipal()
+        // Variável para guardar os dados do usuário que logou
+        private Usuario usuarioLogado;
+
+        // O CONSTRUTOR ESPECIAL que aceita um objeto Usuario
+        public frmTelaPrincipal(Usuario usuario)
         {
             InitializeComponent();
+            this.usuarioLogado = usuario; // Guarda o usuário recebido na variável
         }
+
+
 
         private void frmTelaPrincipal_Load(object sender, EventArgs e)
         {
