@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GAMER\\Source\\Repos\\HelpBoxDESKTOPP\\HelpBox\\HelpBox.csproj": {}
+    "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOPP\\HelpBox\\HelpBox.csproj": {}
   },
   "projects": {
-    "C:\\Users\\GAMER\\Source\\Repos\\HelpBoxDESKTOPP\\HelpBox\\HelpBox.csproj": {
+    "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOPP\\HelpBox\\HelpBox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GAMER\\Source\\Repos\\HelpBoxDESKTOPP\\HelpBox\\HelpBox.csproj",
+        "projectUniqueName": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOPP\\HelpBox\\HelpBox.csproj",
         "projectName": "HelpBox",
-        "projectPath": "C:\\Users\\GAMER\\Source\\Repos\\HelpBoxDESKTOPP\\HelpBox\\HelpBox.csproj",
+        "projectPath": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOPP\\HelpBox\\HelpBox.csproj",
         "packagesPath": "C:\\Users\\GAMER\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\GAMER\\Source\\Repos\\HelpBoxDESKTOPP\\HelpBox\\obj\\",
         "projectStyle": "PackageReference",

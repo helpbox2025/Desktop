@@ -54,27 +54,9 @@ namespace HelpBox
 
         private void ExecutarLogout()
         {
-            string mensagem = "Deseja realmente deslogar?";
-            string titulo = "Confirmação de Logout";
-
-            // Define quais botões estarão disponíveis na caixa de mensagem. 
-            MessageBoxButtons botoes = MessageBoxButtons.YesNo;
-
-            // Define qual ícone será exibido na caixa de mensagem.
-            MessageBoxIcon icone = MessageBoxIcon.Question;
-
-            // Ele então RETORNA um valor que representa qual botão foi clicado (DialogResult.Yes ou DialogResult.No).
-            // Esse valor retornado é armazenado na variável 'resultado'.
-            DialogResult resultado = MessageBox.Show(mensagem, titulo, botoes, icone);
-
-            // Verifica se o valor armazenado na variável 'resultado' é igual a DialogResult.Yes.
-            if (resultado == DialogResult.Yes)
-            {
-                // Se o usuário clicou em "Sim", fecha p/ o login:
-                this.Close();
-            }
-            // Se o usuário clicou em "Não" (ou fechou a caixa de mensagem pelo 'X'),
-
+           
+            this.Close(); // dispara o FORM Closing
+          
         }
 
         private void CarregarDadosFicticios()
