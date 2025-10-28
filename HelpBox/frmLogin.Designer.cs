@@ -53,12 +53,13 @@
             tlpLogin.Controls.Add(pnLogin, 1, 1);
             tlpLogin.Dock = DockStyle.Fill;
             tlpLogin.Location = new Point(0, 0);
+            tlpLogin.Margin = new Padding(3, 4, 3, 4);
             tlpLogin.Name = "tlpLogin";
             tlpLogin.RowCount = 3;
             tlpLogin.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tlpLogin.RowStyles.Add(new RowStyle());
             tlpLogin.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tlpLogin.Size = new Size(984, 687);
+            tlpLogin.Size = new Size(1125, 916);
             tlpLogin.TabIndex = 18;
             // 
             // pnLogin
@@ -72,10 +73,11 @@
             pnLogin.Controls.Add(lblDescricao);
             pnLogin.Controls.Add(lblBoasVindas);
             pnLogin.Controls.Add(pboxLogoHP);
-            pnLogin.Location = new Point(84, 114);
-            pnLogin.MinimumSize = new Size(816, 459);
+            pnLogin.Location = new Point(96, 152);
+            pnLogin.Margin = new Padding(3, 4, 3, 4);
+            pnLogin.MinimumSize = new Size(933, 612);
             pnLogin.Name = "pnLogin";
-            pnLogin.Size = new Size(816, 459);
+            pnLogin.Size = new Size(933, 612);
             pnLogin.TabIndex = 9;
             // 
             // btnSair
@@ -86,9 +88,10 @@
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSair.ForeColor = SystemColors.ButtonHighlight;
-            btnSair.Location = new Point(303, 390);
+            btnSair.Location = new Point(346, 520);
+            btnSair.Margin = new Padding(3, 4, 3, 4);
             btnSair.Name = "btnSair";
-            btnSair.Size = new Size(92, 36);
+            btnSair.Size = new Size(105, 48);
             btnSair.TabIndex = 17;
             btnSair.Text = "Sair";
             btnSair.UseVisualStyleBackColor = false;
@@ -102,9 +105,10 @@
             btnEntrar.FlatStyle = FlatStyle.Flat;
             btnEntrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEntrar.ForeColor = SystemColors.Control;
-            btnEntrar.Location = new Point(449, 390);
+            btnEntrar.Location = new Point(513, 520);
+            btnEntrar.Margin = new Padding(3, 4, 3, 4);
             btnEntrar.Name = "btnEntrar";
-            btnEntrar.Size = new Size(92, 36);
+            btnEntrar.Size = new Size(105, 48);
             btnEntrar.TabIndex = 16;
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = false;
@@ -113,18 +117,20 @@
             // txtSenha
             // 
             txtSenha.BackColor = Color.LightSteelBlue;
-            txtSenha.Location = new Point(303, 352);
+            txtSenha.Location = new Point(346, 469);
+            txtSenha.Margin = new Padding(3, 4, 3, 4);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(235, 23);
+            txtSenha.Size = new Size(268, 27);
             txtSenha.TabIndex = 15;
             txtSenha.UseSystemPasswordChar = true;
             // 
             // txtUsuario
             // 
             txtUsuario.BackColor = Color.LightSteelBlue;
-            txtUsuario.Location = new Point(303, 318);
+            txtUsuario.Location = new Point(346, 424);
+            txtUsuario.Margin = new Padding(3, 4, 3, 4);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(235, 23);
+            txtUsuario.Size = new Size(268, 27);
             txtUsuario.TabIndex = 14;
             // 
             // lblSenha
@@ -132,9 +138,9 @@
             lblSenha.AutoSize = true;
             lblSenha.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSenha.ForeColor = Color.Black;
-            lblSenha.Location = new Point(244, 355);
+            lblSenha.Location = new Point(279, 473);
             lblSenha.Name = "lblSenha";
-            lblSenha.Size = new Size(53, 14);
+            lblSenha.Size = new Size(65, 18);
             lblSenha.TabIndex = 13;
             lblSenha.Text = "Senha:";
             // 
@@ -143,9 +149,9 @@
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUsuario.ForeColor = Color.Black;
-            lblUsuario.Location = new Point(236, 321);
+            lblUsuario.Location = new Point(270, 428);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(63, 14);
+            lblUsuario.Size = new Size(76, 18);
             lblUsuario.TabIndex = 12;
             lblUsuario.Text = "Usuário:";
             // 
@@ -154,9 +160,9 @@
             lblDescricao.AutoSize = true;
             lblDescricao.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDescricao.ForeColor = Color.DarkBlue;
-            lblDescricao.Location = new Point(256, 270);
+            lblDescricao.Location = new Point(293, 360);
             lblDescricao.Name = "lblDescricao";
-            lblDescricao.Size = new Size(322, 14);
+            lblDescricao.Size = new Size(397, 18);
             lblDescricao.TabIndex = 11;
             lblDescricao.Text = "Para acessar o sistema, digite suas credenciais.";
             // 
@@ -165,29 +171,32 @@
             lblBoasVindas.AutoSize = true;
             lblBoasVindas.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblBoasVindas.ForeColor = Color.FromArgb(0, 0, 64);
-            lblBoasVindas.Location = new Point(170, 199);
+            lblBoasVindas.Location = new Point(194, 265);
             lblBoasVindas.Name = "lblBoasVindas";
-            lblBoasVindas.Size = new Size(481, 71);
+            lblBoasVindas.Size = new Size(609, 89);
             lblBoasVindas.TabIndex = 10;
             lblBoasVindas.Text = "SEJA BEM VINDO!";
             // 
             // pboxLogoHP
             // 
             pboxLogoHP.Image = Properties.Resources.helpbox_removebg_preview;
-            pboxLogoHP.Location = new Point(126, -19);
+            pboxLogoHP.Location = new Point(144, -25);
+            pboxLogoHP.Margin = new Padding(3, 4, 3, 4);
             pboxLogoHP.Name = "pboxLogoHP";
-            pboxLogoHP.Size = new Size(558, 225);
+            pboxLogoHP.Size = new Size(638, 300);
             pboxLogoHP.TabIndex = 9;
             pboxLogoHP.TabStop = false;
+            pboxLogoHP.Click += pboxLogoHP_Click;
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(984, 687);
+            ClientSize = new Size(1125, 916);
             Controls.Add(tlpLogin);
-            MinimumSize = new Size(1000, 726);
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(1140, 952);
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HelpBox - Login.";

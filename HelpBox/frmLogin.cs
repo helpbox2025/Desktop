@@ -36,7 +36,7 @@ namespace HelpBox
             // verifica  se o botão clicado pelo usuário foi o "Sim"
             if (resultado == DialogResult.Yes)
             {
-            // Se o usuário clicou em "Sim", fecha td
+                // Se o usuário clicou em "Sim", fecha td
                 Application.Exit();
             }
             // Se o usuário clicou em "Não", o código dentro do 'if' é ignorado, 
@@ -92,6 +92,11 @@ namespace HelpBox
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
             }
+        }
+
+        private void pboxLogoHP_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

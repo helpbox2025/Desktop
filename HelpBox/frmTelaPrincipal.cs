@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelpBox.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HelpBox.Model; // Garante que essa tela saiba o que é um user
-
+using HelpBox.BLL;
+using System.Collections.Generic;
 namespace HelpBox
 {
     public partial class frmTelaPrincipal : Form
     {
+        private ChamadoBLL chamadoBLL = new ChamadoBLL();
         // Variáveis para controlar a animação do menu
         private bool menuAberto = false; // Começa com o estado "fechado"
         private int larguraMenuAberto = 280; // Largura do menu quando estiver aberto
@@ -21,22 +23,16 @@ namespace HelpBox
 
         // Variável para guardar os dados do usuário que logou
         private Usuario usuarioLogado;
-
-        //------------------------------------------------------------------------
-        // O CONSTRUTOR ESPECIAL que aceita um objeto Usuario
         public frmTelaPrincipal(Usuario usuario)
         {
             InitializeComponent();
             this.usuarioLogado = usuario; // Guarda o usuário recebido na variável
         }
-
-
-
         private void frmTelaPrincipal_Load(object sender, EventArgs e)
         {
             // Chama o nosso método para preencher a grade assim que a tela carregar
-            CarregarDadosFicticios();
-
+            // CarregarDadosFicticios();
+            CarregarChamados();
             // ------------------- MUDANÇAS PARA O MENU INICIAR ABERTO -------------
 
             // 1. Garante que o painel esquerdo NÃO comece colapsado/escondido.
@@ -58,8 +54,36 @@ namespace HelpBox
             this.Close(); // dispara o FORM Closing
           
         }
+        private void CarregarChamados()
+        {
+            // Limpa a tabela antes de carregar
+            dgvChamados.Rows.Clear();
 
-        private void CarregarDadosFicticios()
+            try
+            {
+                // CHAMA A BLL!
+                List<Chamado> listaDeChamados = chamadoBLL.ListarChamadosParaGrid();
+
+                // Agora, preenche o grid (dgvChamados)
+                foreach (var chamado in listaDeChamados)
+                {
+                    dgvChamados.Rows.Add(
+                        chamado.id_Cham,
+                        chamado.categoria_Cham,
+                        chamado.titulo_Cham, // O "Assunto"
+                        chamado.prioridade_Cham,
+                        chamado.dataAbertura_Cham.ToShortDateString(), // Formata a data
+                        chamado.status_Cham
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar chamados: " + ex.Message);
+            }
+        }
+
+        /*private void CarregarDadosFicticios()
         {
             // Limpa apenas as LINHAS existentes para não acumular dados a cada teste
             dgvChamados.Rows.Clear();
@@ -82,7 +106,7 @@ namespace HelpBox
 
             // Linha 5
             dgvChamados.Rows.Add("785321", "Software", "Login de novo funcionário não funciona", "Alta", "08/10/2025", "Aberto");
-        }
+        }*/
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -159,19 +183,28 @@ namespace HelpBox
 
         private void dgvChamados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return; // Ignora clique no cabeçalho
 
-            // Abre a tela de detalhes como um "Dialog"
-            frmDetalhesChamado telaDetalhes = new frmDetalhesChamado(); // (Passe o ID se precisar)
+            string nomeColuna = dgvChamados.Columns[e.ColumnIndex].Name;
 
-            // O ShowDialog() PAUSA a Tela Principal
-            telaDetalhes.ShowDialog();
+            // (Os nomes "ColunaSolucionar" e "ColunaDetalhes" vêm do seu .Designer.cs)
+            if (nomeColuna == "ColunaSolucionar" || nomeColuna == "ColunaDetalhes")
+            {
+                // Pega o ID (que agora é um int) da coluna "ColunaIdCham"
+                int idDoChamado = Convert.ToInt32(dgvChamados.Rows[e.RowIndex].Cells["ColunaIdCham"].Value);
 
-            // Quando a telaDetalhes fechar (com this.Close()), 
-            // o código continua daqui.
-            // Você pode até atualizar sua tabela aqui, se quiser.
+                // ** IMPORTANTE **
+                // Você precisa mudar seu 'frmDetalhesChamado' para aceitar um INT, não uma string
+                // Ex: public frmDetalhesChamado(int idChamado)
+                frmDetalhesChamado telaDeDetalhes = new frmDetalhesChamado(idDoChamado);
 
-        }
+                telaDeDetalhes.ShowDialog();
 
+                // Atualiza a lista depois de fechar a tela de detalhes
+                CarregarChamados();
+            }
+        } 
+    
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             ExecutarLogout();

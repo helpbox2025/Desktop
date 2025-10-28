@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using HelpBox.BLL;
+using HelpBox.Model;
 namespace HelpBox
 {
     public partial class frmDetalhesChamado : Form
     {
-        public frmDetalhesChamado()
+        // Variável para guardar o ID do chamado que está aberto
+        private int _idDoChamadoAtual;
+
+        // Instância da BLL
+        private ChamadoBLL chamadoBLL = new ChamadoBLL();
+        public frmDetalhesChamado(int idChamado)
         {
             InitializeComponent();
+
+            // Guarda o ID
+            _idDoChamadoAtual = idChamado;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,24 +58,24 @@ namespace HelpBox
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            // --- 1. LÓGICA PARA SALVAR A SOLUÇÃO ---
-            // (Opcional, mas recomendado)
-            // Antes de fechar, você provavelmente quer salvar
-            // o que o técnico escreveu.
+            try
+            {
+                // Pega a solução do TextBox
+                // (!! ADAPTE o nome 'txtSolucaoTecnico' !!)
+                string solucao = txtSolucaoTec.Text;
 
-            // Exemplo (adapte para os nomes dos seus componentes):
-            // string solucaoDoTecnico = txtSolucaoTecnico.Text;
-            // MeuBancoDeDados.SalvarSolucao(idDoChamado, solucaoDoTecnico);
+                // Chama a BLL para salvar
+                chamadoBLL.SalvarSolucaoTecnico(_idDoChamadoAtual, solucao);
 
-            // Mostra uma mensagem de sucesso
-            MessageBox.Show("Solução salva com sucesso!");
+                MessageBox.Show("Solução salva com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
-            // --- 2. FECHAR A TELA ATUAL ---
-            // Este comando fecha a janela/formulário atual
-            // e automaticamente retorna o foco para a tela
-            // que a abriu (sua tela principal).
-            this.Close();
+                // Fecha a tela (e volta para a tela principal)
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao salvar solução: " + ex.Message);
+            }
         }
 
         private void textDescricao_TextChanged(object sender, EventArgs e)
@@ -98,6 +107,49 @@ namespace HelpBox
         private void stripLogoutDetalhes_Click(object sender, EventArgs e)
         {
             ExecutarLogout();
+        }
+
+        private void frmDetalhesChamado_Load(object sender, EventArgs e)
+        {
+        
+            CarregarDadosDoChamado();
+        
+        }
+        private void CarregarDadosDoChamado()
+        {
+            try
+            {
+                // Busca o chamado completo usando a BLL
+                Chamado chamado = chamadoBLL.GetChamadoPorId(_idDoChamadoAtual);
+
+                if (chamado == null)
+                {
+                    MessageBox.Show("Erro: Chamado não encontrado.");
+                    this.Close();
+                    return;
+                }
+
+                // !!! ADAPTE OS NOMES DOS SEUS TEXTBOX AQUI !!!
+                // (Estou usando nomes baseados na sua primeira imagem)
+
+                txtAssunto.Text = chamado.titulo_Cham;
+                txtDescricao.Text = chamado.descricao_Cham;
+                txtCategoria.Text = chamado.categoria_Cham;
+                txtImpacto.Text = chamado.impacto_Cham;
+                txtFrequencia.Text = chamado.frequencia_Cham;
+                txtSolucaoIA.Text = chamado.solucaoIA_Cham;
+                //txtSolucaoTecnico.Text = chamado.solucaoTec_Cham;
+
+                // Exemplo para campos que podem ser nulos:
+                txtInicioProb.Text = chamado.dataProblema_Cham?.ToShortDateString() ?? "N/A";
+
+                // (Preencha os outros campos que você precisar)
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar dados do chamado: " + ex.Message);
+                this.Close();
+            }
         }
     }
 }
