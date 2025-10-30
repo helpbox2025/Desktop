@@ -210,7 +210,7 @@
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top;
-            pictureBox1.BackColor = Color.LightSteelBlue;
+            pictureBox1.BackColor = Color.FromArgb(74, 112, 122);
             pictureBox1.Image = Properties.Resources.helpbox_removebg_preview3;
             pictureBox1.Location = new Point(88, -19);
             pictureBox1.Name = "pictureBox1";
@@ -224,7 +224,7 @@
             dgvChamados.AllowUserToAddRows = false;
             dgvChamados.AllowUserToDeleteRows = false;
             dgvChamados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvChamados.BackgroundColor = Color.LightSteelBlue;
+            dgvChamados.BackgroundColor = Color.FromArgb(74, 112, 122);
             dgvChamados.BorderStyle = BorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.SteelBlue;
@@ -366,7 +366,7 @@
             // stripLogoutPrincipal
             // 
             stripLogoutPrincipal.Name = "stripLogoutPrincipal";
-            stripLogoutPrincipal.Size = new Size(180, 22);
+            stripLogoutPrincipal.Size = new Size(148, 22);
             stripLogoutPrincipal.Text = "Fazer LogOut";
             stripLogoutPrincipal.Click += stripLogoutPrincipal_Click;
             // 
@@ -410,7 +410,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightSteelBlue;
+            BackColor = Color.FromArgb(74, 112, 122);
             ClientSize = new Size(984, 661);
             Controls.Add(splicontPrincipal);
             Controls.Add(menuStripPrincipal);
