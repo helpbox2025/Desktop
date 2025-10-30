@@ -23,6 +23,7 @@ namespace HelpBox
 
         // Variável para guardar os dados do usuário que logou
         private Usuario usuarioLogado;
+
         public frmTelaPrincipal(Usuario usuario)
         {
             InitializeComponent();
@@ -31,8 +32,9 @@ namespace HelpBox
         private void frmTelaPrincipal_Load(object sender, EventArgs e)
         {
             // Chama o nosso método para preencher a grade assim que a tela carregar
-            // CarregarDadosFicticios();
-            CarregarChamados();
+            // CarregarDadosFicticios(); // Assumindo que você agora tem um método CarregarChamados() real
+            CarregarChamados(); // Chamando o método para carregar dados reais (provavelmente)
+
             // ------------------- MUDANÇAS PARA O MENU INICIAR ABERTO -------------
 
             // 1. Garante que o painel esquerdo NÃO comece colapsado/escondido.
@@ -46,6 +48,24 @@ namespace HelpBox
             this.menuAberto = true;
 
             tsmMenuLateral.BackColor = Color.DarkSlateGray;
+
+            // --- CÓDIGO PARA EXIBIR DADOS DO USUÁRIO LOGADO ---
+            // Verifica se recebemos os dados do usuário da tela de login
+            if (this.usuarioLogado != null)
+            {
+                // Atualiza o Label de boas-vindas com o nome do usuário
+                // Certifique-se que 'nome_User' é a propriedade correta no seu Model
+                lblBoasVindas.Text = $"Olá, {this.usuarioLogado.nome_User}!";
+
+                // ---- LINHA ADICIONADA ----
+                lblEmail.Text = this.usuarioLogado.email_User; // ADICIONADO: Atualiza o Label de email com o email do usuário logado.
+            }
+            else
+            {
+                // Opcional: Define textos padrão caso o usuário não seja recebido
+                lblBoasVindas.Text = "Olá, Técnico!";
+                lblEmail.Text = "email@exemplo.com";
+            }
         }
 
         private void ExecutarLogout()
