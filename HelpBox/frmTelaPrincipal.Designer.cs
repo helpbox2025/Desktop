@@ -94,7 +94,7 @@
             // 
             // tlpMenuLateral
             // 
-            tlpMenuLateral.BackColor = Color.SteelBlue;
+            tlpMenuLateral.BackColor = Color.FromArgb(52, 58, 64);
             tlpMenuLateral.ColumnCount = 1;
             tlpMenuLateral.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tlpMenuLateral.Controls.Add(lblPerfil, 0, 0);
@@ -210,7 +210,7 @@
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top;
-            pictureBox1.BackColor = Color.FromArgb(74, 112, 122);
+            pictureBox1.BackColor = Color.Silver;
             pictureBox1.Image = Properties.Resources.helpbox_removebg_preview3;
             pictureBox1.Location = new Point(88, -19);
             pictureBox1.Name = "pictureBox1";
@@ -224,13 +224,13 @@
             dgvChamados.AllowUserToAddRows = false;
             dgvChamados.AllowUserToDeleteRows = false;
             dgvChamados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvChamados.BackgroundColor = Color.FromArgb(74, 112, 122);
+            dgvChamados.BackgroundColor = Color.Silver;
             dgvChamados.BorderStyle = BorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.SteelBlue;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(52, 58, 64);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(52, 58, 90);
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvChamados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -335,7 +335,7 @@
             // 
             // menuStripPrincipal
             // 
-            menuStripPrincipal.BackColor = Color.SteelBlue;
+            menuStripPrincipal.BackColor = Color.FromArgb(52, 58, 64);
             menuStripPrincipal.ImageScalingSize = new Size(20, 20);
             menuStripPrincipal.Items.AddRange(new ToolStripItem[] { tsmMenuLateral, stripUsuarioPrincipal, stripSobrePrincipal, stripManualPrincipal });
             menuStripPrincipal.Location = new Point(0, 0);
@@ -410,7 +410,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(74, 112, 122);
+            BackColor = Color.Silver;
             ClientSize = new Size(984, 661);
             Controls.Add(splicontPrincipal);
             Controls.Add(menuStripPrincipal);

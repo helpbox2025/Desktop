@@ -96,7 +96,7 @@
             // 
             // btnEntrar
             // 
-            btnEntrar.BackColor = Color.FromArgb(0, 0, 130);
+            btnEntrar.BackColor = Color.FromArgb(52, 58, 64);
             btnEntrar.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 30);
             btnEntrar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 64);
             btnEntrar.FlatStyle = FlatStyle.Flat;
@@ -113,6 +113,7 @@
             // txtSenha
             // 
             txtSenha.BackColor = Color.FromArgb(74, 112, 122);
+            txtSenha.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtSenha.Location = new Point(303, 352);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(235, 23);
@@ -122,6 +123,7 @@
             // txtUsuario
             // 
             txtUsuario.BackColor = Color.FromArgb(74, 112, 122);
+            txtUsuario.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtUsuario.Location = new Point(303, 318);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(235, 23);
