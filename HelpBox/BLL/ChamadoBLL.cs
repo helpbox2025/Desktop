@@ -11,51 +11,44 @@ namespace HelpBox.BLL
     public class ChamadoBLL
     {
         private ChamadoDAL chamadoDAL = new ChamadoDAL();
-
         public List<Chamado> ListarChamadosParaGrid()
         {
-            // Aqui você pode adicionar regras de negócio (ex: se o usuário pode ver todos)
-            // Por enquanto, vamos apenas chamar a DAL
-            try
-            {
-                return chamadoDAL.ListarChamadosParaGrid();
-            }
-            catch (Exception )
-            {
-                // Tratar ou relançar o erro
-                throw;
-            }
+            try { return chamadoDAL.ListarChamadosParaGrid(); }
+            catch (Exception) { throw; }
         }
         public Chamado GetChamadoPorId(int id)
         {
-            if (id <= 0)
-            {
-                throw new Exception("ID do chamado é inválido.");
-            }
-
-            try
-            {
-                return chamadoDAL.GetChamadoPorId(id);
-            }
-            catch (Exception )
-            {
-                throw;
-            }
+            if (id <= 0) { throw new Exception("ID do chamado é inválido."); }
+            try { return chamadoDAL.GetChamadoPorId(id); }
+            catch (Exception) { throw; }
         }
         public void SalvarSolucaoTecnico(int id, string solucao)
         {
-            if (string.IsNullOrWhiteSpace(solucao))
+            if (string.IsNullOrWhiteSpace(solucao)) { throw new Exception("A solução do técnico não pode estar vazia."); }
+            try { chamadoDAL.SalvarSolucaoTecnico(id, solucao); }
+            catch (Exception) { throw; }
+        }
+        public void FinalizarChamado(int id)
+        {
+            if (id <= 0) { throw new Exception("ID do chamado é inválido."); }
+            try { chamadoDAL.FinalizarChamado(id); }
+            catch (Exception ex) { throw ex; }
+        }
+        public bool AtribuirChamado(int idChamado, int idTecnico)
+        {
+            if (idTecnico <= 0)
             {
-                throw new Exception("A solução do técnico não pode estar vazia.");
+                throw new Exception("ID do técnico é inválido.");
             }
 
             try
             {
-                chamadoDAL.SalvarSolucaoTecnico(id, solucao);
+                // Chama o método corrigido da DAL
+                return chamadoDAL.AtribuirChamado(idChamado, idTecnico);
             }
-            catch (Exception )
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
     }

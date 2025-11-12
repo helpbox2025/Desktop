@@ -97,23 +97,41 @@ namespace HelpBox
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
+            // 1. Mostra uma confirmação (é uma ação permanente)
+            DialogResult confirmacao = MessageBox.Show(
+                "Você tem certeza que deseja finalizar este chamado?\nEsta ação não pode ser desfeita.",
+                "Finalizar Chamado",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
 
-            // Mostra uma mensagem de sucesso
-            MessageBox.Show("Chamado finalizado com sucesso!");
-            //Fecha a tela atual
-            this.Close();
+            if (confirmacao == DialogResult.Yes)
+            {
+                try
+                {
+
+                    chamadoBLL.FinalizarChamado(_idDoChamadoAtual);
+
+                    MessageBox.Show("Chamado finalizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao finalizar o chamado: " + ex.Message);
+                }
+            }
         }
 
         private void stripLogoutDetalhes_Click(object sender, EventArgs e)
         {
             ExecutarLogout();
         }
-
         private void frmDetalhesChamado_Load(object sender, EventArgs e)
         {
-        
+
             CarregarDadosDoChamado();
-        
+
         }
         private void CarregarDadosDoChamado()
         {
@@ -137,12 +155,26 @@ namespace HelpBox
                 txtCategoria.Text = chamado.categoria_Cham;
                 txtImpacto.Text = chamado.impacto_Cham;
                 txtFrequencia.Text = chamado.frequencia_Cham;
-                txtSolucaoIA.Text = chamado.solucaoIA_Cham;
-                //txtSolucaoTecnico.Text = chamado.solucaoTec_Cham;
-
-                // Exemplo para campos que podem ser nulos:
                 txtInicioProb.Text = chamado.dataProblema_Cham?.ToShortDateString() ?? "N/A";
+                txtAbrangencia.Text = chamado.usuarios_Cham; // (Exemplo, mude se for outra coluna)
+                txtSolucaoIA.Text = chamado.solucaoIA_Cham;
+                txtSolucaoTec.Text = chamado.solucaoTec_Cham;
 
+                if (chamado.status_Cham.Equals("Fechado", StringComparison.OrdinalIgnoreCase))
+                {
+                    // (!! ADAPTE OS NOMES DOS SEUS CONTROLES !!)
+
+                    // 1. Torna a caixa de solução do técnico "somente leitura"
+                    txtSolucaoTec.ReadOnly = true;
+
+                    // 2. Desabilita os botões
+                    btnSalvar.Enabled = false;
+                    btnFinalizar.Enabled = false;
+
+                    // 3. (Opcional) Muda o texto para dar feedback
+                    btnFinalizar.Text = "Chamado Fechado";
+                    btnSalvar.Text = "Bloqueado";
+                }
                 // (Preencha os outros campos que você precisar)
             }
             catch (Exception ex)
@@ -150,6 +182,10 @@ namespace HelpBox
                 MessageBox.Show("Erro ao carregar dados do chamado: " + ex.Message);
                 this.Close();
             }
+        }
+        private void txtSolucaoTec_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

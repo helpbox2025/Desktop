@@ -20,11 +20,12 @@ namespace HelpBox.Model
         public string solucaoIA_Cham { get; set; }
         public string solucaoTec_Cham { get; set; }
         public string solucaoFinal_Cham { get; set; }
-        public string tecResponsavel_Cham { get; set; }
+        public int? tecResponsavel_Cham { get; set; }
         public string titulo_Cham { get; set; } // Este é o seu "Assunto"
         public string impacto_Cham { get; set; }
         public string usuarios_Cham { get; set; }
         public string frequencia_Cham { get; set; }
         public int clienteId_Cham { get; set; }
+        public string TecResponsavelNomeCompleto { get; set; }
     }
 }

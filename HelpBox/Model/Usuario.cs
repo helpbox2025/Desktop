@@ -18,10 +18,9 @@ namespace HelpBox.Model
         public string? nome_User { get; set; }
         public string? sobrenome_User { get; set; }
 
-        // A interroga "?" serve p dizer que a gente sabe que pode vir Null, e ta tudo bem
-
-        // Propriedade extra para facilitar (não vem direto do BD, mas podemos usar)
         public string NomeCompleto => $"{nome_User} {sobrenome_User}";
+
+
     }
 }
 
