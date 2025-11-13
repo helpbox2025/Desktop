@@ -78,7 +78,8 @@ namespace HelpBox
                         chamado.titulo_Cham,
                         chamado.prioridade_Cham,
                         chamado.dataAbertura_Cham.ToShortDateString(),
-                        chamado.status_Cham
+                        chamado.status_Cham,
+                        chamado.TecResponsavelNomeCompleto
                     );
 
                     // 3. Estiliza o botão "Solucionar"

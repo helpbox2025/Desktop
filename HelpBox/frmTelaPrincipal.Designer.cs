@@ -42,14 +42,6 @@
             panelLogo = new Panel();
             pictureBox1 = new PictureBox();
             dgvChamados = new DataGridView();
-            ColunaIdCham = new DataGridViewTextBoxColumn();
-            ColunaCategoria = new DataGridViewTextBoxColumn();
-            ColunaAssunto = new DataGridViewTextBoxColumn();
-            ColunaPrioridade = new DataGridViewTextBoxColumn();
-            ColunaData = new DataGridViewTextBoxColumn();
-            ColunaStatus = new DataGridViewTextBoxColumn();
-            ColunaSolucionar = new DataGridViewButtonColumn();
-            ColunaDetalhes = new DataGridViewButtonColumn();
             btnManual = new Button();
             menuStripPrincipal = new MenuStrip();
             tsmMenuLateral = new ToolStripMenuItem();
@@ -60,6 +52,15 @@
             stripManualPrincipal = new ToolStripMenuItem();
             stripMSistemaPrincipal = new ToolStripMenuItem();
             timerMenu = new System.Windows.Forms.Timer(components);
+            ColunaIdCham = new DataGridViewTextBoxColumn();
+            ColunaCategoria = new DataGridViewTextBoxColumn();
+            ColunaAssunto = new DataGridViewTextBoxColumn();
+            ColunaPrioridade = new DataGridViewTextBoxColumn();
+            ColunaData = new DataGridViewTextBoxColumn();
+            ColunaStatus = new DataGridViewTextBoxColumn();
+            ColunaTec = new DataGridViewTextBoxColumn();
+            ColunaSolucionar = new DataGridViewButtonColumn();
+            ColunaDetalhes = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)splicontPrincipal).BeginInit();
             splicontPrincipal.Panel1.SuspendLayout();
             splicontPrincipal.Panel2.SuspendLayout();
@@ -235,7 +236,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvChamados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvChamados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvChamados.Columns.AddRange(new DataGridViewColumn[] { ColunaIdCham, ColunaCategoria, ColunaAssunto, ColunaPrioridade, ColunaData, ColunaStatus, ColunaSolucionar, ColunaDetalhes });
+            dgvChamados.Columns.AddRange(new DataGridViewColumn[] { ColunaIdCham, ColunaCategoria, ColunaAssunto, ColunaPrioridade, ColunaData, ColunaStatus, ColunaTec, ColunaSolucionar, ColunaDetalhes });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.Azure;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -256,66 +257,6 @@
             dgvChamados.Size = new Size(774, 480);
             dgvChamados.TabIndex = 1;
             dgvChamados.CellContentClick += dgvChamados_CellContentClick;
-            // 
-            // ColunaIdCham
-            // 
-            ColunaIdCham.HeaderText = "ID Chamado";
-            ColunaIdCham.MinimumWidth = 6;
-            ColunaIdCham.Name = "ColunaIdCham";
-            ColunaIdCham.ReadOnly = true;
-            // 
-            // ColunaCategoria
-            // 
-            ColunaCategoria.HeaderText = "Categoria";
-            ColunaCategoria.MinimumWidth = 6;
-            ColunaCategoria.Name = "ColunaCategoria";
-            ColunaCategoria.ReadOnly = true;
-            // 
-            // ColunaAssunto
-            // 
-            ColunaAssunto.HeaderText = "Assunto";
-            ColunaAssunto.MinimumWidth = 6;
-            ColunaAssunto.Name = "ColunaAssunto";
-            ColunaAssunto.ReadOnly = true;
-            // 
-            // ColunaPrioridade
-            // 
-            ColunaPrioridade.HeaderText = "Prioridade";
-            ColunaPrioridade.MinimumWidth = 6;
-            ColunaPrioridade.Name = "ColunaPrioridade";
-            ColunaPrioridade.ReadOnly = true;
-            // 
-            // ColunaData
-            // 
-            ColunaData.HeaderText = "Data de Abertura";
-            ColunaData.MinimumWidth = 6;
-            ColunaData.Name = "ColunaData";
-            ColunaData.ReadOnly = true;
-            // 
-            // ColunaStatus
-            // 
-            ColunaStatus.HeaderText = "Status";
-            ColunaStatus.MinimumWidth = 6;
-            ColunaStatus.Name = "ColunaStatus";
-            ColunaStatus.ReadOnly = true;
-            // 
-            // ColunaSolucionar
-            // 
-            ColunaSolucionar.HeaderText = "";
-            ColunaSolucionar.MinimumWidth = 6;
-            ColunaSolucionar.Name = "ColunaSolucionar";
-            ColunaSolucionar.ReadOnly = true;
-            ColunaSolucionar.Text = "Solucionar";
-            ColunaSolucionar.UseColumnTextForButtonValue = true;
-            // 
-            // ColunaDetalhes
-            // 
-            ColunaDetalhes.HeaderText = "";
-            ColunaDetalhes.MinimumWidth = 6;
-            ColunaDetalhes.Name = "ColunaDetalhes";
-            ColunaDetalhes.ReadOnly = true;
-            ColunaDetalhes.Text = "Ver Detalhes";
-            ColunaDetalhes.UseColumnTextForButtonValue = true;
             // 
             // btnManual
             // 
@@ -406,6 +347,73 @@
             timerMenu.Interval = 10;
             timerMenu.Tick += timerMenu_Tick;
             // 
+            // ColunaIdCham
+            // 
+            ColunaIdCham.HeaderText = "ID Chamado";
+            ColunaIdCham.MinimumWidth = 6;
+            ColunaIdCham.Name = "ColunaIdCham";
+            ColunaIdCham.ReadOnly = true;
+            // 
+            // ColunaCategoria
+            // 
+            ColunaCategoria.HeaderText = "Categoria";
+            ColunaCategoria.MinimumWidth = 6;
+            ColunaCategoria.Name = "ColunaCategoria";
+            ColunaCategoria.ReadOnly = true;
+            // 
+            // ColunaAssunto
+            // 
+            ColunaAssunto.HeaderText = "Assunto";
+            ColunaAssunto.MinimumWidth = 6;
+            ColunaAssunto.Name = "ColunaAssunto";
+            ColunaAssunto.ReadOnly = true;
+            // 
+            // ColunaPrioridade
+            // 
+            ColunaPrioridade.HeaderText = "Prioridade";
+            ColunaPrioridade.MinimumWidth = 6;
+            ColunaPrioridade.Name = "ColunaPrioridade";
+            ColunaPrioridade.ReadOnly = true;
+            // 
+            // ColunaData
+            // 
+            ColunaData.HeaderText = "Data de Abertura";
+            ColunaData.MinimumWidth = 6;
+            ColunaData.Name = "ColunaData";
+            ColunaData.ReadOnly = true;
+            // 
+            // ColunaStatus
+            // 
+            ColunaStatus.HeaderText = "Status";
+            ColunaStatus.MinimumWidth = 6;
+            ColunaStatus.Name = "ColunaStatus";
+            ColunaStatus.ReadOnly = true;
+            // 
+            // ColunaTec
+            // 
+            ColunaTec.DataPropertyName = "TecResponsavelNomeCompleto";
+            ColunaTec.HeaderText = "Téc. Responsável";
+            ColunaTec.Name = "ColunaTec";
+            ColunaTec.ReadOnly = true;
+            // 
+            // ColunaSolucionar
+            // 
+            ColunaSolucionar.HeaderText = "";
+            ColunaSolucionar.MinimumWidth = 6;
+            ColunaSolucionar.Name = "ColunaSolucionar";
+            ColunaSolucionar.ReadOnly = true;
+            ColunaSolucionar.Text = "Solucionar";
+            ColunaSolucionar.UseColumnTextForButtonValue = true;
+            // 
+            // ColunaDetalhes
+            // 
+            ColunaDetalhes.HeaderText = "";
+            ColunaDetalhes.MinimumWidth = 6;
+            ColunaDetalhes.Name = "ColunaDetalhes";
+            ColunaDetalhes.ReadOnly = true;
+            ColunaDetalhes.Text = "Ver Detalhes";
+            ColunaDetalhes.UseColumnTextForButtonValue = true;
+            // 
             // frmTelaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -451,14 +459,6 @@
         private PictureBox pictureBox1;
         private DataGridView dgvChamados;
         private Button btnManual;
-        private DataGridViewTextBoxColumn ColunaIdCham;
-        private DataGridViewTextBoxColumn ColunaCategoria;
-        private DataGridViewTextBoxColumn ColunaAssunto;
-        private DataGridViewTextBoxColumn ColunaPrioridade;
-        private DataGridViewTextBoxColumn ColunaData;
-        private DataGridViewTextBoxColumn ColunaStatus;
-        private DataGridViewButtonColumn ColunaSolucionar;
-        private DataGridViewButtonColumn ColunaDetalhes;
         private MenuStrip menuStripPrincipal;
         private ToolStripMenuItem stripUsuarioPrincipal;
         private ToolStripMenuItem stripSobrePrincipal;
@@ -469,5 +469,14 @@
         private ToolStripMenuItem tsmMenuLateral;
         private System.Windows.Forms.Timer timerMenu;
         private Label lblPerfil;
+        private DataGridViewTextBoxColumn ColunaIdCham;
+        private DataGridViewTextBoxColumn ColunaCategoria;
+        private DataGridViewTextBoxColumn ColunaAssunto;
+        private DataGridViewTextBoxColumn ColunaPrioridade;
+        private DataGridViewTextBoxColumn ColunaData;
+        private DataGridViewTextBoxColumn ColunaStatus;
+        private DataGridViewTextBoxColumn ColunaTec;
+        private DataGridViewButtonColumn ColunaSolucionar;
+        private DataGridViewButtonColumn ColunaDetalhes;
     }
 }
