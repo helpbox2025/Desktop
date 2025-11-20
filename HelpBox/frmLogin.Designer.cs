@@ -190,6 +190,8 @@
             BackColor = Color.FromArgb(74, 112, 122);
             ClientSize = new Size(984, 661);
             Controls.Add(tlpLogin);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             MinimumSize = new Size(1000, 653);
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;

@@ -65,10 +65,12 @@ namespace HelpBox
             dgvChamados.Rows.Clear();
             try
             {
-                _listaDeChamadosAtual = chamadoBLL.ListarChamadosParaGrid();
-
                 // Pega o ID do técnico logado (do seu Model 'Usuario')
-                int meuID = this.usuarioLogado.id_User;
+                int meuID = this.usuarioLogado.id_User; // Já pegamos isso antes, ótimo!
+
+                // MODIFICADO: Passa 'meuID' para a BLL
+                _listaDeChamadosAtual = chamadoBLL.ListarChamadosParaGrid(meuID);
+
 
                 foreach (var chamado in _listaDeChamadosAtual)
                 {
@@ -261,6 +263,11 @@ namespace HelpBox
             string mensagem = "A HelpBox é uma empresa especializada em softwares para solucionamento interno de chamados...";
             string titulo = "Sobre a HelpBox";
             MessageBox.Show(mensagem, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

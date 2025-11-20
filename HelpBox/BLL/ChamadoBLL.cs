@@ -11,9 +11,10 @@ namespace HelpBox.BLL
     public class ChamadoBLL
     {
         private ChamadoDAL chamadoDAL = new ChamadoDAL();
-        public List<Chamado> ListarChamadosParaGrid()
+        // MODIFICADO: Recebe o ID e repassa para a DAL
+        public List<Chamado> ListarChamadosParaGrid(int idTecnicoLogado)
         {
-            try { return chamadoDAL.ListarChamadosParaGrid(); }
+            try { return chamadoDAL.ListarChamadosParaGrid(idTecnicoLogado); }
             catch (Exception) { throw; }
         }
         public Chamado GetChamadoPorId(int id)
