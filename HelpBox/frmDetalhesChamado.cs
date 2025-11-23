@@ -187,5 +187,11 @@ namespace HelpBox
         {
 
         }
+
+        private void stripMSistemaDetalhes_Click(object sender, EventArgs e)
+        {
+            frmManual tela = new frmManual();
+            tela.ShowDialog();
+        }
     }
 }

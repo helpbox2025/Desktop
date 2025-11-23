@@ -95,24 +95,24 @@
             // 
             // tlpMenuLateral
             // 
-            tlpMenuLateral.BackColor = Color.FromArgb(52, 58, 64);
+            tlpMenuLateral.BackColor = Color.FromArgb(30, 41, 59);
             tlpMenuLateral.ColumnCount = 1;
             tlpMenuLateral.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tlpMenuLateral.Controls.Add(lblPerfil, 0, 0);
             tlpMenuLateral.Controls.Add(picFotoUser, 0, 1);
             tlpMenuLateral.Controls.Add(lblBoasVindas, 0, 2);
             tlpMenuLateral.Controls.Add(lblEmail, 0, 3);
-            tlpMenuLateral.Controls.Add(btnLogOut, 0, 4);
+            tlpMenuLateral.Controls.Add(btnLogOut, 0, 5);
             tlpMenuLateral.Dock = DockStyle.Fill;
             tlpMenuLateral.Location = new Point(0, 0);
             tlpMenuLateral.Name = "tlpMenuLateral";
-            tlpMenuLateral.RowCount = 4;
+            tlpMenuLateral.RowCount = 6;
             tlpMenuLateral.RowStyles.Add(new RowStyle());
             tlpMenuLateral.RowStyles.Add(new RowStyle());
             tlpMenuLateral.RowStyles.Add(new RowStyle());
             tlpMenuLateral.RowStyles.Add(new RowStyle());
+            tlpMenuLateral.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tlpMenuLateral.RowStyles.Add(new RowStyle());
-            tlpMenuLateral.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
             tlpMenuLateral.Size = new Size(200, 637);
             tlpMenuLateral.TabIndex = 0;
             // 
@@ -151,6 +151,7 @@
             lblBoasVindas.TabIndex = 1;
             lblBoasVindas.Text = "Olá, Técnico!";
             lblBoasVindas.TextAlign = ContentAlignment.MiddleCenter;
+            lblBoasVindas.Click += lblBoasVindas_Click;
             // 
             // lblEmail
             // 
@@ -164,13 +165,14 @@
             lblEmail.TabIndex = 2;
             lblEmail.Text = "emailtest@helpbox.com";
             lblEmail.TextAlign = ContentAlignment.MiddleCenter;
+            lblEmail.Click += lblEmail_Click;
             // 
             // btnLogOut
             // 
             btnLogOut.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnLogOut.BackColor = Color.FromArgb(192, 0, 0);
-            btnLogOut.FlatAppearance.MouseDownBackColor = Color.FromArgb(64, 0, 0);
-            btnLogOut.FlatAppearance.MouseOverBackColor = Color.Maroon;
+            btnLogOut.BackColor = Color.Maroon;
+            btnLogOut.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 0, 0);
+            btnLogOut.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
             btnLogOut.FlatStyle = FlatStyle.Flat;
             btnLogOut.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogOut.ForeColor = SystemColors.ControlLightLight;
@@ -184,6 +186,7 @@
             // 
             // tlpConteudo
             // 
+            tlpConteudo.BackColor = Color.Silver;
             tlpConteudo.ColumnCount = 1;
             tlpConteudo.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tlpConteudo.Controls.Add(panelLogo, 0, 0);
@@ -191,11 +194,12 @@
             tlpConteudo.Controls.Add(btnManual, 0, 2);
             tlpConteudo.Dock = DockStyle.Fill;
             tlpConteudo.Location = new Point(0, 0);
+            tlpConteudo.Margin = new Padding(0);
             tlpConteudo.Name = "tlpConteudo";
             tlpConteudo.RowCount = 3;
             tlpConteudo.RowStyles.Add(new RowStyle(SizeType.Absolute, 110F));
             tlpConteudo.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tlpConteudo.RowStyles.Add(new RowStyle());
+            tlpConteudo.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
             tlpConteudo.Size = new Size(780, 637);
             tlpConteudo.TabIndex = 0;
             // 
@@ -230,7 +234,7 @@
             dgvChamados.BackgroundColor = Color.Silver;
             dgvChamados.BorderStyle = BorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(52, 58, 64);
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(30, 41, 59);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = SystemColors.Window;
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(52, 58, 90);
@@ -256,7 +260,7 @@
             dgvChamados.RowHeadersVisible = false;
             dgvChamados.RowHeadersWidth = 51;
             dgvChamados.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvChamados.Size = new Size(774, 480);
+            dgvChamados.Size = new Size(774, 461);
             dgvChamados.TabIndex = 1;
             dgvChamados.CellContentClick += dgvChamados_CellContentClick;
             // 
@@ -330,7 +334,7 @@
             // btnManual
             // 
             btnManual.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnManual.BackColor = Color.MidnightBlue;
+            btnManual.BackColor = Color.FromArgb(30, 41, 59);
             btnManual.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 30);
             btnManual.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 64);
             btnManual.FlatStyle = FlatStyle.Flat;
@@ -342,10 +346,11 @@
             btnManual.TabIndex = 1;
             btnManual.Text = "Manual do Usuário";
             btnManual.UseVisualStyleBackColor = false;
+            btnManual.Click += btnManual_Click;
             // 
             // menuStripPrincipal
             // 
-            menuStripPrincipal.BackColor = Color.FromArgb(52, 58, 64);
+            menuStripPrincipal.BackColor = Color.FromArgb(30, 41, 59);
             menuStripPrincipal.ImageScalingSize = new Size(20, 20);
             menuStripPrincipal.Items.AddRange(new ToolStripItem[] { tsmMenuLateral, stripUsuarioPrincipal, stripSobrePrincipal, stripManualPrincipal });
             menuStripPrincipal.Location = new Point(0, 0);
@@ -404,12 +409,14 @@
             stripManualPrincipal.Name = "stripManualPrincipal";
             stripManualPrincipal.Size = new Size(59, 20);
             stripManualPrincipal.Text = "Manual";
+            stripManualPrincipal.Click += stripManualPrincipal_Click;
             // 
             // stripMSistemaPrincipal
             // 
             stripMSistemaPrincipal.Name = "stripMSistemaPrincipal";
             stripMSistemaPrincipal.Size = new Size(178, 22);
             stripMSistemaPrincipal.Text = "Manual do Sistema";
+            stripMSistemaPrincipal.Click += stripMSistemaPrincipal_Click;
             // 
             // timerMenu
             // 
@@ -427,8 +434,8 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStripPrincipal;
             MaximizeBox = false;
-            MinimumSize = new Size(1000, 653);
             Name = "frmTelaPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "HelpBox - Tela Inicial.";
             WindowState = FormWindowState.Maximized;
             FormClosing += frmTelaPrincipal_FormClosing;

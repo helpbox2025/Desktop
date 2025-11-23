@@ -80,9 +80,9 @@
             // 
             // btnSair
             // 
-            btnSair.BackColor = Color.FromArgb(192, 0, 0);
-            btnSair.FlatAppearance.MouseDownBackColor = Color.FromArgb(64, 0, 0);
-            btnSair.FlatAppearance.MouseOverBackColor = Color.Maroon;
+            btnSair.BackColor = Color.Maroon;
+            btnSair.FlatAppearance.MouseDownBackColor = Color.FromArgb(32, 0, 0);
+            btnSair.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSair.ForeColor = SystemColors.ButtonHighlight;
@@ -112,8 +112,9 @@
             // 
             // txtSenha
             // 
-            txtSenha.BackColor = Color.FromArgb(74, 112, 122);
+            txtSenha.BackColor = Color.FromArgb(30, 41, 59);
             txtSenha.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtSenha.ForeColor = SystemColors.Window;
             txtSenha.Location = new Point(303, 352);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(235, 23);
@@ -122,8 +123,9 @@
             // 
             // txtUsuario
             // 
-            txtUsuario.BackColor = Color.FromArgb(74, 112, 122);
+            txtUsuario.BackColor = Color.FromArgb(30, 41, 59);
             txtUsuario.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtUsuario.ForeColor = SystemColors.Window;
             txtUsuario.Location = new Point(303, 318);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(235, 23);
@@ -133,7 +135,7 @@
             // 
             lblSenha.AutoSize = true;
             lblSenha.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSenha.ForeColor = Color.Black;
+            lblSenha.ForeColor = Color.Transparent;
             lblSenha.Location = new Point(244, 355);
             lblSenha.Name = "lblSenha";
             lblSenha.Size = new Size(53, 14);
@@ -144,7 +146,7 @@
             // 
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUsuario.ForeColor = Color.Black;
+            lblUsuario.ForeColor = Color.Transparent;
             lblUsuario.Location = new Point(236, 321);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(63, 14);
@@ -155,7 +157,7 @@
             // 
             lblDescricao.AutoSize = true;
             lblDescricao.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDescricao.ForeColor = Color.FromArgb(0, 0, 34);
+            lblDescricao.ForeColor = Color.FromArgb(224, 224, 224);
             lblDescricao.Location = new Point(256, 270);
             lblDescricao.Name = "lblDescricao";
             lblDescricao.Size = new Size(322, 14);
@@ -166,7 +168,7 @@
             // 
             lblBoasVindas.AutoSize = true;
             lblBoasVindas.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBoasVindas.ForeColor = Color.FromArgb(0, 0, 64);
+            lblBoasVindas.ForeColor = Color.FromArgb(224, 224, 224);
             lblBoasVindas.Location = new Point(170, 199);
             lblBoasVindas.Name = "lblBoasVindas";
             lblBoasVindas.Size = new Size(481, 71);
@@ -187,7 +189,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(74, 112, 122);
+            BackColor = Color.FromArgb(30, 41, 59);
             ClientSize = new Size(984, 661);
             Controls.Add(tlpLogin);
             FormBorderStyle = FormBorderStyle.FixedSingle;

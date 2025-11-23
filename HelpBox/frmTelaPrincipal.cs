@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq; // Necessário para .FirstOrDefault()
 using System.Text;
@@ -57,7 +58,26 @@ namespace HelpBox
             }
 
             CarregarChamados();
+
+            // Verifica se o usuário foi recebido corretamente
+            if (this.usuarioLogado != null)
+            {
+                // Preenche o Label de Boas Vindas
+                // Use a propriedade correta do seu Model (ex: nome_User ou NomeCompleto)
+                lblBoasVindas.Text = $"Olá, {this.usuarioLogado.nome_User}!";
+
+                // Preenche o Label de Email
+                // Use a propriedade correta do seu Model (ex: email_User)
+                lblEmail.Text = this.usuarioLogado.email_User;
+            }
+            else
+            {
+                // Caso de teste (se abrir a tela sem login, por exemplo)
+                lblBoasVindas.Text = "Olá, Técnico!";
+                lblEmail.Text = "email@exemplo.com";
+            }
         }
+        
 
         // --- !! MÉTODO CARREGAR CHAMADOS (CORRIGIDO) !! ---
         private void CarregarChamados()
@@ -265,7 +285,37 @@ namespace HelpBox
             MessageBox.Show(mensagem, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+
+
         private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnManual_Click(object sender, EventArgs e)
+        {
+            // Cria e abre a tela do manual
+            frmManual tela = new frmManual();
+            tela.ShowDialog(); // Abre como uma janela "filha" (pop-up
+        }
+
+        private void stripManualPrincipal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stripMSistemaPrincipal_Click(object sender, EventArgs e)
+        {
+            frmManual tela = new frmManual();
+            tela.ShowDialog();
+        }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBoasVindas_Click(object sender, EventArgs e)
         {
 
         }

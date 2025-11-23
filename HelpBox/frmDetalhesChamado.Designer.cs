@@ -67,7 +67,7 @@
             // 
             // groupBoxDetalhes
             // 
-            groupBoxDetalhes.BackColor = Color.FromArgb(74, 112, 122);
+            groupBoxDetalhes.BackColor = Color.LightGray;
             groupBoxDetalhes.Controls.Add(labelSolucaoIA);
             groupBoxDetalhes.Controls.Add(txtSolucaoIA);
             groupBoxDetalhes.Controls.Add(txtAbrangencia);
@@ -85,7 +85,7 @@
             groupBoxDetalhes.Controls.Add(txtAssunto);
             groupBoxDetalhes.Controls.Add(lblAssunto);
             groupBoxDetalhes.Dock = DockStyle.Fill;
-            groupBoxDetalhes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBoxDetalhes.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBoxDetalhes.Location = new Point(3, 3);
             groupBoxDetalhes.Name = "groupBoxDetalhes";
             groupBoxDetalhes.Size = new Size(978, 248);
@@ -107,7 +107,7 @@
             // txtSolucaoIA
             // 
             txtSolucaoIA.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtSolucaoIA.BackColor = SystemColors.ControlLight;
+            txtSolucaoIA.BackColor = SystemColors.ControlDark;
             txtSolucaoIA.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtSolucaoIA.Location = new Point(667, 132);
             txtSolucaoIA.Multiline = true;
@@ -120,7 +120,7 @@
             // txtAbrangencia
             // 
             txtAbrangencia.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtAbrangencia.BackColor = SystemColors.ControlLight;
+            txtAbrangencia.BackColor = SystemColors.ControlDark;
             txtAbrangencia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtAbrangencia.Location = new Point(667, 61);
             txtAbrangencia.Name = "txtAbrangencia";
@@ -130,7 +130,7 @@
             // 
             // txtFrequencia
             // 
-            txtFrequencia.BackColor = SystemColors.ControlLight;
+            txtFrequencia.BackColor = SystemColors.ControlDark;
             txtFrequencia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtFrequencia.Location = new Point(142, 211);
             txtFrequencia.Name = "txtFrequencia";
@@ -140,7 +140,7 @@
             // 
             // txtImpacto
             // 
-            txtImpacto.BackColor = SystemColors.ControlLight;
+            txtImpacto.BackColor = SystemColors.ControlDark;
             txtImpacto.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtImpacto.Location = new Point(142, 182);
             txtImpacto.Name = "txtImpacto";
@@ -182,7 +182,7 @@
             // txtInicioProb
             // 
             txtInicioProb.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtInicioProb.BackColor = SystemColors.ControlLight;
+            txtInicioProb.BackColor = SystemColors.ControlDark;
             txtInicioProb.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtInicioProb.ForeColor = SystemColors.WindowText;
             txtInicioProb.Location = new Point(701, 93);
@@ -216,7 +216,7 @@
             // txtCategoria
             // 
             txtCategoria.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtCategoria.BackColor = SystemColors.ControlLight;
+            txtCategoria.BackColor = SystemColors.ControlDark;
             txtCategoria.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCategoria.Location = new Point(667, 31);
             txtCategoria.Name = "txtCategoria";
@@ -226,7 +226,7 @@
             // 
             // txtDescricao
             // 
-            txtDescricao.BackColor = SystemColors.ControlLight;
+            txtDescricao.BackColor = SystemColors.ControlDark;
             txtDescricao.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtDescricao.Location = new Point(142, 60);
             txtDescricao.Multiline = true;
@@ -249,7 +249,7 @@
             // 
             // txtAssunto
             // 
-            txtAssunto.BackColor = SystemColors.ControlLight;
+            txtAssunto.BackColor = SystemColors.ControlDark;
             txtAssunto.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtAssunto.Location = new Point(142, 31);
             txtAssunto.Name = "txtAssunto";
@@ -269,10 +269,10 @@
             // 
             // groupBoxResolucao
             // 
-            groupBoxResolucao.BackColor = Color.FromArgb(74, 112, 122);
+            groupBoxResolucao.BackColor = Color.Silver;
             groupBoxResolucao.Controls.Add(txtSolucaoTec);
             groupBoxResolucao.Dock = DockStyle.Fill;
-            groupBoxResolucao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBoxResolucao.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBoxResolucao.Location = new Point(3, 257);
             groupBoxResolucao.Name = "groupBoxResolucao";
             groupBoxResolucao.Size = new Size(978, 234);
@@ -293,7 +293,7 @@
             // 
             // tlpDetalhes
             // 
-            tlpDetalhes.BackColor = Color.FromArgb(74, 112, 122);
+            tlpDetalhes.BackColor = Color.Silver;
             tlpDetalhes.ColumnCount = 1;
             tlpDetalhes.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tlpDetalhes.Controls.Add(groupBoxDetalhes, 0, 0);
@@ -312,10 +312,10 @@
             // 
             // panelBotoes
             // 
-            panelBotoes.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            panelBotoes.BackColor = Color.FromArgb(74, 112, 122);
+            panelBotoes.BackColor = Color.Silver;
             panelBotoes.Controls.Add(btnSalvar);
             panelBotoes.Controls.Add(btnFinalizar);
+            panelBotoes.Dock = DockStyle.Fill;
             panelBotoes.Location = new Point(3, 497);
             panelBotoes.Name = "panelBotoes";
             panelBotoes.Size = new Size(978, 33);
@@ -323,7 +323,7 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.BackColor = Color.MidnightBlue;
+            btnSalvar.BackColor = Color.FromArgb(30, 41, 59);
             btnSalvar.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 25);
             btnSalvar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 64);
             btnSalvar.FlatStyle = FlatStyle.Flat;
@@ -355,7 +355,7 @@
             // 
             // menuStripDetalhes
             // 
-            menuStripDetalhes.BackColor = Color.SteelBlue;
+            menuStripDetalhes.BackColor = Color.FromArgb(30, 41, 59);
             menuStripDetalhes.ImageScalingSize = new Size(20, 20);
             menuStripDetalhes.Items.AddRange(new ToolStripItem[] { stripUsuarioDetalhes, stripSobreDetalhes, stripManualDetalhes });
             menuStripDetalhes.Location = new Point(0, 0);
@@ -410,17 +410,17 @@
             stripMSistemaDetalhes.Name = "stripMSistemaDetalhes";
             stripMSistemaDetalhes.Size = new Size(178, 22);
             stripMSistemaDetalhes.Text = "Manual do Sistema";
+            stripMSistemaDetalhes.Click += stripMSistemaDetalhes_Click;
             // 
             // frmDetalhesChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(74, 112, 122);
+            BackColor = Color.Silver;
             ClientSize = new Size(984, 661);
             Controls.Add(tlpDetalhes);
             Controls.Add(menuStripDetalhes);
             MainMenuStrip = menuStripDetalhes;
-            MinimumSize = new Size(1000, 651);
             Name = "frmDetalhesChamado";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HelpBox - Chamados.";
