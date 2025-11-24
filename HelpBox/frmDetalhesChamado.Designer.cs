@@ -388,11 +388,12 @@
             stripSobreDetalhes.Name = "stripSobreDetalhes";
             stripSobreDetalhes.Size = new Size(52, 20);
             stripSobreDetalhes.Text = "Sobre";
+            stripSobreDetalhes.Click += stripSobreDetalhes_Click;
             // 
             // stripSobreHDetalhes
             // 
             stripSobreHDetalhes.Name = "stripSobreHDetalhes";
-            stripSobreHDetalhes.Size = new Size(167, 22);
+            stripSobreHDetalhes.Size = new Size(180, 22);
             stripSobreHDetalhes.Text = "Sobre a HelpBox";
             stripSobreHDetalhes.Click += stripSobreHDetalhes_Click;
             // 

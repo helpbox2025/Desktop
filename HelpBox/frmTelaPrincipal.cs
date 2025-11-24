@@ -280,7 +280,8 @@ namespace HelpBox
 
         private void stripSobreHPrincipal_Click(object sender, EventArgs e)
         {
-            string mensagem = "A HelpBox é uma empresa especializada em softwares para solucionamento interno de chamados...";
+            string mensagem = "A HelpBox é uma empresa especializada em softwares para solucionamento interno de chamados relacionados à problemas com hardware e software. Caso queira saber mais ou abrir um chamado, " +
+                "acesse a versão Web!";
             string titulo = "Sobre a HelpBox";
             MessageBox.Show(mensagem, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

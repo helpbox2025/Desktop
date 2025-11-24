@@ -86,7 +86,8 @@ namespace HelpBox
         private void stripSobreHDetalhes_Click(object sender, EventArgs e)
         {
             // Define o texto que será exibido na mensagem
-            string mensagem = "A HelpBox é uma empresa especializada em softwares para solucionamento interno de chamados relacionados à problemas com hardware e software. Caso queira saber mais ou abrir um chamado, acesse: ";
+            string mensagem = "A HelpBox é uma empresa especializada em softwares para solucionamento interno de chamados relacionados à problemas com hardware e software. Caso queira saber mais ou abrir um chamado, " +
+                "acesse a versão Web!";
 
             // Define o título da janela da mensagem
             string titulo = "Sobre a HelpBox";
@@ -192,6 +193,11 @@ namespace HelpBox
         {
             frmManual tela = new frmManual();
             tela.ShowDialog();
+        }
+
+        private void stripSobreDetalhes_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
