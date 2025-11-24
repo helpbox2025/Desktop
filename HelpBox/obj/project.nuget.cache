@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0Y1lb1eQP4M=",
+  "dgSpecHash": "kbDcLqLINoI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\GAMER\\Source\\Repos\\HelpBoxDESKTOP23\\HelpBox\\HelpBox.csproj",
+  "projectFilePath": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP23\\HelpBox\\HelpBox.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\GAMER\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\GAMER\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
