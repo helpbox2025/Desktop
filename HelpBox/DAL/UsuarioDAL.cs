@@ -12,9 +12,10 @@ namespace HelpBox.DAL
 {
     public class UsuarioDAL
     {
-        private string GetConnectionString() // Recupera a string de conexão do arquivo de configuração (App.config).
+        // Recupera a string de conexão do arquivo de configuração (App.config).
+        private string GetConnectionString() 
         {
-            // Usa o nome "ConexaoBD" que você definiu no App.config
+            // Usa o nome "ConexaoBD" que  definimos no App.config
             string? connString = ConfigurationManager.ConnectionStrings["ConexaoBD"]?.ConnectionString;
             if (string.IsNullOrEmpty(connString))
             {
@@ -22,7 +23,10 @@ namespace HelpBox.DAL
             }
             return connString;
         }
-        public Usuario VerificarLoginTecnico(string email, string senhaDigitada) // Verifica no banco de dados se o email pertence a um técnico e valida a senha usando hash.
+
+        // Verifica no banco de dados se o email pertence a
+        // um técnico e valida a senha usando hash.
+        public Usuario VerificarLoginTecnico(string email, string senhaDigitada) 
         {
             Usuario usuarioTecnico = null;
             string connectionString = GetConnectionString();
@@ -47,14 +51,15 @@ namespace HelpBox.DAL
                         conexao.Open();
                         using (SqlDataReader reader = comando.ExecuteReader())
                         {
-                            // Se reader.Read() for true, encontrou um usuário que é técnico E a senha bateu
+                            // Se reader.Read() for true, encontrou um usuário
+                            // que é técnico E a senha bateu
                             if (reader.Read())
                             {
 
                                 // Pega o HASH da senha que está armazenado no banco.
                                 string hashSenhaDoBanco = reader["senha_User"].ToString();
 
-                                // Usa .Trim() como seu amigo, para remover espaços extras.
+                                // Usa .Trim() , para remover espaços extras.
                                 string hashBDLimpo = hashSenhaDoBanco.Trim();
 
                                 // Verifica se a senha digitada corresponde ao hash do banco.
@@ -67,7 +72,8 @@ namespace HelpBox.DAL
                                 catch (Exception exHash)
                                 {
                                     Console.WriteLine($"Erro ao verificar hash BCrypt: {exHash.Message}");
-                                    senhaCorreta = false; // Garante que o login falhe se o hash for inválido
+                                    senhaCorreta = false; 
+                                    // Garante que o login falhe se o hash for inválido
                                 }
                                 if (senhaCorreta)
                                 {
@@ -78,7 +84,8 @@ namespace HelpBox.DAL
                                         email_User = email,
                                         nome_User = reader["Nome_User"].ToString(),
                                         sobrenome_User = reader["sobrenome_User"]?.ToString(),
-                                        cargo_User = reader["cargo_User"]?.ToString(), // Usar ? para campos que podem ser nulos no BD
+                                        cargo_User = reader["cargo_User"]?.ToString(), 
+                                        // Usar ? para campos que podem ser nulos no BD
                                         departamento_User = reader["departamento_User"]?.ToString(),
                                         nivelAcesso_User = Convert.ToInt32(reader["nivelAcesso_User"])
                                     };
@@ -92,13 +99,15 @@ namespace HelpBox.DAL
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine($"Erro inesperado: {ex.Message}"); // Tratar erro
+                        Console.WriteLine($"Erro inesperado: {ex.Message}"); 
+                        // Tratar erro
                         
                     }
                 } 
             } 
 
-            return usuarioTecnico; // Retorna o objeto Usuario (se for técnico válido) ou null
+            return usuarioTecnico; 
+            // Retorna o objeto Usuario (se for técnico válido) ou null
         }
     }
 }

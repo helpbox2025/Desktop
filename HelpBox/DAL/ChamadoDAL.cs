@@ -16,7 +16,8 @@ namespace HelpBox.DAL
             return ConfigurationManager.ConnectionStrings["ConexaoBD"].ConnectionString;
         }
 
-        public List<Chamado> ListarChamadosParaGrid(int idTecnicoLogado) // Busca a lista de chamados no banco, filtrando os que estão livres ou pertencem ao técnico logado.
+        // Busca a lista de chamados no banco, filtrando os que estão livres ou pertencem ao técnico logado.
+        public List<Chamado> ListarChamadosParaGrid(int idTecnicoLogado) 
         {
             List<Chamado> listaDeChamados = new List<Chamado>();
 
@@ -30,14 +31,17 @@ namespace HelpBox.DAL
                                  c.[status_Cham],
                                  c.[tecResponsavel_Cham],
                                  -- Concatena nome e sobrenome da tabela Usuario
-                                 ISNULL(u.[nome_User] + ' ' + u.[sobrenome_User], '') as TecResponsavelNomeCompleto
+                                 ISNULL(u.[nome_User] + ' ' + u.[sobrenome_User], 
+                             '') as TecResponsavelNomeCompleto
                              FROM 
                                  [Chamado] c
                              LEFT JOIN 
                                  [Usuario] u ON c.[tecResponsavel_Cham] = u.[id_User]
                              WHERE 
                                  c.[status_Cham] = 'Em Andamento' AND 
-                                 (c.[tecResponsavel_Cham] IS NULL OR c.[tecResponsavel_Cham] = @IdTecnicoLogado)"; // Faz a "ponte" e filtra
+                                 (c.[tecResponsavel_Cham] IS NULL OR 
+                                    c.[tecResponsavel_Cham] = @IdTecnicoLogado)"; 
+                                                        // Faz a "ponte" e filtra
 
             try
             {
@@ -60,7 +64,8 @@ namespace HelpBox.DAL
                                 chamado.dataAbertura_Cham = Convert.ToDateTime(reader["dataAbertura_Cham"]);
                                 chamado.status_Cham = reader["status_Cham"].ToString();
                                 chamado.tecResponsavel_Cham = reader["tecResponsavel_Cham"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["tecResponsavel_Cham"]);
-                                chamado.TecResponsavelNomeCompleto = reader["TecResponsavelNomeCompleto"].ToString();
+                                chamado.TecResponsavelNomeCompleto = reader["TecResponsavelNomeCompleto"]
+                                                                                             .ToString();
 
                                 listaDeChamados.Add(chamado);
                             }
@@ -74,7 +79,10 @@ namespace HelpBox.DAL
             }
             return listaDeChamados;
         }
-        public Chamado GetChamadoPorId(int id) // Busca todos os detalhes de um único chamado pelo ID para exibir na tela de detalhes.
+
+        // Busca todos os detalhes de um único chamado pelo ID
+        // para exibir na tela de detalhes.
+        public Chamado GetChamadoPorId(int id) 
         {
             Chamado chamado = null;
             string query = "SELECT * FROM [Chamado] WHERE [id_Cham] = @Id";
@@ -123,7 +131,10 @@ namespace HelpBox.DAL
 
             return chamado;
         }
-        public void SalvarSolucaoTecnico(int id, string solucao) // Atualiza o texto da solução técnica de um chamado específico no banco de dados.
+
+        // Atualiza o texto da solução técnica de um chamado
+        // específico no banco de dados.
+        public void SalvarSolucaoTecnico(int id, string solucao) 
         {
             string query = "UPDATE [Chamado] SET [solucaoTec_Cham] = @Solucao WHERE [id_Cham] = @Id";
 
@@ -146,7 +157,8 @@ namespace HelpBox.DAL
         }
         public void FinalizarChamado(int id) // Define o status do chamado como 'Fechado' e registra a data/hora atual de encerramento.
         {
-            string query = "UPDATE [Chamado] SET [status_Cham] = 'Fechado', [dataFechamento_Cham] = GETDATE() WHERE [id_Cham] = @Id";
+            string query = "UPDATE [Chamado] SET [status_Cham] = " +
+                "'Fechado', [dataFechamento_Cham] = GETDATE() WHERE [id_Cham] = @Id";
 
             try
             {
@@ -165,13 +177,17 @@ namespace HelpBox.DAL
                 throw new Exception("Erro na DAL ao finalizar chamado: " + ex.Message);
             }
         }
-        public bool AtribuirChamado(int idChamado, int idTecnico) // Tenta associar o chamado ao técnico, retornando true apenas se o chamado ainda estava sem responsável.
+
+        // Tenta associar o chamado ao técnico,
+        // retornando true apenas se o chamado ainda estava sem responsável.
+        public bool AtribuirChamado(int idChamado, int idTecnico) 
         {
             // Atualiza o ID do responsável E o status
             string query = @"UPDATE [Chamado] 
                              SET [tecResponsavel_Cham] = @IdTecnico, [status_Cham] = 'Em Andamento' 
                              WHERE [id_Cham] = @IdChamado 
-                             AND [tecResponsavel_Cham] IS NULL"; // SÓ ATUALIZA SE ESTIVER LIVRE
+                             AND [tecResponsavel_Cham] IS NULL"; 
+                             // SÓ ATUALIZA SE ESTIVER LIVRE
 
             try
             {

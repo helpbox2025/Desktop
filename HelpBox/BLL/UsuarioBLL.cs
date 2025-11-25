@@ -17,12 +17,13 @@ namespace HelpBox.BLL
             _usuarioDAL = new UsuarioDAL();
         }
 
-        public Usuario ValidarLoginTecnico(string email, string senha) // Valida as credenciais (email e senha) e verifica se o usuário é um técnico.
+        // Valida as credenciais (email e senha) e verifica se o usuário é um técnico.
+        public Usuario ValidarLoginTecnico(string email, string senha) 
         {
            
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(senha))
             {
-                return null;
+                return null; // Retorna nulo p/ frm Login
             }
 
             try

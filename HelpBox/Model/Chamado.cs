@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace HelpBox.Model
 {
-    public class Chamado // Classe modelo que representa a estrutura de dados de um Chamado (Ticket) no sistema.
+    // Classe modelo que representa a estrutura de
+    // dados de um Chamado (Ticket) no sistema.
+    public class Chamado 
     {
-        // Propriedades que mapeiam as colunas da tabela de chamados no banco de dados.
+        // Propriedades que mapeiam as colunas da
+        // tabela de chamados no banco de dados.
         public int id_Cham { get; set; }
         public string status_Cham { get; set; }
         public DateTime dataAbertura_Cham { get; set; }
@@ -26,6 +29,9 @@ namespace HelpBox.Model
         public string usuarios_Cham { get; set; }
         public string frequencia_Cham { get; set; }
         public int clienteId_Cham { get; set; }
-        public string TecResponsavelNomeCompleto { get; set; } // Propriedade auxiliar para exibir o nome do técnico na interface (não é gravada na tabela Chamado).
+
+        // Propriedade auxiliar para exibir o nome do técnico
+        // na interface (não é gravada na tabela Chamado).
+        public string TecResponsavelNomeCompleto { get; set; } 
     }
 }

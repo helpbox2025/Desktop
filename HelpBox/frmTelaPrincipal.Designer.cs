@@ -61,6 +61,7 @@
             stripManualPrincipal = new ToolStripMenuItem();
             stripMSistemaPrincipal = new ToolStripMenuItem();
             timerMenu = new System.Windows.Forms.Timer(components);
+            lblDepartamento = new Label();
             ((System.ComponentModel.ISupportInitialize)splicontPrincipal).BeginInit();
             splicontPrincipal.Panel1.SuspendLayout();
             splicontPrincipal.Panel2.SuspendLayout();
@@ -103,6 +104,7 @@
             tlpMenuLateral.Controls.Add(lblBoasVindas, 0, 2);
             tlpMenuLateral.Controls.Add(lblEmail, 0, 3);
             tlpMenuLateral.Controls.Add(btnLogOut, 0, 5);
+            tlpMenuLateral.Controls.Add(lblDepartamento, 0, 4);
             tlpMenuLateral.Dock = DockStyle.Fill;
             tlpMenuLateral.Location = new Point(0, 0);
             tlpMenuLateral.Name = "tlpMenuLateral";
@@ -423,6 +425,18 @@
             timerMenu.Interval = 10;
             timerMenu.Tick += timerMenu_Tick;
             // 
+            // lblDepartamento
+            // 
+            lblDepartamento.Anchor = AnchorStyles.Top;
+            lblDepartamento.AutoSize = true;
+            lblDepartamento.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDepartamento.ForeColor = SystemColors.Control;
+            lblDepartamento.Location = new Point(50, 149);
+            lblDepartamento.Name = "lblDepartamento";
+            lblDepartamento.Size = new Size(100, 15);
+            lblDepartamento.TabIndex = 4;
+            lblDepartamento.Text = "Departamento - ";
+            // 
             // frmTelaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -489,5 +503,6 @@
         private DataGridViewTextBoxColumn ColunaTec;
         private DataGridViewButtonColumn ColunaSolucionar;
         private DataGridViewButtonColumn ColunaDetalhes;
+        private Label lblDepartamento;
     }
 }

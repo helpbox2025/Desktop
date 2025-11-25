@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace HelpBox.Model
 {
-    public class Usuario // Classe modelo que representa a estrutura de dados de um Usuário no sistema.
+    // Classe modelo que representa a estrutura de dados de um
+    // Usuário no sistema.
+    public class Usuario 
     {
-        // Propriedades que mapeiam as colunas da tabela de usuários no banco de dados.
+        // Propriedades que mapeiam as colunas da tabela de
+        // usuários no banco de dados.
         public int id_User { get; set; }
         public string? email_User { get; set; }
         public string? senha_User { get; set; }
@@ -17,7 +20,10 @@ namespace HelpBox.Model
         public int? nivelAcesso_User { get; set; }
         public string? nome_User { get; set; }
         public string? sobrenome_User { get; set; }
-        public string NomeCompleto => $"{nome_User} {sobrenome_User}"; // Propriedade calculada que retorna o nome e sobrenome concatenados para exibição.
+
+        // Propriedade calculada que retorna o nome e
+        // sobrenome concatenados para exibição.
+        public string NomeCompleto => $"{nome_User} {sobrenome_User}"; 
     }
 }
 

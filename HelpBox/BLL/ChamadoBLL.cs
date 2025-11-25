@@ -11,31 +11,41 @@ namespace HelpBox.BLL
     public class ChamadoBLL
     {
         private ChamadoDAL chamadoDAL = new ChamadoDAL();
-       
-        public List<Chamado> ListarChamadosParaGrid(int idTecnicoLogado) // Busca a lista de chamados disponíveis e associados ao técnico para exibir na grid.
+
+        // Busca a lista de chamados disponíveis e associados ao técnico para exibir na grid.
+        public List<Chamado> ListarChamadosParaGrid(int idTecnicoLogado) 
         {
             try { return chamadoDAL.ListarChamadosParaGrid(idTecnicoLogado); }
             catch (Exception) { throw; }
         }
-        public Chamado GetChamadoPorId(int id) // Valida o ID e busca os detalhes completos de um chamado específico.
+
+        // Valida o ID e busca os detalhes completos de um chamado específico.
+        public Chamado GetChamadoPorId(int id) 
         {
             if (id <= 0) { throw new Exception("ID do chamado é inválido."); }
             try { return chamadoDAL.GetChamadoPorId(id); }
             catch (Exception) { throw; }
         }
-        public void SalvarSolucaoTecnico(int id, string solucao) // Verifica se a solução não está vazia e salva a resposta técnica no banco.
+
+        // Verifica se a solução não está vazia e salva a resposta técnica no banco.
+        public void SalvarSolucaoTecnico(int id, string solucao) 
         {
             if (string.IsNullOrWhiteSpace(solucao)) { throw new Exception("A solução do técnico não pode estar vazia."); }
             try { chamadoDAL.SalvarSolucaoTecnico(id, solucao); }
             catch (Exception) { throw; }
         }
-        public void FinalizarChamado(int id) // Valida o ID e executa a finalização do chamado.
+
+        // Valida o ID e executa a finalização do chamado.
+        public void FinalizarChamado(int id) 
         {
             if (id <= 0) { throw new Exception("ID do chamado é inválido."); }
             try { chamadoDAL.FinalizarChamado(id); }
             catch (Exception ex) { throw ex; }
         }
-        public bool AtribuirChamado(int idChamado, int idTecnico) // Tenta atribuir um chamado ao técnico, retornando verdadeiro ou falso (para controle de concorrência).
+
+        // Tenta atribuir um chamado ao técnico,
+        // retornando verdadeiro ou falso (para controle de concorrência).
+        public bool AtribuirChamado(int idChamado, int idTecnico) 
         {
             if (idTecnico <= 0)
             {
