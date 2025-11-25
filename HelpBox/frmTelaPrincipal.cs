@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq; // Necessário para .FirstOrDefault()
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,33 +18,26 @@ namespace HelpBox
     public partial class frmTelaPrincipal : Form
     {
         private ChamadoBLL chamadoBLL = new ChamadoBLL();
-
-        // --- Variáveis de Classe ---
         private int larguraMenuAberto = 280;
         private int larguraMenuFechado = 0;
         private int passoAnimacao = 30;
         private bool menuAberto = false;
 
         private List<Chamado> _listaDeChamadosAtual;
-        private Usuario usuarioLogado; // Seu código usa 'usuarioLogado' (minúsculo)
-
-        // --- Construtor ---
-        public frmTelaPrincipal(Usuario usuario)
+        private Usuario usuarioLogado;
+        public frmTelaPrincipal(Usuario usuario) // Inicializa a tela e recebe o objeto do usuário logado.
         {
             InitializeComponent();
             this.usuarioLogado = usuario;
         }
 
-        // --- Load da Tela ---
-        private void frmTelaPrincipal_Load(object sender, EventArgs e)
+        private void frmTelaPrincipal_Load(object sender, EventArgs e) // Configura o layout inicial, exibe mensagem de boas-vindas e carrega a lista de chamados.
         {
-            // ... (Seu código de animação do menu está ótimo) ...
             this.splicontPrincipal.Panel1Collapsed = false;
             this.splicontPrincipal.SplitterDistance = this.larguraMenuAberto;
             this.menuAberto = true;
             tsmMenuLateral.BackColor = Color.DarkSlateGray;
 
-            // Preenche os dados do usuário logado
             if (this.usuarioLogado != null)
             {
                 lblBoasVindas.Text = $"Olá, {this.usuarioLogado.nome_User}!";
@@ -52,43 +45,29 @@ namespace HelpBox
             }
             else
             {
-                // (Fallback, como você já tinha)
                 lblBoasVindas.Text = "Olá, Técnico!";
                 lblEmail.Text = "email@exemplo.com";
             }
 
             CarregarChamados();
 
-            // Verifica se o usuário foi recebido corretamente
             if (this.usuarioLogado != null)
             {
-                // Preenche o Label de Boas Vindas
-                // Use a propriedade correta do seu Model (ex: nome_User ou NomeCompleto)
                 lblBoasVindas.Text = $"Olá, {this.usuarioLogado.nome_User}!";
-
-                // Preenche o Label de Email
-                // Use a propriedade correta do seu Model (ex: email_User)
                 lblEmail.Text = this.usuarioLogado.email_User;
             }
             else
             {
-                // Caso de teste (se abrir a tela sem login, por exemplo)
                 lblBoasVindas.Text = "Olá, Técnico!";
                 lblEmail.Text = "email@exemplo.com";
             }
         }
-        
-
-        // --- !! MÉTODO CARREGAR CHAMADOS (CORRIGIDO) !! ---
-        private void CarregarChamados()
+        private void CarregarChamados() // Busca os chamados no banco, preenche a tabela e define as cores dos botões de ação.
         {
             dgvChamados.Rows.Clear();
             try
             {
-                // Pega o ID do técnico logado (do seu Model 'Usuario')
-                int meuID = this.usuarioLogado.id_User; // Já pegamos isso antes, ótimo!
-
-                // MODIFICADO: Passa 'meuID' para a BLL
+                int meuID = this.usuarioLogado.id_User;
                 _listaDeChamadosAtual = chamadoBLL.ListarChamadosParaGrid(meuID);
 
 
@@ -103,22 +82,18 @@ namespace HelpBox
                         chamado.status_Cham,
                         chamado.TecResponsavelNomeCompleto
                     );
-
-                    // 3. Estiliza o botão "Solucionar"
-                    // Verifica se 'tecResponsavel_Cham' (o ID) tem um valor
-                    if (chamado.tecResponsavel_Cham.HasValue) // .HasValue verifica se o int? não é nulo
+                    if (chamado.tecResponsavel_Cham != null)
                     {
                         DataGridViewButtonCell cell = (DataGridViewButtonCell)dgvChamados.Rows[rowIndex].Cells["ColunaSolucionar"];
                         cell.Value = "Em Atendimento";
 
-                        // Se o ID do responsável for o MEU ID (int == int)
-                        if (chamado.tecResponsavel_Cham.Value == meuID)
+                        if (chamado.tecResponsavel_Cham == meuID)
                         {
-                            cell.Style.BackColor = Color.CornflowerBlue; // Cor para "Meu"
+                            cell.Style.BackColor = Color.CornflowerBlue;
                         }
                         else
                         {
-                            cell.Style.BackColor = Color.Gray; // Cor para "De outro"
+                            cell.Style.BackColor = Color.Gray;
                         }
                         cell.Style.ForeColor = Color.White;
                     }
@@ -129,9 +104,7 @@ namespace HelpBox
                 MessageBox.Show("Erro ao carregar chamados: " + ex.Message);
             }
         }
-
-        // --- !! MÉTODO DE CLIQUE NA TABELA (CORRIGIDO) !! ---
-        private void dgvChamados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvChamados_CellContentClick(object sender, DataGridViewCellEventArgs e) // Gerencia os cliques nos botões da tabela (Solucionar/Detalhes) e valida se o técnico pode acessar o chamado.
         {
             if (e.RowIndex < 0) return;
 
@@ -140,16 +113,12 @@ namespace HelpBox
 
             Chamado chamadoClicado = _listaDeChamadosAtual.FirstOrDefault(c => c.id_Cham == idDoChamado);
             if (chamadoClicado == null) return;
+            int meuID = this.usuarioLogado.id_User; 
+            int? tecnicoID = chamadoClicado.tecResponsavel_Cham;
+            string tecnicoNome = chamadoClicado.TecResponsavelNomeCompleto;
 
-            // --- Pega os dados CORRETOS para a lógica ---
-            int meuID = this.usuarioLogado.id_User; // ID do técnico logado
-            int? tecnicoID = chamadoClicado.tecResponsavel_Cham; // ID do responsável (pode ser nulo)
-            string tecnicoNome = chamadoClicado.TecResponsavelNomeCompleto; // NOME do responsável (vem do JOIN)
-
-            // --- LÓGICA DO BOTÃO "SOLUCIONAR" ---
             if (nomeColuna == "ColunaSolucionar")
             {
-                // Caso 1: Chamado está LIVRE (!tecnicoID.HasValue == "é nulo")
                 if (!tecnicoID.HasValue)
                 {
                     DialogResult confirmacao = MessageBox.Show(
@@ -158,7 +127,6 @@ namespace HelpBox
 
                     if (confirmacao == DialogResult.Yes)
                     {
-                        // Tenta "pegar" o chamado no banco usando o MEU ID
                         bool sucesso = chamadoBLL.AtribuirChamado(idDoChamado, meuID);
 
                         if (sucesso)
@@ -169,44 +137,35 @@ namespace HelpBox
                         {
                             MessageBox.Show("Este chamado acabou de ser pego por outro técnico. A lista será atualizada.", "Conflito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        CarregarChamados(); // Atualiza a lista
+                        CarregarChamados();
                     }
                 }
-                // Caso 2: Chamado está pego por MIM (compara ID com ID)
                 else if (tecnicoID.Value == meuID)
                 {
                     AbrirDetalhes(idDoChamado);
                 }
-                // Caso 3: Chamado está pego por OUTRO TÉCNICO
                 else
                 {
-                    // !! RESPOSTA AQUI !! Mostra o NOME (que veio do JOIN)
                     MessageBox.Show("Este chamado já está sendo solucionado por: " + tecnicoNome, "Chamado Bloqueado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-
-            // --- LÓGICA DO BOTÃO "VER DETALHES" ---
             if (nomeColuna == "ColunaDetalhes")
             {
                 if (tecnicoID.HasValue && tecnicoID.Value == meuID)
                 {
                     AbrirDetalhes(idDoChamado);
                 }
-                else if (!tecnicoID.HasValue) // Se estiver livre
+                else if (!tecnicoID.HasValue)
                 {
                     MessageBox.Show("Você deve primeiro clicar em 'Solucionar' para atribuir este chamado a você.", "Ação Necessária", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else // Se for de outro técnico
+                else
                 {
-                    // !! RESPOSTA AQUI !! Mostra o NOME
                     MessageBox.Show("Este chamado está sendo solucionado por: " + tecnicoNome + ". Você não pode ver os detalhes.", "Chamado Bloqueado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
-
-        // --- (O resto do seu código: AbrirDetalhes, ExecutarLogout, btnLogOut_Click, etc. está perfeito) ---
-
-        private void AbrirDetalhes(int idDoChamado)
+        private void AbrirDetalhes(int idDoChamado) // Abre a janela de detalhes do chamado e atualiza a lista ao retornar.
         {
             using (frmDetalhesChamado telaDeDetalhes = new frmDetalhesChamado(idDoChamado))
             {
@@ -214,23 +173,19 @@ namespace HelpBox
             }
             CarregarChamados();
         }
-
-        private void ExecutarLogout()
+        private void ExecutarLogout() // Fecha a tela atual para realizar o logout.
         {
             this.Close();
         }
-
-        private void btnLogOut_Click(object sender, EventArgs e)
+        private void btnLogOut_Click(object sender, EventArgs e) // Chama a função de logout ao clicar no botão.
         {
             ExecutarLogout();
         }
-
-        private void stripLogoutPrincipal_Click(object sender, EventArgs e)
+        private void stripLogoutPrincipal_Click(object sender, EventArgs e) // Chama a função de logout através do menu superior.
         {
             ExecutarLogout();
         }
-
-        private void frmTelaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmTelaPrincipal_FormClosing(object sender, FormClosingEventArgs e) // Exibe confirmação ao tentar fechar a janela e cancela se o usuário negar.
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
@@ -241,8 +196,7 @@ namespace HelpBox
                 }
             }
         }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void toolStripMenuItem1_Click(object sender, EventArgs e) // Alterna o estado do menu lateral (abrir/fechar) e inicia a animação.
         {
             if (timerMenu.Enabled) return;
             menuAberto = !menuAberto;
@@ -252,8 +206,7 @@ namespace HelpBox
             }
             timerMenu.Start();
         }
-
-        private void timerMenu_Tick(object sender, EventArgs e)
+        private void timerMenu_Tick(object sender, EventArgs e) // Controla a animação de deslize do menu lateral a cada "tick" do temporizador.
         {
             if (menuAberto)
             {
@@ -277,45 +230,35 @@ namespace HelpBox
                 }
             }
         }
-
-        private void stripSobreHPrincipal_Click(object sender, EventArgs e)
+        private void stripSobreHPrincipal_Click(object sender, EventArgs e) // Exibe informações sobre a empresa HelpBox.
         {
             string mensagem = "A HelpBox é uma empresa especializada em softwares para solucionamento interno de chamados relacionados à problemas com hardware e software. Caso queira saber mais ou abrir um chamado, " +
                 "acesse a versão Web!";
             string titulo = "Sobre a HelpBox";
             MessageBox.Show(mensagem, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-
-
-        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        private void panelLogo_Paint(object sender, PaintEventArgs e) 
         {
 
         }
-
-        private void btnManual_Click(object sender, EventArgs e)
+        private void btnManual_Click(object sender, EventArgs e) // Abre a janela do Manual do Sistema pelo botão lateral.
         {
-            // Cria e abre a tela do manual
             frmManual tela = new frmManual();
-            tela.ShowDialog(); // Abre como uma janela "filha" (pop-up
+            tela.ShowDialog(); 
         }
-
         private void stripManualPrincipal_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void stripMSistemaPrincipal_Click(object sender, EventArgs e)
+        private void stripMSistemaPrincipal_Click(object sender, EventArgs e) // Abre a janela do Manual do Sistema pelo menu superior.
         {
             frmManual tela = new frmManual();
             tela.ShowDialog();
         }
-
         private void lblEmail_Click(object sender, EventArgs e)
         {
 
         }
-
         private void lblBoasVindas_Click(object sender, EventArgs e)
         {
 

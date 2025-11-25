@@ -11,18 +11,16 @@ namespace HelpBox.DAL
 {
     public class ChamadoDAL
     {
-        //O método que lê do App.config(Igual na UsuarioDAL)
-        private string GetConnectionString()
+        private string GetConnectionString() // Recupera a string de conexão configurada no arquivo App.config.
         {
             return ConfigurationManager.ConnectionStrings["ConexaoBD"].ConnectionString;
         }
 
-        // Recebe o ID do técnico logado para filtrar a grade
-        public List<Chamado> ListarChamadosParaGrid(int idTecnicoLogado)
+        public List<Chamado> ListarChamadosParaGrid(int idTecnicoLogado) // Busca a lista de chamados no banco, filtrando os que estão livres ou pertencem ao técnico logado.
         {
             List<Chamado> listaDeChamados = new List<Chamado>();
 
-            // MODIFICADO: Adicionei a cláusula WHERE para filtrar os chamados
+            // Cláusula WHERE para filtrar os chamados
             string query = @"SELECT 
                                  c.[id_Cham], 
                                  c.[categoria_Cham], 
@@ -47,7 +45,6 @@ namespace HelpBox.DAL
                 {
                     using (SqlCommand comando = new SqlCommand(query, conexao))
                     {
-                        // ADICIONADO: Parâmetro para o filtro
                         comando.Parameters.AddWithValue("@IdTecnicoLogado", idTecnicoLogado);
 
                         conexao.Open();
@@ -77,12 +74,10 @@ namespace HelpBox.DAL
             }
             return listaDeChamados;
         }
-        // --- !! MÉTODO CORRIGIDO PARA LER O ID !! ---
-
-        public Chamado GetChamadoPorId(int id)
+        public Chamado GetChamadoPorId(int id) // Busca todos os detalhes de um único chamado pelo ID para exibir na tela de detalhes.
         {
             Chamado chamado = null;
-            string query = "SELECT * FROM [Chamado] WHERE [id_Cham] = @Id"; // (Idealmente, este também teria o JOIN)
+            string query = "SELECT * FROM [Chamado] WHERE [id_Cham] = @Id";
 
             try
             {
@@ -99,35 +94,22 @@ namespace HelpBox.DAL
                             if (reader.Read())
                             {
                                 chamado = new Chamado();
-                                // ... (id_Cham, status_Cham, etc...)
                                 chamado.id_Cham = Convert.ToInt32(reader["id_Cham"]);
                                 chamado.status_Cham = reader["status_Cham"].ToString();
                                 chamado.dataAbertura_Cham = Convert.ToDateTime(reader["dataAbertura_Cham"]);
                                 chamado.dataFechamento_Cham = reader["dataFechamento_Cham"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["dataFechamento_Cham"]);
-
-
-                                //chamado.dataProblema_Cham = reader["dataProblema_Cham"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["dataProblema_Cham"]);
-
                                 chamado.prioridade_Cham = reader["prioridade_Cham"].ToString();
                                 chamado.categoria_Cham = reader["categoria_Cham"].ToString();
                                 chamado.descricao_Cham = reader["descricao_Cham"].ToString();
                                 chamado.solucaoIA_Cham = reader["solucaoIA_Cham"].ToString();
                                 chamado.solucaoTec_Cham = reader["solucaoTec_Cham"].ToString();
                                 chamado.solucaoFinal_Cham = reader["solucaoFinal_Cham"].ToString();
-
-
-
-                                // !! CORREÇÃO !!: Lê o ID (int?)
                                 chamado.tecResponsavel_Cham = reader["tecResponsavel_Cham"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["tecResponsavel_Cham"]);
-
-
-
                                 chamado.titulo_Cham = reader["titulo_Cham"].ToString();
                                 chamado.impacto_Cham = reader["impacto_Cham"].ToString();
                                 chamado.usuarios_Cham = reader["usuarios_Cham"].ToString();
                                 chamado.frequencia_Cham = reader["frequencia_Cham"].ToString();
                                 chamado.clienteId_Cham = Convert.ToInt32(reader["clienteId_Cham"]);
-
                             }
                         }
                     }
@@ -141,15 +123,9 @@ namespace HelpBox.DAL
 
             return chamado;
         }
-
-
-
-        public void SalvarSolucaoTecnico(int id, string solucao)
+        public void SalvarSolucaoTecnico(int id, string solucao) // Atualiza o texto da solução técnica de um chamado específico no banco de dados.
         {
-
-            // Este método está correto, não mexe com o responsável
             string query = "UPDATE [Chamado] SET [solucaoTec_Cham] = @Solucao WHERE [id_Cham] = @Id";
-            // ... (O resto do seu código deste método está correto) ...
 
             try
             {
@@ -168,16 +144,10 @@ namespace HelpBox.DAL
                 throw new Exception("Erro na DAL ao salvar solução: " + ex.Message);
             }
         }
-
-
-
-        public void FinalizarChamado(int id)
+        public void FinalizarChamado(int id) // Define o status do chamado como 'Fechado' e registra a data/hora atual de encerramento.
         {
-             
-            // Este método está correto
             string query = "UPDATE [Chamado] SET [status_Cham] = 'Fechado', [dataFechamento_Cham] = GETDATE() WHERE [id_Cham] = @Id";
 
-            // ... (O resto do seu código deste método está correto) ...
             try
             {
                 using (SqlConnection conexao = new SqlConnection(GetConnectionString()))
@@ -195,10 +165,7 @@ namespace HelpBox.DAL
                 throw new Exception("Erro na DAL ao finalizar chamado: " + ex.Message);
             }
         }
-
-
-
-        public bool AtribuirChamado(int idChamado, int idTecnico)
+        public bool AtribuirChamado(int idChamado, int idTecnico) // Tenta associar o chamado ao técnico, retornando true apenas se o chamado ainda estava sem responsável.
         {
             // Atualiza o ID do responsável E o status
             string query = @"UPDATE [Chamado] 
@@ -212,13 +179,8 @@ namespace HelpBox.DAL
                 using (SqlCommand comando = new SqlCommand(query, conexao))
 
                 {
-
-                    // !! CORREÇÃO !!
-
                     comando.Parameters.AddWithValue("@IdTecnico", idTecnico);
                     comando.Parameters.AddWithValue("@IdChamado", idChamado);
-
-
                     conexao.Open();
                     int rowsAffected = comando.ExecuteNonQuery();
                     return rowsAffected > 0; // Retorna true se conseguiu atualizar

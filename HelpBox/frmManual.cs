@@ -12,7 +12,7 @@ namespace HelpBox
 {
     public partial class frmManual : Form
     {
-        public frmManual()
+        public frmManual()//Inicializa os componentes visuais da tela de manual.
         {
             InitializeComponent();
         }
@@ -22,14 +22,11 @@ namespace HelpBox
 
         }
 
-        private void frmManual_Load(object sender, EventArgs e)
+        private void frmManual_Load(object sender, EventArgs e) // Tenta carregar o arquivo 'Manual.rtf' na caixa de texto ao abrir a janela.
         {
             try
             {
-                // Procura o arquivo na mesma pasta onde o programa (.exe) está rodando
                 string caminhoArquivo = System.IO.Path.Combine(Application.StartupPath, "Manual.rtf");
-
-                // Carrega o arquivo dentro da caixa de texto
                 richTextBox1.LoadFile(caminhoArquivo);
             }
             catch (Exception)

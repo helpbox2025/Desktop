@@ -1796,23 +1796,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\GAMER\\.nuget\\packages\\": {},
+    "C:\\Users\\jucal\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\GAMER\\Source\\Repos\\HelpBoxDESKTOP24.11\\HelpBox\\HelpBox.csproj",
+      "projectUniqueName": "C:\\Users\\jucal\\Downloads\\HelpBox\\HelpBox\\HelpBoxDESKTOP\\HelpBox\\HelpBox.csproj",
       "projectName": "HelpBox",
-      "projectPath": "C:\\Users\\GAMER\\Source\\Repos\\HelpBoxDESKTOP24.11\\HelpBox\\HelpBox.csproj",
-      "packagesPath": "C:\\Users\\GAMER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\GAMER\\Source\\Repos\\HelpBoxDESKTOP24.11\\HelpBox\\obj\\",
+      "projectPath": "C:\\Users\\jucal\\Downloads\\HelpBox\\HelpBox\\HelpBoxDESKTOP\\HelpBox\\HelpBox.csproj",
+      "packagesPath": "C:\\Users\\jucal\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jucal\\Downloads\\HelpBox\\HelpBox\\HelpBoxDESKTOP\\HelpBox\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\GAMER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jucal\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1821,7 +1821,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
