@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpboxdesktop24\\helpbox\\frmtelaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|solutionrelative:helpbox\\frmtelaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpboxdesktop24\\helpbox\\frmdetalheschamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|solutionrelative:helpbox\\frmdetalheschamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpboxdesktop24\\helpbox\\dal\\chamadodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|solutionrelative:helpbox\\dal\\chamadodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpboxdesktop24\\helpbox\\dal\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|solutionrelative:helpbox\\dal\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpboxdesktop24\\helpbox\\frmdetalheschamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -27,20 +19,28 @@
       "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|solutionrelative:helpbox\\frmtelaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpboxdesktop24\\helpbox\\model\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|solutionrelative:helpbox\\model\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpboxdesktop24\\helpbox\\frmtelaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|solutionrelative:helpbox\\frmtelaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpboxdesktop24\\helpbox\\model\\chamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|solutionrelative:helpbox\\model\\chamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpboxdesktop24\\helpbox\\bll\\usuariobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|solutionrelative:helpbox\\bll\\usuariobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpboxdesktop24\\helpbox\\bll\\chamadobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|solutionrelative:helpbox\\bll\\chamadobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpboxdesktop24\\helpbox\\dal\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|solutionrelative:helpbox\\dal\\usuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpboxdesktop24\\helpbox\\model\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|solutionrelative:helpbox\\model\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpboxdesktop24\\helpbox\\bll\\usuariobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|solutionrelative:helpbox\\bll\\usuariobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A099DFAD-8558-458A-8390-D75F9A9762B6}|HelpBox\\HelpBox.csproj|c:\\users\\gamer\\source\\repos\\helpboxdesktop24\\helpbox\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,30 +58,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmDetalhesChamado.cs",
-              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\frmDetalhesChamado.cs",
-              "RelativeDocumentMoniker": "HelpBox\\frmDetalhesChamado.cs",
-              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\frmDetalhesChamado.cs*",
-              "RelativeToolTip": "HelpBox\\frmDetalhesChamado.cs*",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAIwIAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T02:36:03.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "ChamadoDAL.cs",
               "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\DAL\\ChamadoDAL.cs",
               "RelativeDocumentMoniker": "HelpBox\\DAL\\ChamadoDAL.cs",
               "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\DAL\\ChamadoDAL.cs",
               "RelativeToolTip": "HelpBox\\DAL\\ChamadoDAL.cs",
-              "ViewState": "AgIAALUAAAAAAAAAAAAcwAcAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowEYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T02:32:11.074Z",
               "EditorCaption": ""
@@ -89,44 +76,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UsuarioDAL.cs",
-              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\DAL\\UsuarioDAL.cs",
-              "RelativeDocumentMoniker": "HelpBox\\DAL\\UsuarioDAL.cs",
-              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\DAL\\UsuarioDAL.cs",
-              "RelativeToolTip": "HelpBox\\DAL\\UsuarioDAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T02:34:21.978Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "frmTelaPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\frmTelaPrincipal.cs",
               "RelativeDocumentMoniker": "HelpBox\\frmTelaPrincipal.cs",
-              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\frmTelaPrincipal.cs*",
-              "RelativeToolTip": "HelpBox\\frmTelaPrincipal.cs*",
-              "ViewState": "AgIAABEBAAAAAAAAAAAkwIwAAAAzAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\frmTelaPrincipal.cs",
+              "RelativeToolTip": "HelpBox\\frmTelaPrincipal.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAowFEAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T02:14:57.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmTelaPrincipal.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\frmTelaPrincipal.cs",
-              "RelativeDocumentMoniker": "HelpBox\\frmTelaPrincipal.cs",
-              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\frmTelaPrincipal.cs [Projeto]*",
-              "RelativeToolTip": "HelpBox\\frmTelaPrincipal.cs [Projeto]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T02:39:02.526Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "frmDetalhesChamado.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\frmDetalhesChamado.cs",
               "RelativeDocumentMoniker": "HelpBox\\frmDetalhesChamado.cs",
@@ -138,33 +100,45 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmDetalhesChamado.cs",
+              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\frmDetalhesChamado.cs",
+              "RelativeDocumentMoniker": "HelpBox\\frmDetalhesChamado.cs",
+              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\frmDetalhesChamado.cs*",
+              "RelativeToolTip": "HelpBox\\frmDetalhesChamado.cs*",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAmwJoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T02:36:03.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmTelaPrincipal.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\frmTelaPrincipal.cs",
+              "RelativeDocumentMoniker": "HelpBox\\frmTelaPrincipal.cs",
+              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\frmTelaPrincipal.cs [Projeto]",
+              "RelativeToolTip": "HelpBox\\frmTelaPrincipal.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T02:39:02.526Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Chamado.cs",
+              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\Model\\Chamado.cs",
+              "RelativeDocumentMoniker": "HelpBox\\Model\\Chamado.cs",
+              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\Model\\Chamado.cs",
+              "RelativeToolTip": "HelpBox\\Model\\Chamado.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T03:01:41.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\Model\\Usuario.cs",
-              "RelativeDocumentMoniker": "HelpBox\\Model\\Usuario.cs",
-              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\Model\\Usuario.cs",
-              "RelativeToolTip": "HelpBox\\Model\\Usuario.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T03:02:20.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UsuarioBLL.cs",
-              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\BLL\\UsuarioBLL.cs",
-              "RelativeDocumentMoniker": "HelpBox\\BLL\\UsuarioBLL.cs",
-              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\BLL\\UsuarioBLL.cs",
-              "RelativeToolTip": "HelpBox\\BLL\\UsuarioBLL.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwA4AAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T02:29:30.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "ChamadoBLL.cs",
               "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\BLL\\ChamadoBLL.cs",
               "RelativeDocumentMoniker": "HelpBox\\BLL\\ChamadoBLL.cs",
@@ -178,14 +152,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Chamado.cs",
-              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\Model\\Chamado.cs",
-              "RelativeDocumentMoniker": "HelpBox\\Model\\Chamado.cs",
-              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\Model\\Chamado.cs",
-              "RelativeToolTip": "HelpBox\\Model\\Chamado.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA8wCQAAAABAAAAAAAAAA==",
+              "Title": "UsuarioDAL.cs",
+              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\DAL\\UsuarioDAL.cs",
+              "RelativeDocumentMoniker": "HelpBox\\DAL\\UsuarioDAL.cs",
+              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\DAL\\UsuarioDAL.cs",
+              "RelativeToolTip": "HelpBox\\DAL\\UsuarioDAL.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAowEsAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T03:01:41.566Z",
+              "WhenOpened": "2025-11-25T02:34:21.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\Model\\Usuario.cs",
+              "RelativeDocumentMoniker": "HelpBox\\Model\\Usuario.cs",
+              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\Model\\Usuario.cs",
+              "RelativeToolTip": "HelpBox\\Model\\Usuario.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T03:02:20.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UsuarioBLL.cs",
+              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\BLL\\UsuarioBLL.cs",
+              "RelativeDocumentMoniker": "HelpBox\\BLL\\UsuarioBLL.cs",
+              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\HelpBoxDESKTOP24\\HelpBox\\BLL\\UsuarioBLL.cs",
+              "RelativeToolTip": "HelpBox\\BLL\\UsuarioBLL.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwA4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T02:29:30.763Z",
               "EditorCaption": ""
             },
             {

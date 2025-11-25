@@ -148,7 +148,7 @@ namespace HelpBox
                 txtFrequencia.Text = chamado.frequencia_Cham;
 
                 // Formata a data do problema ou mostra "N/A" se a data estiver null
-                txtInicioProb.Text = chamado.dataProblema_Cham?
+                txtInicioProb.Text = chamado.dataProblema?
                                  .ToShortDateString() ?? "N/A";
 
                 txtAbrangencia.Text = chamado.usuarios_Cham;

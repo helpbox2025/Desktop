@@ -27,7 +27,8 @@ namespace HelpBox.DAL
                                  c.[categoria_Cham], 
                                  c.[titulo_Cham], 
                                  c.[prioridade_Cham], 
-                                 c.[dataAbertura_Cham], 
+                                 c.[dataProblema], 
+                                 c.[dataAbertura_Cham],
                                  c.[status_Cham],
                                  c.[tecResponsavel_Cham],
                                  -- Concatena nome e sobrenome da tabela Usuario
@@ -61,12 +62,13 @@ namespace HelpBox.DAL
                                 chamado.categoria_Cham = reader["categoria_Cham"].ToString();
                                 chamado.titulo_Cham = reader["titulo_Cham"].ToString();
                                 chamado.prioridade_Cham = reader["prioridade_Cham"].ToString();
-                                chamado.dataAbertura_Cham = Convert.ToDateTime(reader["dataAbertura_Cham"]);
+                                chamado.dataProblema = Convert.ToDateTime(reader["dataProblema"]);
                                 chamado.status_Cham = reader["status_Cham"].ToString();
                                 chamado.tecResponsavel_Cham = reader["tecResponsavel_Cham"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["tecResponsavel_Cham"]);
                                 chamado.TecResponsavelNomeCompleto = reader["TecResponsavelNomeCompleto"]
                                                                                              .ToString();
-
+                                chamado.dataAbertura_Cham = Convert.ToDateTime(reader["dataAbertura_Cham"]);
+                                
                                 listaDeChamados.Add(chamado);
                             }
                         }
@@ -106,6 +108,7 @@ namespace HelpBox.DAL
                                 chamado.status_Cham = reader["status_Cham"].ToString();
                                 chamado.dataAbertura_Cham = Convert.ToDateTime(reader["dataAbertura_Cham"]);
                                 chamado.dataFechamento_Cham = reader["dataFechamento_Cham"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["dataFechamento_Cham"]);
+                                chamado.dataProblema = reader["dataProblema"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["dataProblema"]);
                                 chamado.prioridade_Cham = reader["prioridade_Cham"].ToString();
                                 chamado.categoria_Cham = reader["categoria_Cham"].ToString();
                                 chamado.descricao_Cham = reader["descricao_Cham"].ToString();

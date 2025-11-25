@@ -16,7 +16,7 @@ namespace HelpBox.Model
         public string status_Cham { get; set; }
         public DateTime dataAbertura_Cham { get; set; }
         public DateTime? dataFechamento_Cham { get; set; }
-        public DateTime? dataProblema_Cham { get; set; }
+        public DateTime? dataProblema { get; set; }
         public string prioridade_Cham { get; set; }
         public string categoria_Cham { get; set; }
         public string descricao_Cham { get; set; }
