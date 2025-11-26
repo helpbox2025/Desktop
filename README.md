@@ -1,6 +1,6 @@
 # 📦 HelpBox - Sistema de Gerenciamento de Chamados (Desktop)
 
-![Status do Projeto](https://img.shields.io/badge/Status-Em_Desenvolvimento-yellow) ![.NET](https://img.shields.io/badge/.NET-8.0-purple) ![C#](https://img.shields.io/badge/Language-C%23-blue)
+![Status do Projeto](https://img.shields.io/badge/Status-Finalizado-green) ![.NET](https://img.shields.io/badge/.NET-8.0-purple) ![C#](https://img.shields.io/badge/Language-C%23-blue)
 
 Bem-vindo ao repositório do cliente Desktop do **HelpBox**! 🚀
 Este aplicativo foi desenvolvido para atender às necessidades dos técnicos de suporte, oferecendo uma interface robusta e ágil para o gerenciamento e solução de chamados de TI.
