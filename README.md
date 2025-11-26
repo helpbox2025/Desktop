@@ -64,7 +64,7 @@ A qualidade do código é garantida através de uma suíte de testes unitários 
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/helpbox2025/Desktop.git](https://github.com/helpbox2025/Desktop.git)
+    https://github.com/helpbox2025/Desktop.git
     ```
 2.  **Configure o Banco de Dados:**
     * Certifique-se de ter o SQL Server instalado.
