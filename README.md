@@ -23,14 +23,12 @@ O projeto segue a arquitetura em **3 Camadas (3-Tier)**, garantindo organizaçã
 * **Mascaramento de Senha:** Proteção visual dos campos de senha.
 
 ### 💻 Dashboard e Navegação
-* **Interface Responsiva:** Layout fluido que se adapta a diferentes resoluções (Full Screen).
 * **Menu Lateral Retrátil:** Navegação intuitiva com animação suave para maximizar a área de trabalho.
 * **Perfil do Técnico:** Exibição dinâmica do nome e e-mail do usuário logado.
 
 ### 🎫 Gerenciamento de Chamados
-* **Listagem Inteligente:** Visualização clara dos chamados com status "Aberto", "Em Andamento" ou "Fechado".
+* **Listagem Inteligente:** Visualização clara dos chamados "Em andamento".
 * **Atribuição de Responsabilidade:** Técnicos podem assumir chamados livres com um clique.
-* **Controle de Concorrência:** Botões de ação são bloqueados visualmente e logicamente se o chamado já pertencer a outro técnico.
 * **Resolução:** Interface dedicada para leitura do problema, análise da IA e registro da solução técnica.
 
 ---
@@ -42,7 +40,7 @@ O projeto segue a arquitetura em **3 Camadas (3-Tier)**, garantindo organizaçã
 * **Banco de Dados:** SQL Server (Local / Azure)
 * **ORM / Acesso a Dados:** ADO.NET (SqlClient)
 * **Segurança:** BCrypt.Net-Next
-* **Testes Unitários:** xUnit + Moq
+* **Testes Unitários:** xUnit
 
 ---
 
@@ -50,7 +48,7 @@ O projeto segue a arquitetura em **3 Camadas (3-Tier)**, garantindo organizaçã
 
 O sistema é dividido em três camadas lógicas para garantir a separação de responsabilidades:
 
-1.  **Model:** Representação dos objetos (DTOs/POCOs) como `Usuario` e `Chamado`.
+1.  **Model:** Representação dos objetos como `Usuario` e `Chamado`.
 2.  **DAL (Data Access Layer):** Responsável por toda a comunicação com o SQL Server, execução de queries e mapeamento de dados.
 3.  **BLL (Business Logic Layer):** O "cérebro" do sistema. Contém as regras de negócio, validações e orquestra o fluxo entre a UI e a DAL.
 
@@ -58,10 +56,7 @@ O sistema é dividido em três camadas lógicas para garantir a separação de r
 
 ## ✅ Testes Unitários
 
-A qualidade do código é garantida através de uma suíte de testes unitários automatizados localizada no projeto `HelpBox.Tests`.
-
-* **Cobertura:** Validação das regras de negócio da BLL (ex: campos vazios, IDs inválidos).
-* **Mocking:** Utilização da biblioteca `Moq` para isolar a lógica de negócio e simular o comportamento do banco de dados.
+A qualidade do código é garantida através de uma suíte de testes unitários automatizados localizada no projeto ''HelpBox.Tests''.
 
 ---
 
@@ -81,9 +76,6 @@ A qualidade do código é garantida através de uma suíte de testes unitários 
 
 ---
 
-## 📄 Licença
-
-Este projeto é desenvolvido para fins acadêmicos (TCC) e é propriedade da equipe HelpBox.
 
 ---
 
