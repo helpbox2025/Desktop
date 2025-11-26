@@ -48,7 +48,7 @@ O projeto segue a arquitetura em **3 Camadas (Negócios, Dados e Modelo)**, gara
 
 O sistema é dividido em três camadas lógicas para garantir a separação de responsabilidades:
 
-1.  **Model:** Representação dos objetos como `Usuario` e `Chamado`.
+1.  **Model:** Representação dos objetos como Usuario e Chamado.
 2.  **DAL (Data Access Layer):** Responsável por toda a comunicação com o SQL Server, execução de queries e mapeamento de dados.
 3.  **BLL (Business Logic Layer):** O "cérebro" do sistema. Contém as regras de negócio, validações e orquestra o fluxo entre a UI e a DAL.
 
@@ -68,11 +68,11 @@ A qualidade do código é garantida através de uma suíte de testes unitários 
     ```
 2.  **Configure o Banco de Dados:**
     * Certifique-se de ter o SQL Server instalado.
-    * Ajuste a `connectionString` no arquivo `App.config` para apontar para o seu servidor.
+    * Ajuste a connectionString no arquivo `App.config` para apontar para o seu servidor.
 3.  **Execute o Projeto:**
-    * Abra o `HelpBox.sln` no Visual Studio 2022.
+    * Abra o HelpBox.sln no Visual Studio 2022.
     * Compile a solução (Build).
-    * Pressione `F5` para iniciar.
+    * Pressione F5 para iniciar.
 
 ---
 
