@@ -11,7 +11,7 @@ Este aplicativo foi desenvolvido para atender às necessidades dos técnicos de 
 
 O **HelpBox Desktop** é a interface administrativa utilizada pela equipe técnica para visualizar, assumir e solucionar problemas relatados pelos clientes. O sistema foi projetado com foco em segurança, escalabilidade e uma experiência de usuário fluida.
 
-O projeto segue a arquitetura em **3 Camadas (3-Tier)**, garantindo organização e facilidade de manutenção.
+O projeto segue a arquitetura em **3 Camadas (Negócios, Dados e Modelo)**, garantindo organização e facilidade de manutenção.
 
 ---
 
