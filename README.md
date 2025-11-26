@@ -81,5 +81,5 @@ A qualidade do código é garantida através de uma suíte de testes unitários 
 ---
 
 <div align="center">
-  <sub>Desenvolvido por <b>HelpBox tecnologia</b>. 🚀</sub>
+  <sub>Desenvolvido por <b>HelpBox tecnologia</b>. 💡</sub>
 </div>
