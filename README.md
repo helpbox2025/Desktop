@@ -2,7 +2,7 @@
 
 ![Status do Projeto](https://img.shields.io/badge/Status-Finalizado-green) ![.NET](https://img.shields.io/badge/.NET-8.0-purple) ![C#](https://img.shields.io/badge/Language-C%23-blue)
 
-Bem-vindo ao repositório do cliente Desktop do **HelpBox**! 🚀
+Bem-vindo ao repositório Desktop do **HelpBox** 
 Este aplicativo foi desenvolvido para atender às necessidades dos técnicos de suporte, oferecendo uma interface robusta e ágil para o gerenciamento e solução de chamados de TI.
 
 ---
@@ -38,7 +38,7 @@ O projeto segue a arquitetura em **3 Camadas (Negócios, Dados e Modelo)**, gara
 * **Linguagem:** C# (Windows Forms)
 * **Framework:** .NET 8.0 (Windows Desktop)
 * **Banco de Dados:** SQL Server (Local / Azure)
-* **ORM / Acesso a Dados:** ADO.NET (SqlClient)
+* **Acesso a Dados:** SqlClient
 * **Segurança:** BCrypt.Net-Next
 * **Testes Unitários:** xUnit
 
@@ -69,6 +69,7 @@ A qualidade do código é garantida através de uma suíte de testes unitários 
 2.  **Configure o Banco de Dados:**
     * Certifique-se de ter o SQL Server instalado.
     * Ajuste a connectionString no arquivo `App.config` para apontar para o seu servidor.
+      
 3.  **Execute o Projeto:**
     * Abra o HelpBox.sln no Visual Studio 2022.
     * Compile a solução (Build).
